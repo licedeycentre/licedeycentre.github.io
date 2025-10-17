@@ -1,0 +1,14 @@
+{
+  "address": "Владивосток, ул. Бородинская 15Б",
+  "addressDetails": "парк «Солнышко», вверх по лестнице — второй этаж",
+  "phones": [
+    { "number": "8 914 712-69-52 (Ольга)", "href": "tel:+79147126952" },
+    { "number": "8 914 734-70-10 (Евгения)", "href": "tel:+79147347010" }
+  ],
+  "email": { "text": "nko.licedey@list.ru", "href": "mailto:nko.licedey@list.ru" },
+  "socials": [
+    { "name": "Telegram", "href": "https://t.me/licedeycentre", "icon": "siTelegram" },
+    { "name": "TikTok", "href": "https://www.tiktok.com/@licedeycentre", "icon": "siTiktok" },
+    { "name": "VK", "href": "https://vk.com/licedeycentre", "icon": "siVk" }
+  ]
+}

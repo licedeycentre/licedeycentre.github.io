@@ -1,0 +1,29 @@
+{
+  "name": "licedey-centre-spa",
+  "private": true,
+  "version": "0.0.1",
+  "type": "module",
+  "homepage": "https://licedeycentre.github.io",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "lucide-react": "^0.545.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-player": "^3.3.3",
+    "react-router-dom": "^6.8.1",
+    "simple-icons": "^15.16.1",
+    "yet-another-react-lightbox": "^3.25.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.2",
+    "@types/react-dom": "^19.2.1",
+    "@vitejs/plugin-react": "^4.3.1",
+    "gh-pages": "^6.1.1",
+    "vite": "^5.4.2"
+  }
+}

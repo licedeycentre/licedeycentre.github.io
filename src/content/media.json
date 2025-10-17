@@ -1,0 +1,13 @@
+{
+  "media": {
+    "logo": "/images/logo.png",
+    "hero": {
+      "slide1": "https://i.imgur.com/FOz2IzJ.jpeg",
+      "slide2": "https://i.imgur.com/ZyhtDpz.jpeg"
+    },
+    "performances": {
+      "pustocvet": "https://i.imgur.com/ZyhtDpz.jpeg",
+      "default": "https://i.imgur.com/TM5hcWJ.jpeg"
+    }
+  }
+}

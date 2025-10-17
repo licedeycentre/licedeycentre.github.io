@@ -1,0 +1,22 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://licedeycentre.github.io/sitemap.xml
+
+# Запрещаем индексацию служебных файлов
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+
+# Разрешаем индексацию основных страниц
+Allow: /
+Allow: /about
+Allow: /performances
+Allow: /publications
+Allow: /contacts
+Allow: /images/
+Allow: /videos/
+Allow: /documents/
