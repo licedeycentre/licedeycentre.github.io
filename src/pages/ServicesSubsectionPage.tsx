@@ -79,9 +79,9 @@ const ServicesSubsectionPage: React.FC = () => {
         { label: 'Услуги', href: '/services' },
         { label: subsectionData.title }
       ]}
-      actions={[
-        { text: 'Связаться с нами', href: '/contacts', variant: 'primary' }
-      ]}
+      actions={subsectionData.contactButton ? [
+        { text: subsectionData.contactButton.text, href: subsectionData.contactButton.href, variant: 'primary' }
+      ] : []}
       centered={false}
     >
       <div className="content-card">

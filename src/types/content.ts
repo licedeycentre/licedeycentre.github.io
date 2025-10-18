@@ -176,6 +176,10 @@ export interface AboutSubsection {
   content: string
   documents?: Document[]
   video?: PerformanceVideo
+  contactButton?: {
+    text: string
+    href: string
+  }
 }
 
 export interface AboutData {
@@ -197,6 +201,10 @@ export interface AboutData {
     inclusive?: AboutSubsection
     theater?: AboutSubsection
   }
+  contactButton?: {
+    text: string
+    href: string
+  }
 }
 
 // Типы для раздела "Услуги"
@@ -215,6 +223,10 @@ export interface ServicesSubsection {
   seoKeywords?: string
   content: string
   video?: PerformanceVideo
+  contactButton?: {
+    text: string
+    href: string
+  }
 }
 
 export interface ServicesData {
@@ -229,6 +241,10 @@ export interface ServicesData {
     performances?: ServicesSubsection
     hall?: ServicesSubsection
     equipment?: ServicesSubsection
+  }
+  contactButton?: {
+    text: string
+    href: string
   }
 }
 

@@ -17,9 +17,9 @@ const ServicesPage: React.FC = () => {
         { label: 'Главная', href: '/' },
         { label: 'Услуги' }
       ]}
-      actions={[
-        { text: 'Связаться с нами', href: '/contacts', variant: 'primary' }
-      ]}
+      actions={servicesData.contactButton ? [
+        { text: servicesData.contactButton.text, href: servicesData.contactButton.href, variant: 'primary' }
+      ] : []}
       centered={false}
     >
       <div className="content-card">

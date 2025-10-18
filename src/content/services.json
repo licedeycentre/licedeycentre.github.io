@@ -46,6 +46,10 @@
         "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
         "title": "Выступления на заказ",
         "description": "Видео с выступлений"
+      },
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
       }
     },
     "hall": {
@@ -58,6 +62,10 @@
         "url": "https://rutube.ru/video/b7094bb353ef614bebc8b081b7b312ee/",
         "title": "Обзор зала",
         "description": "Видео обзор театрального зала"
+      },
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
       }
     },
     "equipment": {
@@ -70,7 +78,15 @@
         "url": "https://2ch.org/media/src/1055134/17491560755470.mp4",
         "title": "Театральное оборудование",
         "description": "Видео об оборудовании"
+      },
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
       }
     }
+  },
+  "contactButton": {
+    "text": "Связаться с нами",
+    "href": "/contacts"
   }
 }

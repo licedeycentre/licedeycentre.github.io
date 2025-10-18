@@ -19,9 +19,9 @@ const AboutPage: React.FC = () => {
         { label: 'Главная', href: '/' },
         { label: 'О нас' }
       ]}
-      actions={[
-        { text: 'Связаться с нами', href: '/contacts', variant: 'primary' }
-      ]}
+      actions={aboutData.contactButton ? [
+        { text: aboutData.contactButton.text, href: aboutData.contactButton.href, variant: 'primary' }
+      ] : []}
       centered={false}
     >
       <div className="content-card">

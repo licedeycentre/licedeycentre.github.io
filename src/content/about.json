@@ -112,7 +112,11 @@
           "description": "Образец справки для занятий театральным искусством",
           "url": "/documents/medical-certificate.pdf"
         }
-      ]
+      ],
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
+      }
     },
     "inclusive": {
       "title": "Инклюзивная театральная студия «Без границ»",
@@ -144,7 +148,11 @@
           "description": "Заявление для записи в инклюзивную студию",
           "url": "/documents/application-form.pdf"
         }
-      ]
+      ],
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
+      }
     },
     "theater": {
       "title": "Театр «Балаган»",
@@ -170,7 +178,11 @@
           "description": "Правила для зрителей театра",
           "url": "/documents/regulations.pdf"
         }
-      ]
+      ],
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
+      }
     },
     "summer-camp": {
       "title": "Летний театральный лагерь",
@@ -205,7 +217,15 @@
           "description": "Образец справки для занятий театральным искусством",
           "url": "/documents/medical-certificate.pdf"
         }
-      ]
+      ],
+      "contactButton": {
+        "text": "Связаться с нами",
+        "href": "/contacts"
+      }
     }
+  },
+  "contactButton": {
+    "text": "Связаться с нами",
+    "href": "/contacts"
   }
 }
