@@ -71,13 +71,6 @@ const AboutPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Галерея */}
-      {aboutData.gallery && aboutData.gallery.length > 0 && (
-        <div className="content-card">
-          <ImageGallery images={aboutData.gallery} />
-        </div>
-      )}
-
       {/* Видео */}
       {aboutData.video && (
         <div className="content-card">
@@ -86,6 +79,13 @@ const AboutPage: React.FC = () => {
             title={aboutData.video.title}
             description={aboutData.video.description}
           />
+        </div>
+      )}
+
+      {/* Галерея */}
+      {aboutData.gallery && aboutData.gallery.length > 0 && (
+        <div className="content-card">
+          <ImageGallery images={aboutData.gallery} />
         </div>
       )}
 

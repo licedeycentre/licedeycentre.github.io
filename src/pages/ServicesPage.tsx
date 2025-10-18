@@ -45,13 +45,6 @@ const ServicesPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Галерея */}
-      {servicesData.gallery && servicesData.gallery.length > 0 && (
-        <div className="content-card">
-          <ImageGallery images={servicesData.gallery} />
-        </div>
-      )}
-
       {/* Видео */}
       {servicesData.video && (
         <div className="content-card">
@@ -60,6 +53,13 @@ const ServicesPage: React.FC = () => {
             title={servicesData.video.title}
             description={servicesData.video.description}
           />
+        </div>
+      )}
+
+      {/* Галерея */}
+      {servicesData.gallery && servicesData.gallery.length > 0 && (
+        <div className="content-card">
+          <ImageGallery images={servicesData.gallery} />
         </div>
       )}
     </PageLayout>

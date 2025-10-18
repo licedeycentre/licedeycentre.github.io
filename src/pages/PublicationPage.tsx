@@ -101,38 +101,6 @@ const PublicationPage: React.FC = () => {
         )}
       </div>
       
-      {/* Документы публикации */}
-      {post.documents && post.documents.length > 0 && (
-        <div className="content-card">
-          <div className="readable-content">
-            <h2>Документы</h2>
-          </div>
-          <div className="documents-grid">
-            {post.documents.map((doc) => (
-              <a 
-                key={doc.id} 
-                href={doc.url} 
-                className="document-card"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <div className="document-card-icon">
-                  <FileText size={24} />
-                </div>
-                <div className="document-card-content">
-                  <h4 className="document-card-title">{doc.title}</h4>
-                  <p className="document-card-desc">{doc.description}</p>
-                </div>
-                <div className="document-card-action">
-                  <Download size={16} />
-                </div>
-              </a>
-            ))}
-          </div>
-        </div>
-      )}
-      
       {/* Видео публикации */}
       {post.video && (
         <div className="content-card">
@@ -164,6 +132,38 @@ const PublicationPage: React.FC = () => {
         <div className="content-card">
           <div className="modal-gallery">
             <ImageGallery images={post.gallery as string[]} />
+          </div>
+        </div>
+      )}
+      
+      {/* Документы публикации */}
+      {post.documents && post.documents.length > 0 && (
+        <div className="content-card">
+          <div className="readable-content">
+            <h2>Документы</h2>
+          </div>
+          <div className="documents-grid">
+            {post.documents.map((doc) => (
+              <a 
+                key={doc.id} 
+                href={doc.url} 
+                className="document-card"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="document-card-icon">
+                  <FileText size={24} />
+                </div>
+                <div className="document-card-content">
+                  <h4 className="document-card-title">{doc.title}</h4>
+                  <p className="document-card-desc">{doc.description}</p>
+                </div>
+                <div className="document-card-action">
+                  <Download size={16} />
+                </div>
+              </a>
+            ))}
           </div>
         </div>
       )}
