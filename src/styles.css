@@ -7804,6 +7804,7 @@ body.mobile-menu-open {
   display: flex;
   gap: 1rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
   padding-top: 2rem;
   border-top: 1px solid var(--border-color);
   flex-wrap: wrap;
