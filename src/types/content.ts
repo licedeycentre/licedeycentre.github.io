@@ -159,6 +159,7 @@ export interface ContactsData {
   socials: ContactSocial[]
   mapUrl?: string
   feedbackFormUrl?: string
+  faq?: FAQItem[]
 }
 
 // Типы для страницы "О нас"

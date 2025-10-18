@@ -17,7 +17,8 @@ import type {
   SEOData,
   FAQData,
   SiteData,
-  ShowDate
+  ShowDate,
+  PerformanceStatusType
 } from '../types/content'
 import { PerformanceStatus } from '../types/content'
 import { generatePublicationId, generatePerformanceId } from '../utils/slugify'
@@ -32,7 +33,6 @@ import aboutData from '../content/about.json'
 import servicesData from '../content/services.json'
 import privacyPolicyData from '../content/privacy-policy.json'
 import seoData from '../content/seo.json'
-import faqData from '../content/faq.json'
 import siteData from '../content/site.json'
 
 // Функция для определения статуса спектакля
@@ -178,7 +178,12 @@ export const usePublications = (): Publication[] => {
 // Хук для работы со спектаклями (отсортированными)
 export const usePerformances = (): Performance[] => {
   const performances = Array.isArray(performancesData?.performances) ? performancesData.performances : []
-  return sortPerformances(performances)
+  // Приводим типы для совместимости с JSON
+  const typedPerformances = performances.map(perf => ({
+    ...perf,
+    status: perf.status as PerformanceStatusType | undefined
+  }))
+  return sortPerformances(typedPerformances)
 }
 
 // Хук для получения отсортированных спектаклей с ограничением количества
@@ -241,9 +246,10 @@ export const useSEO = (): SEOData => {
   return seoData || { defaults: { siteName: '', siteDescription: '', siteKeywords: '', siteUrl: '', logo: '', author: '', twitterSite: '', twitterCreator: '' }, pages: {}, structuredData: { organization: {} } }
 }
 
-// Хук для работы с FAQ
+// Хук для работы с FAQ (теперь из контактов)
 export const useFAQ = (): FAQData => {
-  return faqData || { faq: [] }
+  const contacts = useContacts()
+  return { faq: contacts.faq || [] }
 }
 
 // Хук для работы с глобальными настройками сайта
