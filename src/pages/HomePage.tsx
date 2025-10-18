@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useHeroSlides, useSortedPublications, useSortedPerformances } from '../hooks/useContent'
+import { useHeroSlides, useSortedPublications, useSortedPerformances, useSEO } from '../hooks/useContent'
 import { MediaThumb } from '../components/MediaThumb'
 import { PerformanceCard } from '../components/PerformanceCard'
 import { Slider } from '../components/Slider'
@@ -139,12 +139,19 @@ const HeroSlider: React.FC = () => {
 
 // Главная страница
 const HomePage: React.FC = () => {
+  const seoData = useSEO()
+  const homePageSEO = seoData.pages.home || {
+    title: "Лицедей — Центр Современного Искусства",
+    description: "Театр‑студия 'Балаганчик' во Владивостоке. Актерское мастерство, сценическая речь, спектакли для детей и взрослых.",
+    keywords: "театр, актерское мастерство, Владивосток, театральная студия, Балаганчик, спектакли, сценическая речь"
+  }
+
   return (
     <>
       <SEOHead 
-        title="Лицедей — Центр Современного Искусства"
-        description="Театр‑студия 'Балаганчик' во Владивостоке. Актерское мастерство, сценическая речь, спектакли для детей и взрослых."
-        keywords="театр, актерское мастерство, Владивосток, театральная студия, Балаганчик, спектакли, сценическая речь"
+        title={homePageSEO.title}
+        description={homePageSEO.description}
+        keywords={homePageSEO.keywords}
         url="/"
       />
       <main>

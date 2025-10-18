@@ -131,7 +131,7 @@ const ContactsPage: React.FC = () => {
               <iframe
                 className="map-frame"
                 title="Карта — Лицедей"
-                src="https://yandex.ru/map-widget/v1/?um=constructor%3A&amp;ll=131.919513%2C43.165880&z=16&pt=131.919513,43.165880,pm2rdm"
+                src={contactsData.mapUrl}
                 referrerPolicy="no-referrer-when-downgrade"
                 allowFullScreen
               ></iframe>
@@ -147,7 +147,7 @@ const ContactsPage: React.FC = () => {
         </div>
         <div className="yandex-form-container">
           <iframe 
-            src="https://forms.yandex.ru/cloud/68e8929a02848f207c913644?iframe=1" 
+            src={contactsData.feedbackFormUrl} 
             frameBorder="0" 
             name="ya-form-68e8929a02848f207c913644" 
             width="100%" 

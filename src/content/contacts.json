@@ -10,5 +10,7 @@
     { "name": "Telegram", "href": "https://t.me/licedeycentre", "icon": "siTelegram" },
     { "name": "TikTok", "href": "https://www.tiktok.com/@licedeycentre", "icon": "siTiktok" },
     { "name": "VK", "href": "https://vk.com/licedeycentre", "icon": "siVk" }
-  ]
+  ],
+  "mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A&ll=131.919513%2C43.165880&z=16&pt=131.919513,43.165880,pm2rdm",
+  "feedbackFormUrl": "https://forms.yandex.ru/cloud/68e8929a02848f207c913644?iframe=1"
 }

@@ -3832,6 +3832,23 @@ body.mobile-menu-open {
   margin-bottom: 12px;
 }
 
+/* Обложка публикации */
+.publication-cover {
+  margin: 0 auto 24px;
+  max-width: 800px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.publication-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+  max-height: 400px;
+  object-fit: cover;
+}
+
 /* Мобильная адаптация detail-header */
 @media (max-width: 768px) {
   .detail-header { 
@@ -3845,12 +3862,32 @@ body.mobile-menu-open {
     font-size: 13px;
     line-height: 1.4;
   }
+  
+  /* Адаптация обложки публикации для мобильных */
+  .publication-cover {
+    margin: 0 auto 20px;
+    max-width: none;
+    border-radius: var(--radius-sm);
+  }
+  
+  .publication-cover img {
+    max-height: 300px;
+  }
 }
 
 @media (max-width: 480px) {
   
   .detail-meta { 
     font-size: 12px;
+  }
+  
+  /* Дополнительная адаптация обложки для маленьких экранов */
+  .publication-cover {
+    margin: 0 auto 16px;
+  }
+  
+  .publication-cover img {
+    max-height: 250px;
   }
 }
 

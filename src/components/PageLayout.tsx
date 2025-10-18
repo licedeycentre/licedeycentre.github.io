@@ -28,12 +28,6 @@ export interface PageLayoutProps {
   // Actions
   actions?: PageAction[]
   
-  // Optional header content
-  headerContent?: React.ReactNode
-  
-  // Optional sidebar content
-  sidebarContent?: React.ReactNode
-  
   // Layout options
   fullWidth?: boolean
   centered?: boolean
@@ -46,8 +40,6 @@ const PageLayout: React.FC<PageLayoutProps> = ({
   breadcrumbs = [],
   children,
   actions = [],
-  headerContent,
-  sidebarContent,
   fullWidth = false,
   centered = true
 }) => {
@@ -84,26 +76,10 @@ const PageLayout: React.FC<PageLayoutProps> = ({
           </nav>
         )}
 
-        {/* Header Content */}
-        {headerContent && (
-          <div className="page-header">
-            {headerContent}
-          </div>
-        )}
-
         {/* Main Content */}
-        <div className={`page-layout ${sidebarContent ? 'with-sidebar' : ''}`}>
-          <main className={centered ? 'page-content-centered' : 'page-content'}>
-            {children}
-          </main>
-          
-          {/* Sidebar */}
-          {sidebarContent && (
-            <aside className="page-sidebar">
-              {sidebarContent}
-            </aside>
-          )}
-        </div>
+        <main className={centered ? 'page-content-centered' : 'page-content'}>
+          {children}
+        </main>
 
         {/* Actions */}
         {actions.length > 0 && (

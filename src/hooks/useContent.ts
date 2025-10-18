@@ -171,116 +171,82 @@ const sortPublications = (publications: Publication[]): Publication[] => {
 
 // Хук для работы с публикациями (отсортированными)
 export const usePublications = (): Publication[] => {
-  return React.useMemo(() => {
-    const publications = Array.isArray(publicationsData?.publications) ? publicationsData.publications : []
-    return sortPublications(publications)
-  }, [])
+  const publications = Array.isArray(publicationsData?.publications) ? publicationsData.publications : []
+  return sortPublications(publications)
 }
 
 // Хук для работы со спектаклями (отсортированными)
 export const usePerformances = (): Performance[] => {
-  return React.useMemo(() => {
-    const performances = Array.isArray(performancesData?.performances) ? performancesData.performances : []
-    return sortPerformances(performances)
-  }, [])
+  const performances = Array.isArray(performancesData?.performances) ? performancesData.performances : []
+  return sortPerformances(performances)
 }
 
 // Хук для получения отсортированных спектаклей с ограничением количества
 export const useSortedPerformances = (limit?: number): Performance[] => {
   const performances = usePerformances()
-  
-  return React.useMemo(() => {
-    return limit ? performances.slice(0, limit) : performances
-  }, [performances, limit])
+  return limit ? performances.slice(0, limit) : performances
 }
 
 // Хук для получения отсортированных публикаций с ограничением количества
 export const useSortedPublications = (limit?: number): Publication[] => {
   const publications = usePublications()
-  
-  return React.useMemo(() => {
-    return limit ? publications.slice(0, limit) : publications
-  }, [publications, limit])
+  return limit ? publications.slice(0, limit) : publications
 }
 
 // Хук для работы с героем
 export const useHeroSlides = (): HeroSlide[] => {
-  return React.useMemo(() => {
-    return Array.isArray(heroData?.slides) ? heroData.slides : []
-  }, [])
+  return Array.isArray(heroData?.slides) ? heroData.slides : []
 }
 
 // Хук для работы с медиа
 export const useMedia = (): MediaContent => {
-  return React.useMemo(() => {
-    return mediaData?.media || {}
-  }, [])
+  return mediaData?.media || {}
 }
 
 // Хук для получения конкретной публикации по ID
 export const usePublication = (id: string): Publication | undefined => {
   const publications = usePublications()
-  return React.useMemo(() => 
-    publications.find((p) => generatePublicationId(p.title, p.date) === id), 
-    [publications, id]
-  )
+  return publications.find((p) => generatePublicationId(p.title, p.date) === id)
 }
 
 // Хук для получения конкретного спектакля по ID
 export const usePerformance = (id: string): Performance | undefined => {
   const performances = usePerformances()
-  return React.useMemo(() => 
-    performances.find((p) => generatePerformanceId(p.title) === id), 
-    [performances, id]
-  )
+  return performances.find((p) => generatePerformanceId(p.title) === id)
 }
 
 // Хук для работы с контактами
 export const useContacts = (): ContactsData => {
-  return React.useMemo(() => {
-    return contactsData || {}
-  }, [])
+  return contactsData || {}
 }
 
 // Хук для работы с данными страницы "О нас"
 export const useAbout = (): AboutData => {
-  return React.useMemo(() => {
-    return aboutData || {}
-  }, [])
+  return aboutData || {}
 }
 
 // Хук для работы с данными страницы "Услуги"
 export const useServices = (): ServicesData => {
-  return React.useMemo(() => {
-    return servicesData || {}
-  }, [])
+  return servicesData || {}
 }
 
 // Хук для работы с политикой конфиденциальности
 export const usePrivacyPolicy = (): LegalPageData => {
-  return React.useMemo(() => {
-    return privacyPolicyData as LegalPageData
-  }, [])
+  return privacyPolicyData as LegalPageData
 }
 
 
 // Хук для работы с SEO данными
 export const useSEO = (): SEOData => {
-  return React.useMemo(() => {
-    return seoData || { defaults: { siteName: '', siteDescription: '', siteKeywords: '', siteUrl: '', logo: '', author: '', twitterSite: '', twitterCreator: '' }, pages: {}, structuredData: { organization: {} } }
-  }, [])
+  return seoData || { defaults: { siteName: '', siteDescription: '', siteKeywords: '', siteUrl: '', logo: '', author: '', twitterSite: '', twitterCreator: '' }, pages: {}, structuredData: { organization: {} } }
 }
 
 // Хук для работы с FAQ
 export const useFAQ = (): FAQData => {
-  return React.useMemo(() => {
-    return faqData || { faq: [] }
-  }, [])
+  return faqData || { faq: [] }
 }
 
 // Хук для работы с глобальными настройками сайта
 export const useSite = (): SiteData => {
-  return React.useMemo(() => {
-    return siteData || { organization: { name: '', fullName: '', shortName: '' }, season: { current: '', label: '' }, footer: { copyright: '', photoConsent: '' }, contacts: { mapDescription: '' } }
-  }, [])
+  return siteData || { organization: { name: '', fullName: '', shortName: '' }, season: { current: '', label: '' }, footer: { copyright: '', photoConsent: '' }, contacts: { mapDescription: '' } }
 }

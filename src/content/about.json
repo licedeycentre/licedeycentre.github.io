@@ -3,6 +3,11 @@
   "leadText": "Лицедей — это пространство, где Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua",
   "history": "Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. \n\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nSed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.\nNemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
   "mission": "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.\nSimilique sunt in culpa qui officia deserunt mollitia animi id est laborum et dolorum fuga et harum quidem rerum facilis est et expedita distinctio.\nNam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus omnis voluptas assumenda est.\n\nOmnis dolor repellendus temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae.\nItaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.\nEt harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus.",
+  "sectionTitles": {
+    "history": "Наша история",
+    "mission": "Наша миссия",
+    "directions": "Направления деятельности"
+  },
   "gallery": [
     "https://i.imgur.com/wmacDwq.jpeg",
     "https://i.imgur.com/cMDJuFf.jpeg"
@@ -57,14 +62,14 @@
     },
     {
       "icon": "🎊",
-      "title": "Фестивали и культурные мероприятия",
+      "title": "События и активность",
       "audience": "Для коллектива",
-      "description": "Внутренние мероприятия коллектива: театральные фестивали, дни открытых дверей, сезонные праздники и творческие встречи.",
-      "link": "/publications?tag=фестивали"
+      "description": "Внутренние события коллектива, театральные фестивали, сезонные праздники, творческие встречи, участие в культурных мероприятиях.",
+      "link": "/publications?tag=события"
     },
     {
       "icon": "💫",
-      "title": "Социальные проекты НКО",
+      "title": "Социальные проекты",
       "audience": "Для тех, кому нужна поддержка",
       "description": "Грантовые проекты, направленные на развитие творческих способностей, сохранение традиций и работу с детьми в трудной жизненной ситуации.",
       "link": "/publications?tag=проекты"
@@ -73,6 +78,9 @@
   "subsections": {
     "studio": {
       "title": "Театральная студия «Балаганчик»",
+      "seoTitle": "Театральная студия «Балаганчик»",
+      "seoDescription": "Театральная студия для взрослых и детей. Обучение актерскому мастерству, сценической речи, пластике. Игровые методики, развитие воображения и коммуникативных навыков.",
+      "seoKeywords": "театр, студия, актерское мастерство, Владивосток, обучение, театральная студия",
       "content": "<h2>Программа обучения</h2><p><strong>Основные направления:</strong></p><ul><li><strong>Актерское мастерство</strong> — упражнения и этюды, работа с партнером, тренинги на снятие психологических зажимов</li><li><strong>Сценическая речь</strong> — постановка правильного дыхания, развитие дикции, силы голоса, вокал</li><li><strong>Сценическое движение</strong> — хореография, контактная импровизация, ритмика, акробатика</li><li><strong>Бутафорская мастерская</strong> — создание декораций и реквизита</li><li><strong>Постановка спектаклей</strong> — от идеи до премьеры</li><li><strong>История театра</strong> — изучение традиций и современности</li></ul><h3>Расписание занятий</h3><p><strong>Группы:</strong> утренние, дневные и вечерние</p><p>Подберем удобное время для каждого!</p><p><strong>🎭 БОНУС: Погружение в театральную среду!</strong></p><ul><li>Участие в создании спектакля (декорации, костюмы, свето- и звукорежиссура)</li><li>Выступления в театре \"Балаган\"</li><li>Участие в театральных капустниках и фестивалях</li><li>Возможность войти в основной состав труппы театра \"Балаган\"</li></ul><h3>Где мы выступаем</h3><p>Театр \"Балаган\", фестивали, открытые и коммерческие площадки Владивостока</p><h3>Стоимость занятий</h3><p><strong>Абонемент</strong><br>6500₽/месяц</p><p><strong>Разовое занятие</strong><br>700₽</p><p><strong>Пробное занятие</strong><br>БЕСПЛАТНО!</p><h3>Скидки</h3><ul><li><strong>Многодетным семьям</strong> — 25%</li><li><strong>\"Семейный\"</strong> (2+ члена семьи) — 10%</li></ul><h3>Как нас найти</h3><p><strong>Адрес:</strong> Бородинская 15 б (Парк \"Солнышко\", район Вторая Речка)</p><h3>Что взять с собой</h3><p>Удобная обувь и одежда (идеально — чешки, трико)</p><p>Хорошее настроение и желание творить!</p><p><strong>📞 Есть вопросы?</strong> Звоните, пишите в WhatsApp — с удовольствием ответим на все ваши вопросы!</p>",
       "video": {
         "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
@@ -108,6 +116,9 @@
     },
     "inclusive": {
       "title": "Инклюзивная театральная студия «Без границ»",
+      "seoTitle": "Инклюзивная театральная студия «Без границ»",
+      "seoDescription": "Специализированная студия для людей с ограниченными возможностями здоровья. Адаптивные программы, индивидуальный подход, арт-терапия.",
+      "seoKeywords": "театр, инклюзия, ОВЗ, адаптивные программы, арт-терапия, Владивосток",
       "content": "<p><strong>🤝 Театр без границ для всех!</strong></p><p>Специализированная студия для людей с ограниченными возможностями здоровья</p><h2>Наша миссия</h2><p>Lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Программа занятий</h3><ul><li><strong>Адаптивное актерское мастерство</strong> — специальные методики для развития творческих способностей</li><li><strong>Арт-терапия</strong> — использование искусства для психологической поддержки</li><li><strong>Движение и пластика</strong> — адаптированные упражнения для развития координации</li><li><strong>Музыкальная терапия</strong> — работа с ритмом, звуком и голосом</li><li><strong>Социальная адаптация</strong> — развитие коммуникативных навыков через театр</li></ul><h3>Возрастные группы</h3><ul><li><strong>Детская группа</strong> — 6-12 лет</li><li><strong>Подростковая группа</strong> — 13-18 лет</li><li><strong>Взрослая группа</strong> — от 18 лет</li></ul><h3>Особенности программы</h3><ul><li>Индивидуальный подход к каждому участнику</li><li>Работа с психологом и арт-терапевтом</li><li>Адаптированное пространство и оборудование</li><li>Совместные проекты с основными студиями</li><li>Участие в инклюзивных спектаклях</li></ul><h3>Расписание</h3><p><strong>Занятия проходят:</strong></p><ul><li>Детская группа: суббота 10:00-11:30</li><li>Подростковая группа: суббота 12:00-13:30</li><li>Взрослая группа: воскресенье 15:00-16:30</li></ul><h3>Стоимость</h3><p><strong>Абонемент</strong><br>3000₽/месяц</p><p><strong>Разовое занятие</strong><br>400₽</p><p><strong>Пробное занятие</strong><br>БЕСПЛАТНО!</p><p><strong>💝 Специальные условия:</strong></p><ul><li>Скидка 50% для многодетных семей</li><li>Бесплатные занятия для детей-инвалидов</li><li>Гибкая система оплаты</li></ul><h3>Как записаться</h3><p><strong>📞 Свяжитесь с нами:</strong></p><p>Телефон: 8 914 712-69-52 (Ольга)</p><p>Email: nko.licedey@list.ru</p><p>Мы обсудим индивидуальные потребности и подберем подходящую программу!</p>",
       "video": {
         "url": "https://rutube.ru/video/b7094bb353ef614bebc8b081b7b312ee/",
@@ -137,6 +148,9 @@
     },
     "theater": {
       "title": "Театр «Балаган»",
+      "seoTitle": "Театр Балаган",
+      "seoDescription": "Профессиональный театр Балаган. Регулярные показы спектаклей для широкой аудитории. Репертуар для зрителей всех возрастов.",
+      "seoKeywords": "театр, Балаган, спектакли, репертуар, Владивосток, театральные постановки",
       "content": "<h2>О театре «Балаган»</h2><p>Театр «Балаган» — это профессиональный театр, который объединяет в себе традиции классического театрального искусства и современные подходы к постановке спектаклей.</p><h3>Наш репертуар</h3><p>В репертуаре театра представлены спектакли для зрителей всех возрастов:</p><ul><li><strong>Детские спектакли</strong> — сказки и приключения для самых маленьких зрителей</li><li><strong>Семейные постановки</strong> — спектакли, которые интересны и детям, и взрослым</li><li><strong>Взрослые спектакли</strong> — серьезные драматические произведения</li><li><strong>Экспериментальные постановки</strong> — современные интерпретации классики</li></ul><h3>Труппа театра</h3><p>В театре работают профессиональные актеры, режиссеры, художники и другие специалисты театрального дела. Многие из них также преподают в наших студиях.</p><h3>Где мы играем</h3><p>Спектакли проходят на различных площадках Владивостока:</p><ul><li>Основная сцена театра</li><li>Городские культурные центры</li><li>Фестивальные площадки</li><li>Выездные спектакли</li></ul><h3>Как попасть на спектакль</h3><p><strong>📞 Заказ билетов:</strong></p><p>Телефон: 8 914 712-69-52</p><p>Email: nko.licedey@list.ru</p><p><strong>📍 Адрес:</strong> Бородинская 15 б (Парк \"Солнышко\", район Вторая Речка)</p><p>Следите за афишей на нашем сайте и в социальных сетях!</p>",
       "video": {
         "url": "https://2ch.org/media/src/1055134/17491560755470.mp4",

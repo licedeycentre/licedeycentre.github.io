@@ -1,5 +1,13 @@
 import React from 'react'
 import { useSEO } from '../hooks/useContent'
+import { Performance, Publication } from '../types/content'
+import { 
+  generatePerformanceStructuredData, 
+  generatePublicationStructuredData,
+  generateBreadcrumbStructuredData,
+  generateFAQStructuredData,
+  generateLocalBusinessStructuredData
+} from '../utils/structuredData'
 
 interface SEOHeadProps {
   title?: string
@@ -15,6 +23,11 @@ interface SEOHeadProps {
   section?: string
   tags?: string[]
   structuredData?: any
+  performance?: Performance
+  publication?: Publication
+  breadcrumbs?: Array<{name: string, url: string}>
+  faqs?: Array<{question: string, answer: string}>
+  showLocalBusiness?: boolean
 }
 
 const SEOHead: React.FC<SEOHeadProps> = ({
@@ -30,7 +43,12 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   author,
   section,
   tags = [],
-  structuredData
+  structuredData,
+  performance,
+  publication,
+  breadcrumbs,
+  faqs,
+  showLocalBusiness = false
 }) => {
   const seoData = useSEO()
   
@@ -47,8 +65,29 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   const fullUrl = finalUrl.startsWith('http') ? finalUrl : `${seoData.defaults.siteUrl}${finalUrl}`
   const fullImage = finalImage.startsWith('http') ? finalImage : `${seoData.defaults.siteUrl}${finalImage}`
 
-  // Используем структурированные данные из JSON или переданные
-  const finalStructuredData = structuredData || seoData.structuredData.organization
+  // Генерируем структурированные данные в зависимости от типа контента
+  let finalStructuredData = structuredData || seoData.structuredData.organization
+  
+  if (performance) {
+    finalStructuredData = generatePerformanceStructuredData(performance, 0)
+  } else if (publication) {
+    finalStructuredData = generatePublicationStructuredData(publication, 0)
+  }
+  
+  // Дополнительные структурированные данные
+  const additionalStructuredData = []
+  
+  if (breadcrumbs && breadcrumbs.length > 0) {
+    additionalStructuredData.push(generateBreadcrumbStructuredData(breadcrumbs))
+  }
+  
+  if (faqs && faqs.length > 0) {
+    additionalStructuredData.push(generateFAQStructuredData(faqs))
+  }
+  
+  if (showLocalBusiness) {
+    additionalStructuredData.push(generateLocalBusinessStructuredData())
+  }
 
   return (
     <>
@@ -58,8 +97,23 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta name="keywords" content={finalKeywords} />
       <meta name="author" content={finalAuthor} />
       <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
+      <meta name="bingbot" content="index, follow" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      {/* Дополнительные мета-теги */}
+      <meta name="theme-color" content="#1a1a1a" />
+      <meta name="msapplication-TileColor" content="#1a1a1a" />
+      <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="apple-mobile-web-app-title" content="Лицедей" />
+      
+      {/* Геолокация */}
+      <meta name="geo.region" content="RU-PRI" />
+      <meta name="geo.placename" content="Владивосток" />
+      <meta name="geo.position" content="43.105620;131.873530" />
+      <meta name="ICBM" content="43.105620, 131.873530" />
       
       {/* Canonical URL */}
       <link rel="canonical" href={fullUrl} />
@@ -70,6 +124,8 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <meta property="og:description" content={finalDescription} />
       <meta property="og:image" content={fullImage} />
       <meta property="og:image:alt" content={finalImageAlt} />
+      <meta property="og:image:width" content="1200" />
+      <meta property="og:image:height" content="630" />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content={seoData.defaults.siteName} />
       <meta property="og:locale" content="ru_RU" />
@@ -112,6 +168,17 @@ const SEOHead: React.FC<SEOHeadProps> = ({
           __html: JSON.stringify(finalStructuredData, null, 2)
         }}
       />
+      
+      {/* Дополнительные структурированные данные */}
+      {additionalStructuredData.map((data, index) => (
+        <script
+          key={index}
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(data, null, 2)
+          }}
+        />
+      ))}
     </>
   )
 }

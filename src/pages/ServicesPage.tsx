@@ -8,30 +8,6 @@ import PageLayout from '../components/PageLayout'
 const ServicesPage: React.FC = () => {
   const servicesData = useServices()
   
-  const services = [
-    {
-      icon: "🎭",
-      title: "Выступления на заказ",
-      audience: "Для мероприятий",
-      description: "Корпоративные мероприятия, частные праздники, городские события. Спектакли из репертуара и индивидуальные постановки.",
-      link: "/services/performances"
-    },
-    {
-      icon: "🏛️",
-      title: "Аренда зала",
-      audience: "Для организаций",
-      description: "Театральный зал до 100 человек с профессиональным оборудованием. Сцена 6×8 м, свет, звук, проекция.",
-      link: "/services/hall"
-    },
-    {
-      icon: "⚡",
-      title: "Аренда оборудования",
-      audience: "Для мероприятий",
-      description: "Профессиональное театральное оборудование: свет, звук, декорации, костюмы с доставкой и монтажом.",
-      link: "/services/equipment"
-    }
-  ]
-
   return (
     <PageLayout
       title="Услуги — Лицедей"
@@ -48,12 +24,12 @@ const ServicesPage: React.FC = () => {
     >
       <div className="content-card">
         <div className="readable-content">
-          <h2>Наши услуги</h2>
-          <p>Центр Современного Искусства «Лицедей» предлагает широкий спектр коммерческих услуг для организаций и частных лиц.</p>
+          <h2>{servicesData.sectionTitles?.services || 'Наши услуги'}</h2>
+          {servicesData.introText && <p>{servicesData.introText}</p>}
         </div>
         
         <div className="directions-grid">
-          {services.map((service, index) => (
+          {servicesData.services?.map((service, index) => (
             <div key={index} className="direction-card">
               <div className="direction-icon">{service.icon}</div>
               <div className="direction-content">

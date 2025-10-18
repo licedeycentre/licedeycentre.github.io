@@ -4,7 +4,7 @@ import { useAbout } from '../hooks/useContent'
 import { ImageGallery } from '../components/ImageGallery'
 import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
-import { processHtmlContentSimple } from '../utils/htmlProcessor'
+import { processHtmlContent } from '../utils/htmlProcessor'
 import { FileText, Download } from 'lucide-react'
 
 const AboutPage: React.FC = () => {
@@ -37,21 +37,21 @@ const AboutPage: React.FC = () => {
 
       <div className="content-card">
         <div className="readable-content">
-          <h2>Наша история</h2>
-          {processHtmlContentSimple(aboutData.history?.replace(/\n/g, '<br>') || '')}
+          <h2>{aboutData.sectionTitles?.history || 'Наша история'}</h2>
+          {processHtmlContent(aboutData.history?.replace(/\n/g, '<br>') || '')}
         </div>
       </div>
 
       <div className="content-card">
         <div className="readable-content">
-          <h2>Наша миссия</h2>
-          {processHtmlContentSimple(aboutData.mission?.replace(/\n/g, '<br>') || '')}
+          <h2>{aboutData.sectionTitles?.mission || 'Наша миссия'}</h2>
+          {processHtmlContent(aboutData.mission?.replace(/\n/g, '<br>') || '')}
         </div>
       </div>
 
       <div className="content-card">
         <div className="readable-content">
-          <h2>Направления деятельности</h2>
+          <h2>{aboutData.sectionTitles?.directions || 'Направления деятельности'}</h2>
         </div>
         
         <div className="directions-grid">

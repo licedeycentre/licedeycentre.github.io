@@ -6,7 +6,7 @@ import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
 import { formatDate } from '../utils/dateFormat'
 import { generatePublicationId } from '../utils/slugify'
-import { processHtmlContentSimple } from '../utils/htmlProcessor'
+import { processHtmlContent } from '../utils/htmlProcessor'
 import { PerformanceVideo, VideoGroup as VideoGroupType } from '../types/content'
 import { FileText, Download } from 'lucide-react'
 
@@ -67,8 +67,19 @@ const PublicationPage: React.FC = () => {
           )}
           <h1>{post.title}</h1>
         </header>
+        
+        {/* Обложка публикации */}
+        {post.image && (
+          <div className="publication-cover">
+            <img 
+              src={post.image} 
+              alt={post.title}
+              loading="lazy"
+            />
+          </div>
+        )}
         <article className="detail-content readable-content">
-          {processHtmlContentSimple(post.html || '')}
+          {processHtmlContent(post.html || '')}
         </article>
         
         {/* Кнопка действия */}

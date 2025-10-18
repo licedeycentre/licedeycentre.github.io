@@ -24,7 +24,7 @@ const NavLink: React.FC<{ to: string; children: React.ReactNode; className?: str
 const AboutDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
   const location = useLocation()
-  const closeTimeoutRef = React.useRef<NodeJS.Timeout | null>(null)
+  const closeTimeoutRef = React.useRef<number | null>(null)
   
   const isAboutActive = location.pathname.startsWith('/about')
   
@@ -200,7 +200,7 @@ const AboutDropdown: React.FC = () => {
 const ServicesDropdown: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false)
   const location = useLocation()
-  const closeTimeoutRef = React.useRef<NodeJS.Timeout | null>(null)
+  const closeTimeoutRef = React.useRef<number | null>(null)
   
   const isServicesActive = location.pathname.startsWith('/services')
   
@@ -476,6 +476,7 @@ const MobileNavLink: React.FC<{ to: string; children: React.ReactNode; onClick: 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const media = useMedia()
+  const location = useLocation()
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen)
@@ -493,7 +494,7 @@ const Header: React.FC = () => {
   // Очистка при размонтировании и при переходах между страницами
   React.useEffect(() => {
     return () => {
-      scrollLock.forceUnlock()
+      scrollLock.unlock()
     }
   }, [])
 
@@ -527,6 +528,9 @@ const Header: React.FC = () => {
           {/* Центральная навигация для ПК */}
           <nav className="header-nav" aria-label="Главная навигация">
             <ul className="nav-list">
+              <li className="nav-item">
+                <NavLink to="/">Главная</NavLink>
+              </li>
               <AboutDropdown />
               <ServicesDropdown />
               <li className="nav-item">
@@ -610,6 +614,9 @@ const Header: React.FC = () => {
         <div className="mobile-menu-content">
           <nav className="mobile-nav" aria-label="Мобильная навигация">
             <ul className="mobile-nav-list">
+              <li className="mobile-nav-item">
+                <MobileNavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>Главная</MobileNavLink>
+              </li>
               <MobileAboutDropdown onClose={() => setIsMobileMenuOpen(false)} />
               <MobileServicesDropdown onClose={() => setIsMobileMenuOpen(false)} />
               <li className="mobile-nav-item">

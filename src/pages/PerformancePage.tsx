@@ -8,7 +8,7 @@ import { PerformanceInfoCard } from '../components/PerformanceInfoCard'
 import PageLayout from '../components/PageLayout'
 import { formatShowDate, filterFutureShowDates, sortShowDates, formatLastShowDate } from '../utils/dateFormat'
 import { generatePerformanceId } from '../utils/slugify'
-import { processHtmlContentSimple } from '../utils/htmlProcessor'
+import { processHtmlContent } from '../utils/htmlProcessor'
 import { PerformanceVideo, VideoGroup as VideoGroupType } from '../types/content'
 import { FileText, Download } from 'lucide-react'
 
@@ -70,7 +70,7 @@ const PerformancePage: React.FC = () => {
         {performance.detailedDescription && (
           <div className="content-card">
             <div className="readable-content">
-              {processHtmlContentSimple(performance.detailedDescription || '')}
+              {processHtmlContent(performance.detailedDescription || '')}
             </div>
           </div>
         )}

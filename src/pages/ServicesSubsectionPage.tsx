@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useServices } from '../hooks/useContent'
 import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
-import { processHtmlContentSimple } from '../utils/htmlProcessor'
+import { processHtmlContent } from '../utils/htmlProcessor'
 
 const ServicesSubsectionPage: React.FC = () => {
   const { subsection } = useParams<{ subsection: string }>()
@@ -58,42 +58,15 @@ const ServicesSubsectionPage: React.FC = () => {
   }
 
   const getPageTitle = () => {
-    switch (subsection) {
-      case 'performances':
-        return 'Выступления на заказ'
-      case 'hall':
-        return 'Аренда зала'
-      case 'equipment':
-        return 'Аренда оборудования'
-      default:
-        return subsectionData.title
-    }
+    return subsectionData.seoTitle || subsectionData.title
   }
 
   const getPageDescription = () => {
-    switch (subsection) {
-      case 'performances':
-        return 'Организуем выступления для ваших мероприятий. Корпоративные праздники, частные торжества, городские события.'
-      case 'hall':
-        return 'Аренда театрального зала для проведения мероприятий. Оборудованная сцена, свет, звук, гримерные.'
-      case 'equipment':
-        return 'Аренда профессионального театрального оборудования. Световое, звуковое оборудование, декорации.'
-      default:
-        return subsectionData.title
-    }
+    return subsectionData.seoDescription || subsectionData.title
   }
 
   const getKeywords = () => {
-    switch (subsection) {
-      case 'performances':
-        return 'выступления на заказ, корпоративные мероприятия, частные праздники, театр, Владивосток'
-      case 'hall':
-        return 'аренда зала, театральный зал, аренда сцены, мероприятия, Владивосток'
-      case 'equipment':
-        return 'аренда оборудования, театральное оборудование, свет, звук, декорации, Владивосток'
-      default:
-        return 'услуги, театр, Владивосток'
-    }
+    return subsectionData.seoKeywords || 'услуги, театр, Владивосток'
   }
 
   return (
@@ -113,7 +86,7 @@ const ServicesSubsectionPage: React.FC = () => {
     >
       <div className="content-card">
         <div className="readable-content">
-          {processHtmlContentSimple(subsectionData.content)}
+          {processHtmlContent(subsectionData.content)}
         </div>
       </div>
 

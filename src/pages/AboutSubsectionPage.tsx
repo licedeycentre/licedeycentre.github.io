@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom'
 import { useAbout } from '../hooks/useContent'
 import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
-import { processHtmlContentSimple } from '../utils/htmlProcessor'
+import { processHtmlContent } from '../utils/htmlProcessor'
 import { FileText, Download } from 'lucide-react'
 
 const AboutSubsectionPage: React.FC = () => {
@@ -59,48 +59,15 @@ const AboutSubsectionPage: React.FC = () => {
   }
 
   const getPageTitle = () => {
-    switch (subsection) {
-      case 'studio':
-        return 'Театральная студия «Балаганчик»'
-      case 'inclusive':
-        return 'Инклюзивная театральная студия «Без границ»'
-      case 'theater':
-        return 'Театр Балаган'
-      case 'summer-camp':
-        return 'Летний театральный лагерь'
-      default:
-        return subsectionData.title
-    }
+    return subsectionData.seoTitle || subsectionData.title
   }
 
   const getPageDescription = () => {
-    switch (subsection) {
-      case 'studio':
-        return 'Театральная студия для взрослых и детей. Обучение актерскому мастерству, сценической речи, пластике. Игровые методики, развитие воображения и коммуникативных навыков.'
-      case 'inclusive':
-        return 'Специализированная студия для людей с ограниченными возможностями здоровья. Адаптивные программы, индивидуальный подход, арт-терапия.'
-      case 'theater':
-        return 'Профессиональный театр Балаган. Регулярные показы спектаклей для широкой аудитории. Репертуар для зрителей всех возрастов.'
-      case 'summer-camp':
-        return 'Летний театральный лагерь для детей 6-14 лет. Театральные тренинги, постановка спектаклей, творческие занятия, экскурсии. Дневное пребывание с 5-разовым питанием.'
-      default:
-        return subsectionData.title
-    }
+    return subsectionData.seoDescription || subsectionData.title
   }
 
   const getKeywords = () => {
-    switch (subsection) {
-      case 'studio':
-        return 'театр, студия, актерское мастерство, Владивосток, обучение, театральная студия'
-      case 'inclusive':
-        return 'театр, инклюзия, ОВЗ, адаптивные программы, арт-терапия, Владивосток'
-      case 'theater':
-        return 'театр, Балаган, спектакли, репертуар, Владивосток, театральные постановки'
-      case 'summer-camp':
-        return 'летний лагерь, детский лагерь, театральный лагерь, Владивосток, каникулы, театральная мастерская'
-      default:
-        return 'театр, студия, Владивосток'
-    }
+    return subsectionData.seoKeywords || 'театр, студия, Владивосток'
   }
 
   return (
@@ -120,7 +87,7 @@ const AboutSubsectionPage: React.FC = () => {
     >
       <div className="content-card">
         <div className="readable-content">
-          {processHtmlContentSimple(subsectionData.content)}
+          {processHtmlContent(subsectionData.content)}
         </div>
       </div>
 

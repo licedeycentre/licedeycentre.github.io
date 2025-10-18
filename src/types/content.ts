@@ -153,9 +153,12 @@ export interface ContactSocial {
 
 export interface ContactsData {
   address: string
+  addressDetails?: string
   phones: ContactPhone[]
   email: ContactEmail
   socials: ContactSocial[]
+  mapUrl?: string
+  feedbackFormUrl?: string
 }
 
 // Типы для страницы "О нас"
@@ -169,8 +172,12 @@ export interface AboutDirection {
 
 export interface AboutSubsection {
   title: string
+  seoTitle?: string
+  seoDescription?: string
+  seoKeywords?: string
   content: string
   documents?: Document[]
+  video?: PerformanceVideo
 }
 
 export interface AboutData {
@@ -178,7 +185,14 @@ export interface AboutData {
   leadText: string
   history: string
   mission: string
+  sectionTitles?: {
+    history?: string
+    mission?: string
+    directions?: string
+  }
   documents?: Document[]
+  gallery?: string[]
+  video?: PerformanceVideo
   directions: AboutDirection[]
   subsections?: {
     studio?: AboutSubsection
@@ -188,12 +202,31 @@ export interface AboutData {
 }
 
 // Типы для раздела "Услуги"
+export interface Service {
+  icon: string
+  title: string
+  audience: string
+  description: string
+  link: string
+}
+
 export interface ServicesSubsection {
   title: string
+  seoTitle?: string
+  seoDescription?: string
+  seoKeywords?: string
   content: string
+  video?: PerformanceVideo
 }
 
 export interface ServicesData {
+  introText?: string
+  sectionTitles?: {
+    services?: string
+  }
+  services?: Service[]
+  gallery?: string[]
+  video?: PerformanceVideo
   subsections?: {
     performances?: ServicesSubsection
     hall?: ServicesSubsection
