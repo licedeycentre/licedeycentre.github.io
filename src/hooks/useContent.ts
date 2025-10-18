@@ -7,7 +7,6 @@ import type {
   MediaContent,
   PublicationsData,
   PerformancesData,
-  DocumentsData,
   HeroData,
   MediaData,
   ContactsData,

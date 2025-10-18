@@ -86,9 +86,6 @@ export interface Document {
   url: string
 }
 
-export interface DocumentsData {
-  documents: Document[]
-}
 
 // Типы для героя
 export interface HeroButton {
