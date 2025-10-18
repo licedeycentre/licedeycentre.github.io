@@ -80,9 +80,7 @@ const AboutSubsectionPage: React.FC = () => {
         { label: 'О нас', href: '/about' },
         { label: subsectionData.title }
       ]}
-      actions={subsectionData.contactButton ? [
-        { text: subsectionData.contactButton.text, href: subsectionData.contactButton.href, variant: 'primary' }
-      ] : []}
+      actions={[]}
       centered={false}
     >
       <div className="content-card">
@@ -99,6 +97,18 @@ const AboutSubsectionPage: React.FC = () => {
             title={subsectionData.video.title}
             description={subsectionData.video.description}
           />
+        </div>
+      )}
+
+      {/* Кнопка связаться */}
+      {subsectionData.contactButton && (
+        <div className="page-actions">
+          <Link 
+            to={subsectionData.contactButton.href} 
+            className="btn btn-primary"
+          >
+            {subsectionData.contactButton.text}
+          </Link>
         </div>
       )}
 

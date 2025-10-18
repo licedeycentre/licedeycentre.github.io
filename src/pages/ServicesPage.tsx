@@ -17,9 +17,7 @@ const ServicesPage: React.FC = () => {
         { label: 'Главная', href: '/' },
         { label: 'Услуги' }
       ]}
-      actions={servicesData.contactButton ? [
-        { text: servicesData.contactButton.text, href: servicesData.contactButton.href, variant: 'primary' }
-      ] : []}
+      actions={[]}
       centered={false}
     >
       <div className="content-card">
@@ -60,6 +58,18 @@ const ServicesPage: React.FC = () => {
       {servicesData.gallery && servicesData.gallery.length > 0 && (
         <div className="content-card">
           <ImageGallery images={servicesData.gallery} />
+        </div>
+      )}
+
+      {/* Кнопка связаться */}
+      {servicesData.contactButton && (
+        <div className="page-actions">
+          <Link 
+            to={servicesData.contactButton.href} 
+            className="btn btn-primary"
+          >
+            {servicesData.contactButton.text}
+          </Link>
         </div>
       )}
     </PageLayout>

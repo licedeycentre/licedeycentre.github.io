@@ -19,9 +19,7 @@ const AboutPage: React.FC = () => {
         { label: 'Главная', href: '/' },
         { label: 'О нас' }
       ]}
-      actions={aboutData.contactButton ? [
-        { text: aboutData.contactButton.text, href: aboutData.contactButton.href, variant: 'primary' }
-      ] : []}
+      actions={[]}
       centered={false}
     >
       <div className="content-card">
@@ -86,6 +84,18 @@ const AboutPage: React.FC = () => {
       {aboutData.gallery && aboutData.gallery.length > 0 && (
         <div className="content-card">
           <ImageGallery images={aboutData.gallery} />
+        </div>
+      )}
+
+      {/* Кнопка связаться */}
+      {aboutData.contactButton && (
+        <div className="page-actions">
+          <Link 
+            to={aboutData.contactButton.href} 
+            className="btn btn-primary"
+          >
+            {aboutData.contactButton.text}
+          </Link>
         </div>
       )}
 
