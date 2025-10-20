@@ -16,31 +16,26 @@
   },
   "documents": [
     {
-      "id": "regulations",
       "title": "Правила внутреннего распорядка",
       "description": "Основные правила поведения в центре",
       "url": "/documents/regulations.pdf"
     },
     {
-      "id": "safety-rules",
       "title": "Правила техники безопасности",
       "description": "Меры безопасности при занятиях",
       "url": "/documents/safety-rules.pdf"
     },
     {
-      "id": "program-description",
       "title": "Описание программы обучения",
       "description": "Подробное описание образовательной программы",
       "url": "/documents/program-description.docx"
     },
     {
-      "id": "schedule-template",
       "title": "Шаблон расписания",
       "description": "Excel таблица для планирования занятий",
       "url": "/documents/schedule-template.xlsx"
     },
     {
-      "id": "unknown-format",
       "title": "Документ неизвестного формата",
       "description": "Тест fallback иконки для неизвестного формата",
       "url": "/documents/unknown-file.unknown"
@@ -104,25 +99,21 @@
       },
       "documents": [
         {
-          "id": "schedule",
           "title": "Расписание занятий на сезон 2025/2026",
           "description": "Актуальное расписание всех групп и занятий",
           "url": "/documents/schedule.pdf"
         },
         {
-          "id": "contract",
           "title": "Договор на оказание образовательных услуг",
           "description": "Типовой договор для записи в студию",
           "url": "/documents/contract.pdf"
         },
         {
-          "id": "application-form",
           "title": "Заявление на зачисление",
           "description": "Форма заявления для записи в театральную студию",
           "url": "/documents/application-form.pdf"
         },
         {
-          "id": "medical-certificate",
           "title": "Справка о состоянии здоровья",
           "description": "Образец справки для занятий театральным искусством",
           "url": "/documents/medical-certificate.pdf"
@@ -146,19 +137,16 @@
       },
       "documents": [
         {
-          "id": "schedule-inclusive",
           "title": "Расписание инклюзивной студии",
           "description": "Расписание занятий для инклюзивной студии",
           "url": "/documents/schedule.pdf"
         },
         {
-          "id": "contract-inclusive",
           "title": "Договор для инклюзивной студии",
           "description": "Договор для записи в инклюзивную студию",
           "url": "/documents/contract.pdf"
         },
         {
-          "id": "application-inclusive",
           "title": "Заявление для инклюзивной студии",
           "description": "Заявление для записи в инклюзивную студию",
           "url": "/documents/application-form.pdf"
@@ -182,13 +170,11 @@
       },
       "documents": [
         {
-          "id": "afisha",
           "title": "Афиша спектаклей",
           "description": "Актуальная афиша театра Балаган",
           "url": "/documents/schedule.pdf"
         },
         {
-          "id": "theater-rules",
           "title": "Правила посещения театра",
           "description": "Правила для зрителей театра",
           "url": "/documents/regulations.pdf"
@@ -209,25 +195,21 @@
       },
       "documents": [
         {
-          "id": "schedule-camp",
           "title": "Расписание занятий на сезон 2025/2026",
           "description": "Актуальное расписание всех групп и занятий",
           "url": "/documents/schedule.pdf"
         },
         {
-          "id": "contract-camp",
           "title": "Договор на оказание образовательных услуг",
           "description": "Типовой договор для записи в студию",
           "url": "/documents/contract.pdf"
         },
         {
-          "id": "application-form-camp",
           "title": "Заявление на зачисление",
           "description": "Форма заявления для записи в театральную студию",
           "url": "/documents/application-form.pdf"
         },
         {
-          "id": "medical-certificate-camp",
           "title": "Справка о состоянии здоровья",
           "description": "Образец справки для занятий театральным искусством",
           "url": "/documents/medical-certificate.pdf"

@@ -120,23 +120,4 @@ export function generatePerformanceId(title: string): string {
   return slugify(title)
 }
 
-/**
- * Генерирует ID для элемента с учетом дубликатов
- * При дубликатах последний перезаписывает предыдущий
- */
-export function generateUniqueId<T extends { title: string; date?: string }>(
-  items: T[],
-  generator: (title: string, date?: string) => string
-): string {
-  const usedIds = new Set<string>()
-
-  // Проходим по всем элементам и собираем используемые ID
-  items.forEach(item => {
-    const id = generator(item.title, item.date)
-    usedIds.add(id)
-  })
-
-  // Возвращаем ID последнего элемента (он перезапишет предыдущие)
-  const lastItem = items[items.length - 1]
-  return generator(lastItem.title, lastItem.date)
-}
+// Убраны генерация и нормализация id для документов — ключи считаем на лету

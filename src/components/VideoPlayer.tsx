@@ -47,7 +47,7 @@ export const VideoPlayer: React.FC<VideoPlayerProps> = ({
 
           return (
             <div
-              key={index}
+              key={video.url || String(index)}
               className={`video-player-wrapper ${isVideo ? 'video-player-wrapper--adaptive' : ''}`}
             >
               {youtubeId ? (

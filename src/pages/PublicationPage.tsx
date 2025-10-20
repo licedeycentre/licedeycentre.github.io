@@ -138,9 +138,13 @@ const PublicationPage: React.FC = () => {
             <h2>Документы</h2>
           </div>
           <div className="documents-grid">
-            {post.documents.map(doc => (
+            {post.documents.map((doc, index) => (
               <a
-                key={doc.id}
+                key={
+                  (doc.title && doc.title.replace(/\s+/g, '-')) ||
+                  (doc.url.split('/').pop() || '').replace(/\.[^.]+$/, '') ||
+                  String(index)
+                }
                 href={doc.url}
                 className="document-card"
                 download

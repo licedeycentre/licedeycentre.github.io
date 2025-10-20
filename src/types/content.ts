@@ -80,7 +80,6 @@ export interface PerformancesData {
 
 // Типы для документов
 export interface Document {
-  id: string
   title: string
   description: string
   url: string

@@ -236,7 +236,8 @@ export const useAbout = (): AboutData => {
 
 // Хук для работы с данными страницы "Услуги"
 export const useServices = (): ServicesData => {
-  return servicesData || {}
+  const data = servicesData || {}
+  return data
 }
 
 // Хук для работы с политикой конфиденциальности

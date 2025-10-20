@@ -64,19 +64,16 @@
       "ticketsUrl": "/contacts",
       "documents": [
         {
-          "id": "pustotsvet-script",
           "title": "Сценарий спектакля 'Пустоцвет'",
           "description": "Полный текст сценария спектакля",
           "url": "/documents/pustotsvet-script.pdf"
         },
         {
-          "id": "pustotsvet-director-notes",
           "title": "Режиссерские заметки",
           "description": "Заметки режиссера по постановке спектакля",
           "url": "/documents/pustotsvet-director-notes.pdf"
         },
         {
-          "id": "pustotsvet-costume-design",
           "title": "Эскизы костюмов",
           "description": "Эскизы и описания костюмов персонажей",
           "url": "/documents/pustotsvet-costume-design.pdf"

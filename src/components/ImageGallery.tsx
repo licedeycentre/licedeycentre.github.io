@@ -31,7 +31,7 @@ export const ImageGallery: React.FC<ImageGalleryProps> = ({ images }) => {
       <div className="image-gallery">
         {images.map((image, index) => (
           <div
-            key={index}
+            key={image || String(index)}
             className="gallery-grid-item"
             onClick={() => openLightbox(index)}
             onKeyDown={e => {
