@@ -1,5 +1,5 @@
 import React from 'react'
-import { FileText, FileType, FileSpreadsheet, File } from 'lucide-react'
+import { FileText, FileSpreadsheet, File } from 'lucide-react'
 
 /**
  * Определяет иконку документа на основе расширения файла в URL
@@ -15,7 +15,7 @@ export const getDocumentIcon = (url: string): React.ComponentType<{ size?: numbe
       return FileText
     case 'doc':
     case 'docx':
-      return FileType
+      return FileText
     case 'xls':
     case 'xlsx':
       return FileSpreadsheet
