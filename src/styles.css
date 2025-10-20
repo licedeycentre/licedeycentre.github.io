@@ -3956,6 +3956,9 @@ body.mobile-menu-open {
   flex-shrink: 0;
   color: var(--burgundy);
   transition: color var(--duration-2) var(--easing-standard);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 /* Mobile styles for documents */
@@ -6211,6 +6214,29 @@ body.mobile-menu-open {
   /* === КАРТОЧКИ === */
   .document-card:hover .document-card-action {
     color: var(--burgundy-dark);
+  }
+
+  /* Компактные икон-кнопки для действий в карточке документа */
+  .icon-button {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    color: #ffffff;
+    background: #1f2937;
+    /* тёмно-серый на светлом фоне */
+    text-decoration: none;
+  }
+
+  .icon-button:hover {
+    background: #111827;
+  }
+
+  .icon-button:focus-visible {
+    outline: 2px solid #111827;
+    outline-offset: 2px;
   }
 
   .performance-embedded-item:hover {

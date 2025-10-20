@@ -67,3 +67,22 @@ export const getDocumentType = (url: string): string => {
       return 'Документ'
   }
 }
+
+/**
+ * Формирует URL для предпросмотра документа в новой вкладке.
+ * PDF открываем напрямую; остальные форматы через Google Viewer.
+ */
+export const getDocumentPreviewUrl = (url: string): string => {
+  const extension = url.split('.').pop()?.toLowerCase()
+  if (extension === 'pdf') {
+    return url
+  }
+
+  const base = typeof window !== 'undefined' ? window.location.origin : ''
+  const absolute =
+    url.startsWith('http://') || url.startsWith('https://')
+      ? url
+      : `${base}${url.startsWith('/') ? '' : '/'}${url}`
+
+  return `https://docs.google.com/viewer?embedded=1&url=${encodeURIComponent(absolute)}`
+}

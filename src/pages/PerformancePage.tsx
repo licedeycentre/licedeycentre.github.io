@@ -8,8 +8,8 @@ import { PerformanceInfoCard } from '../components/PerformanceInfoCard'
 import PageLayout from '../components/PageLayout'
 import { processHtmlContent } from '../utils/htmlProcessor'
 import { VideoGroup as VideoGroupType } from '../types/content'
-import { Download } from 'lucide-react'
-import { getDocumentIcon, getDocumentColor } from '../utils/documentIcons'
+import { Download, Eye } from 'lucide-react'
+import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../utils/documentIcons'
 
 const PerformancePage: React.FC = () => {
   const { id } = useParams()
@@ -106,17 +106,13 @@ const PerformancePage: React.FC = () => {
             </div>
             <div className="documents-grid">
               {performance.documents.map((doc, index) => (
-                <a
+                <div
                   key={
                     (doc.title && doc.title.replace(/\s+/g, '-')) ||
                     (doc.url.split('/').pop() || '').replace(/\.[^.]+$/, '') ||
                     String(index)
                   }
-                  href={doc.url}
                   className="document-card"
-                  download
-                  target="_blank"
-                  rel="noopener noreferrer"
                 >
                   <div
                     className="document-card-icon"
@@ -129,9 +125,27 @@ const PerformancePage: React.FC = () => {
                     <p className="document-card-desc">{doc.description}</p>
                   </div>
                   <div className="document-card-action">
-                    <Download size={16} />
+                    <a
+                      className="icon-button"
+                      href={getDocumentPreviewUrl(doc.url)}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="Предпросмотр"
+                      title="Предпросмотр"
+                    >
+                      <Eye size={16} />
+                    </a>
+                    <a
+                      className="icon-button"
+                      href={doc.url}
+                      download
+                      aria-label="Скачать"
+                      title="Скачать"
+                    >
+                      <Download size={16} />
+                    </a>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
           </div>

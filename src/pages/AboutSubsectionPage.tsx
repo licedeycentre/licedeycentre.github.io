@@ -4,8 +4,8 @@ import { useAbout } from '../hooks/useContent'
 import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
 import { processHtmlContent } from '../utils/htmlProcessor'
-import { Download } from 'lucide-react'
-import { getDocumentIcon, getDocumentColor } from '../utils/documentIcons'
+import { Download, Eye } from 'lucide-react'
+import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../utils/documentIcons'
 
 const AboutSubsectionPage: React.FC = () => {
   const { subsection } = useParams<{ subsection?: string }>()
@@ -112,17 +112,13 @@ const AboutSubsectionPage: React.FC = () => {
           </div>
           <div className="documents-grid">
             {subsectionData.documents.map((doc, index) => (
-              <a
+              <div
                 key={
                   (doc.title && doc.title.replace(/\s+/g, '-')) ||
                   (doc.url.split('/').pop() || '').replace(/\.[^.]+$/, '') ||
                   String(index)
                 }
-                href={doc.url}
                 className="document-card"
-                download
-                target="_blank"
-                rel="noopener noreferrer"
               >
                 <div
                   className="document-card-icon"
@@ -135,9 +131,27 @@ const AboutSubsectionPage: React.FC = () => {
                   <p className="document-card-desc">{doc.description}</p>
                 </div>
                 <div className="document-card-action">
-                  <Download size={16} />
+                  <a
+                    className="icon-button"
+                    href={getDocumentPreviewUrl(doc.url)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Предпросмотр"
+                    title="Предпросмотр"
+                  >
+                    <Eye size={16} />
+                  </a>
+                  <a
+                    className="icon-button"
+                    href={doc.url}
+                    download
+                    aria-label="Скачать"
+                    title="Скачать"
+                  >
+                    <Download size={16} />
+                  </a>
                 </div>
-              </a>
+              </div>
             ))}
           </div>
         </div>
