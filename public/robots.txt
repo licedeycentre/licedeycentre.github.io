@@ -1,0 +1,50 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://licedeycentre.github.io/sitemap.xml
+
+# Запрещаем индексацию служебных файлов
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.json$
+Disallow: /*.ts$
+Disallow: /*.tsx$
+Disallow: /package.json
+Disallow: /package-lock.json
+Disallow: /tsconfig.json
+Disallow: /vite.config.ts
+Disallow: /.git/
+Disallow: /.gitignore
+Disallow: /README.md
+Disallow: /TECHNICAL_NOTES.md
+Disallow: /CONTENT_GUIDE.md
+Disallow: /docs/
+
+# Разрешаем индексацию основных страниц
+Allow: /
+Allow: /about
+Allow: /performances
+Allow: /performances/*
+Allow: /publications
+Allow: /publications/*
+Allow: /services
+Allow: /services/*
+Allow: /contacts
+Allow: /privacy-policy
+Allow: /images/
+Allow: /videos/
+Allow: /documents/
+Allow: /favicon.svg
+Allow: /404.html
+
+# Разрешаем индексацию медиафайлов
+Allow: /images/logo.png
+Allow: /images/performances/
+Allow: /images/publications/
+Allow: /images/hero/
+Allow: /videos/
+Allow: /documents/*.pdf
+
+# Crawl-delay для вежливого сканирования
+Crawl-delay: 1
