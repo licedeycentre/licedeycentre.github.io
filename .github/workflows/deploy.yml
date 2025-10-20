@@ -39,14 +39,3 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
 
-name: noop
-
-on:
-  push:
-    branches: [__never__]
-
-jobs:
-  skip:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "deprecated workflow"
