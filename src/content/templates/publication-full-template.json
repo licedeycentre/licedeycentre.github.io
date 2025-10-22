@@ -9,11 +9,19 @@
     "https://i.imgur.com/gallery-image-2.jpeg",
     "https://i.imgur.com/gallery-image-3.jpeg"
   ],
-  "video": {
-    "url": "https://www.youtube.com/watch?v=example",
-    "title": "Название видео",
-    "description": "Описание видео"
-  },
+  "video": [
+    {
+      "title": "Материалы публикации",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=example1"
+        },
+        {
+          "url": "https://rutube.ru/video/example2"
+        }
+      ]
+    }
+  ],
   "button": {
     "text": "Текст кнопки",
     "url": "/performances/example-performance"

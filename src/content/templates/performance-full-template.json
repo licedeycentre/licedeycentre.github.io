@@ -16,11 +16,19 @@
     "https://i.imgur.com/gallery-image-2.jpeg",
     "https://i.imgur.com/gallery-image-3.jpeg"
   ],
-  "video": {
-    "url": "https://www.youtube.com/watch?v=example",
-    "title": "Название видео",
-    "description": "Описание видео"
-  },
+  "video": [
+    {
+      "title": "Материалы спектакля",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/watch?v=example1"
+        },
+        {
+          "url": "https://rutube.ru/video/example2"
+        }
+      ]
+    }
+  ],
   "status": "current",
   "showTicketsButton": true,
   "showDates": [

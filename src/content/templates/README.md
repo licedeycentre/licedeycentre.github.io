@@ -104,11 +104,27 @@ cp src/content/templates/publication-template.json src/content/publications.json
 
 ### Видео
 ```json
+// Одно видео
 "video": {
   "url": "https://www.youtube.com/watch?v=example",
   "title": "Название видео",
   "description": "Описание видео"
 }
+
+// Несколько видео (группы)
+"video": [
+  {
+    "title": "Материалы спектакля",
+    "videos": [
+      {
+        "url": "https://www.youtube.com/watch?v=example1"
+      },
+      {
+        "url": "https://rutube.ru/video/example2"
+      }
+    ]
+  }
+]
 ```
 
 ### Даты показов
