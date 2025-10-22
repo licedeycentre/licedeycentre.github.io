@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useContacts } from '../hooks/useContent'
 import PageLayout from '../components/PageLayout'
 import { MapPin, Phone, Mail, Users } from 'lucide-react'
@@ -6,6 +6,7 @@ import { siTelegram, siTiktok, siVk } from 'simple-icons'
 
 const ContactsPage: React.FC = () => {
   const contactsData = useContacts()
+  const [formError, setFormError] = useState(false)
 
   return (
     <PageLayout
@@ -144,15 +145,40 @@ const ContactsPage: React.FC = () => {
           <h2>Обратная связь</h2>
         </div>
         <div className="yandex-form-container">
-          <iframe
-            src={contactsData.feedbackFormUrl}
-            frameBorder="0"
-            name="ya-form-68e8929a02848f207c913644"
-            width="100%"
-            height="500"
-            title="Форма обратной связи"
-            className="yandex-form-iframe"
-          />
+          {formError ? (
+            <div className="form-fallback">
+              <p>Форма обратной связи временно недоступна. Вы можете связаться с нами:</p>
+              <div className="contact-methods">
+                <p><strong>Телефон:</strong> {contactsData.phones.map(phone => phone.number).join(', ')}</p>
+                <p><strong>Email:</strong> <a href={contactsData.email.href}>{contactsData.email.text}</a></p>
+                <p><strong>Telegram:</strong> <a href={contactsData.socials.find(s => s.name === 'Telegram')?.href} target="_blank" rel="noopener noreferrer">@licedeycentre</a></p>
+              </div>
+              <button 
+                onClick={() => setFormError(false)}
+                className="retry-button"
+              >
+                Попробовать снова
+              </button>
+            </div>
+          ) : (
+            <iframe
+              src={contactsData.feedbackFormUrl}
+              frameBorder="0"
+              name="ya-form-68e8929a02848f207c913644"
+              width="100%"
+              height="500"
+              title="Форма обратной связи"
+              className="yandex-form-iframe"
+              onError={() => {
+                console.warn('Ошибка загрузки формы обратной связи');
+                setFormError(true);
+              }}
+              onLoad={() => {
+                console.log('Форма обратной связи загружена');
+                setFormError(false);
+              }}
+            />
+          )}
         </div>
       </div>
 
