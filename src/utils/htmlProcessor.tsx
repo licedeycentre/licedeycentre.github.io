@@ -1,4 +1,5 @@
 import React from 'react'
+import DOMPurify from 'dompurify'
 
 /**
  * Обрабатывает HTML-контент, заменяя внутренние ссылки на React Router Link компоненты
@@ -22,9 +23,15 @@ export const processHtmlContent = (html: string): JSX.Element => {
     }
   )
 
+  // Санитизируем HTML для безопасности
+  const sanitizedHtml = DOMPurify.sanitize(processedHtml, {
+    ADD_ATTR: ['data-href'], // Разрешаем data-href для внутренних ссылок
+    ADD_TAGS: ['span'], // Разрешаем span для internal-link
+  })
+
   return (
     <div
-      dangerouslySetInnerHTML={{ __html: processedHtml }}
+      dangerouslySetInnerHTML={{ __html: sanitizedHtml }}
       onClick={e => {
         const target = e.target as HTMLElement
         const internalLink = target.closest('.internal-link')

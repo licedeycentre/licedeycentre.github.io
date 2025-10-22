@@ -5,6 +5,7 @@ import { PageTransition } from './components/PageTransition'
 import Header from './components/Header'
 import Footer from './components/Footer'
 import CookieBanner from './components/CookieBanner'
+import ErrorBoundary from './components/ErrorBoundary'
 
 // Импорты страниц
 import HomePage from './pages/HomePage'
@@ -21,29 +22,31 @@ import PrivacyPolicyPage from './pages/PrivacyPolicyPage'
 
 const App: React.FC = () => {
   return (
-    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
-      <div>
-        <ScrollToTop />
-        <Header />
-        <PageTransition>
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/about" element={<AboutPage />} />
-            <Route path="/about/:subsection" element={<AboutSubsectionPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/services/:subsection" element={<ServicesSubsectionPage />} />
-            <Route path="/performances" element={<PerformancesPage />} />
-            <Route path="/performances/:id" element={<PerformancePage />} />
-            <Route path="/contacts" element={<ContactsPage />} />
-            <Route path="/publications" element={<PublicationsPage />} />
-            <Route path="/publications/:id" element={<PublicationPage />} />
-            <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-          </Routes>
-        </PageTransition>
-        <Footer />
-        <CookieBanner />
-      </div>
-    </Router>
+    <ErrorBoundary>
+      <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
+        <div>
+          <ScrollToTop />
+          <Header />
+          <PageTransition>
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/about" element={<AboutPage />} />
+              <Route path="/about/:subsection" element={<AboutSubsectionPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/:subsection" element={<ServicesSubsectionPage />} />
+              <Route path="/performances" element={<PerformancesPage />} />
+              <Route path="/performances/:id" element={<PerformancePage />} />
+              <Route path="/contacts" element={<ContactsPage />} />
+              <Route path="/publications" element={<PublicationsPage />} />
+              <Route path="/publications/:id" element={<PublicationPage />} />
+              <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+            </Routes>
+          </PageTransition>
+          <Footer />
+          <CookieBanner />
+        </div>
+      </Router>
+    </ErrorBoundary>
   )
 }
 

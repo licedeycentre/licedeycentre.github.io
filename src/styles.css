@@ -22,7 +22,9 @@ body {
 .expandable-item {
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .expandable-item.visible {
@@ -34,7 +36,9 @@ body {
 .expandable-item-staggered {
   opacity: 0;
   transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .expandable-item-staggered.visible {
@@ -2569,7 +2573,9 @@ body.mobile-menu-open {
   font-size: 14px;
   opacity: 0;
   transform: translateY(-8px);
-  transition: opacity 0.25s ease 0.1s, transform 0.25s ease 0.1s;
+  transition:
+    opacity 0.25s ease 0.1s,
+    transform 0.25s ease 0.1s;
 }
 
 .faq-item--open .faq-answer p {
@@ -4183,7 +4189,6 @@ body.mobile-menu-open {
 .document-card-desc {
   font-size: 13px;
   -webkit-line-clamp: 2;
-}
 }
 
 @media (max-width: 480px) {
