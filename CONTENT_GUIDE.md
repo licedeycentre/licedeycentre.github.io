@@ -13,14 +13,14 @@
 - `hero.json` - слайды главной страницы
 - `performances.json` - спектакли
 - `publications.json` - публикации и новости
-- `documents.json` - документы
-- `media.json` - медиафайлы
-- `contacts.json` - контактная информация
-- `about.json` - страница "О театре"
+- `about.json` - страница "О нас" (включает документы)
+- `services.json` - услуги (включает документы)
+- `media.json` - медиафайлы и социальные сети
+- `contacts.json` - контактная информация и FAQ
 - `privacy-policy.json` - политика конфиденциальности
 - `seo.json` - SEO метаданные для всех страниц
-- `faq.json` - часто задаваемые вопросы
 - `site.json` - глобальные настройки сайта
+- `ui-labels.json` - тексты интерфейса (кнопки, заголовки)
 
 ## Порядок отображения элементов
 
@@ -243,14 +243,50 @@ public/images/
    - Поддерживаемые форматы: PDF, DOC, DOCX, XLS, XLSX, PPT, PPTX
    - Рекомендуется использовать PDF для лучшей совместимости
 
-2. **Добавьте информацию о документе** в файл `src/content/documents.json`:
+2. **Добавьте информацию о документе** в соответствующий JSON файл страницы:
 
+**Для спектакля** (в `performances.json`):
 ```json
 {
-  "id": "unique-document-id",
-  "title": "Название документа",
-  "description": "Краткое описание документа",
-  "url": "/documents/filename.pdf"
+  "title": "Название спектакля",
+  "documents": [
+    {
+      "title": "Название документа",
+      "description": "Описание документа",
+      "url": "/documents/filename.pdf"
+    }
+  ]
+}
+```
+
+**Для страницы "О нас"** (в `about.json`):
+```json
+{
+  "documents": [
+    {
+      "title": "Название документа",
+      "description": "Описание документа", 
+      "url": "/documents/filename.pdf"
+    }
+  ]
+}
+```
+
+**Для услуг** (в `services.json`):
+```json
+{
+  "services": [
+    {
+      "title": "Название услуги",
+      "documents": [
+        {
+          "title": "Название документа",
+          "description": "Описание документа",
+          "url": "/documents/filename.pdf"
+        }
+      ]
+    }
+  ]
 }
 ```
 

@@ -33,8 +33,15 @@ src/
 ├── content/            # JSON файлы с контентом
 │   ├── performances.json
 │   ├── publications.json
+│   ├── about.json
+│   ├── services.json
+│   ├── contacts.json
 │   ├── hero.json
-│   └── ...
+│   ├── media.json
+│   ├── seo.json
+│   ├── site.json
+│   ├── ui-labels.json
+│   └── privacy-policy.json
 ├── hooks/              # React хуки
 │   └── useContent.ts   # Хук для загрузки контента
 ├── utils/              # Утилиты

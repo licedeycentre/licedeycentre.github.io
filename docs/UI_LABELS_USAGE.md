@@ -24,42 +24,52 @@
 
 ```json
 {
-  "common": {           // Общие метки
+  "common": {           // Общие метки (3)
     "readMore": "Подробнее",
     "download": "Скачать",
-    ...
+    "preview": "Предпросмотр"
   },
-  "navigation": {       // Навигация
+  "navigation": {       // Навигация (6)
     "main": "Главная",
     "about": "О нас",
-    ...
+    "services": "Услуги",
+    "contacts": "Контакты",
+    "publications": "Публикации",
+    "performances": "Спектакли"
   },
-  "sections": {         // Заголовки секций
+  "sections": {         // Заголовки секций (2)
     "video": "Видео",
-    "documents": "Документы",
-    ...
+    "documents": "Документы"
   },
-  "buttons": {          // Кнопки
-    "buyTickets": "Купить билеты",
-    "contact": "Связаться с нами",
-    ...
+  "buttons": {          // Кнопки (2)
+    "showArchivedActors": "Показать всех актёров",
+    "hideArchivedActors": "Скрыть архивных актёров"
   },
-  "footer": {           // Footer
+  "footer": {           // Footer (4)
     "addressTitle": "Адрес",
     "phonesTitle": "Телефоны",
-    ...
+    "emailTitle": "Email",
+    "socialTitle": "Социальные сети"
   },
-  "performance": {      // Спектакли
-    "duration": "Продолжительность",
-    "status": { ... },
-    ...
-  },
-  "ariaLabels": {       // Accessibility
+  "ariaLabels": {       // Accessibility (7)
     "mainNavigation": "Главная навигация",
-    ...
+    "socialNetworks": "Социальные сети",
+    "openMenu": "Открыть меню",
+    "closeMenu": "Закрыть меню",
+    "toHome": "на главную",
+    "aboutSubmenu": "Подразделы О нас",
+    "servicesSubmenu": "Подразделы Услуги"
+  },
+  "cookies": {          // Cookie баннер (4)
+    "title": "Мы используем cookies",
+    "description": "Этот сайт использует cookies для улучшения пользовательского опыта...",
+    "privacyPolicy": "политикой конфиденциальности",
+    "accept": "Принять"
   }
 }
 ```
+
+**Итого:** 28 меток в 7 категориях
 
 ## Как использовать в компонентах
 
@@ -159,15 +169,15 @@ const Footer: React.FC = () => {
 
 ## Категории labels
 
-### `common` - Общие действия
+### `common` - Общие действия (3 метки)
 
 Используется: везде где нужны базовые действия
 
 ```
-readMore, download, preview, close, open, loading, error
+readMore, download, preview
 ```
 
-### `navigation` - Меню навигации
+### `navigation` - Меню навигации (6 меток)
 
 Используется: Header, мобильное меню
 
@@ -175,23 +185,23 @@ readMore, download, preview, close, open, loading, error
 main, about, services, contacts, publications, performances
 ```
 
-### `sections` - Заголовки секций
+### `sections` - Заголовки секций (2 метки)
 
 Используется: страницы контента
 
 ```
-video, documents, gallery, cast, schedule
+video, documents
 ```
 
-### `buttons` - Кнопки действий
+### `buttons` - Кнопки действий (2 метки)
 
-Используется: CTA кнопки, формы
+Используется: специфичные кнопки интерфейса
 
 ```
-buyTickets, contact, showArchivedActors, enroll
+showArchivedActors, hideArchivedActors
 ```
 
-### `footer` - Footer
+### `footer` - Footer (4 метки)
 
 Используется: Footer компонент
 
@@ -199,20 +209,20 @@ buyTickets, contact, showArchivedActors, enroll
 addressTitle, phonesTitle, emailTitle, socialTitle
 ```
 
-### `performance` - Спектакли
-
-Используется: страницы спектаклей, карточки
-
-```
-duration, ageGroup, status.upcoming, notFound
-```
-
-### `ariaLabels` - Accessibility
+### `ariaLabels` - Accessibility (7 меток)
 
 Используется: aria-label атрибуты
 
 ```
-mainNavigation, socialNetworks, openMenu, closeMenu
+mainNavigation, socialNetworks, openMenu, closeMenu, toHome, aboutSubmenu, servicesSubmenu
+```
+
+### `cookies` - Cookie баннер (4 метки)
+
+Используется: CookieBanner компонент
+
+```
+title, description, privacyPolicy, accept
 ```
 
 ## Best Practices
