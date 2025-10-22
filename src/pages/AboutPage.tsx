@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useAbout } from '../hooks/useContent'
+import { useAbout, useUILabels } from '../hooks/useContent'
 import { ImageGallery } from '../components/ImageGallery'
 import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
@@ -10,6 +10,7 @@ import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../uti
 
 const AboutPage: React.FC = () => {
   const aboutData = useAbout()
+  const labels = useUILabels()
 
   return (
     <PageLayout
@@ -96,7 +97,7 @@ const AboutPage: React.FC = () => {
       {aboutData.documents && aboutData.documents.length > 0 && (
         <div className="content-card">
           <div className="readable-content">
-            <h2>Документы</h2>
+            <h2>{labels.sections.documents}</h2>
           </div>
           <div className="documents-grid">
             {aboutData.documents.map((doc, index) => (
@@ -124,8 +125,8 @@ const AboutPage: React.FC = () => {
                     href={getDocumentPreviewUrl(doc.url)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Предпросмотр"
-                    title="Предпросмотр"
+                    aria-label={labels.common.preview}
+                    title={labels.common.preview}
                   >
                     <Eye size={16} />
                   </a>
@@ -133,8 +134,8 @@ const AboutPage: React.FC = () => {
                     className="icon-button"
                     href={doc.url}
                     download
-                    aria-label="Скачать"
-                    title="Скачать"
+                    aria-label={labels.common.download}
+                    title={labels.common.download}
                   >
                     <Download size={16} />
                   </a>

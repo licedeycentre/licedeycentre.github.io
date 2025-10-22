@@ -7,12 +7,14 @@
 ## Зачем это нужно?
 
 ### ✅ Для контент-менеджера:
+
 - Все тексты интерфейса в одном файле
 - Меняешь текст кнопки в одном месте — меняется везде
 - Нет риска сломать код
 - Легко искать и редактировать
 
 ### ✅ Для разработчика:
+
 - Чистый код без хардкода
 - Готовая база для мультиязычности (i18n)
 - Типизация через TypeScript
@@ -120,6 +122,7 @@ const Footer: React.FC = () => {
 **Задача:** Поменять "Купить билеты" на "Приобрести билеты"
 
 **Решение:**
+
 1. Открыть `src/content/ui-labels.json`
 2. Найти `"buttons.buyTickets"`
 3. Изменить значение
@@ -132,8 +135,10 @@ const Footer: React.FC = () => {
 **Задача:** Добавить текст "Загрузить ещё"
 
 **Решение:**
+
 1. Открыть `src/content/ui-labels.json`
 2. Добавить в нужную секцию:
+
 ```json
 {
   "buttons": {
@@ -142,54 +147,70 @@ const Footer: React.FC = () => {
   }
 }
 ```
+
 3. Использовать в компоненте: `labels.buttons.loadMore`
 
 ### Проверить все доступные labels
 
 **Решение:**
+
 - Открыть `src/content/ui-labels.json`
 - Или посмотреть типы в `src/types/content.ts` → `interface UILabels`
 
 ## Категории labels
 
 ### `common` - Общие действия
+
 Используется: везде где нужны базовые действия
+
 ```
 readMore, download, preview, close, open, loading, error
 ```
 
 ### `navigation` - Меню навигации
+
 Используется: Header, мобильное меню
+
 ```
 main, about, services, contacts, publications, performances
 ```
 
 ### `sections` - Заголовки секций
+
 Используется: страницы контента
+
 ```
 video, documents, gallery, cast, schedule
 ```
 
 ### `buttons` - Кнопки действий
+
 Используется: CTA кнопки, формы
+
 ```
 buyTickets, contact, showArchivedActors, enroll
 ```
 
 ### `footer` - Footer
+
 Используется: Footer компонент
+
 ```
 addressTitle, phonesTitle, emailTitle, socialTitle
 ```
 
 ### `performance` - Спектакли
+
 Используется: страницы спектаклей, карточки
+
 ```
 duration, ageGroup, status.upcoming, notFound
 ```
 
 ### `ariaLabels` - Accessibility
+
 Используется: aria-label атрибуты
+
 ```
 mainNavigation, socialNetworks, openMenu, closeMenu
 ```
@@ -197,11 +218,13 @@ mainNavigation, socialNetworks, openMenu, closeMenu
 ## Best Practices
 
 ### ✅ Хорошо:
+
 - Использовать labels для всего видимого пользователю текста
 - Группировать labels логически по секциям
 - Давать понятные имена ключам (`buyTickets` лучше чем `btn1`)
 
 ### ❌ Плохо:
+
 - Хардкодить текст прямо в компоненте
 - Дублировать один и тот же текст в разных местах JSON
 - Смешивать контент и UI labels (контент → отдельные JSON файлы)
@@ -226,11 +249,11 @@ A: В отдельных JSON файлах (`about.json`, `services.json` и т.
 
 **Q: Что делать с динамическим текстом?**  
 A: Использовать шаблоны или интерполяцию:
+
 ```tsx
-`${labels.performance.duration}: ${performance.duration}`
+;`${labels.performance.duration}: ${performance.duration}`
 ```
 
 ---
 
 _Обновлено: Октябрь 2024_
-

@@ -329,14 +329,6 @@ export interface UILabels {
     readMore: string
     download: string
     preview: string
-    close: string
-    open: string
-    showAll: string
-    hideAll: string
-    loading: string
-    error: string
-    noResults: string
-    backToHome: string
   }
   navigation: {
     main: string
@@ -349,54 +341,16 @@ export interface UILabels {
   sections: {
     video: string
     documents: string
-    gallery: string
-    detailedDescription: string
-    cast: string
-    schedule: string
-    ourServices: string
-    ourHistory: string
   }
   buttons: {
-    buyTickets: string
-    getTickets: string
-    contact: string
-    aboutUs: string
     showArchivedActors: string
     hideArchivedActors: string
-    watchSchedule: string
-    enroll: string
-    enrollCamp: string
-    aboutStudio: string
-    aboutCamp: string
   }
   footer: {
     addressTitle: string
     phonesTitle: string
     emailTitle: string
     socialTitle: string
-    navigation: string
-    quickLinks: string
-    privacyPolicy: string
-  }
-  performance: {
-    duration: string
-    ageGroup: string
-    creators: string
-    notFound: string
-    notFoundDescription: string
-    status: {
-      upcoming: string
-      planned: string
-      finished: string
-      development: string
-      archived: string
-    }
-  }
-  publication: {
-    notFound: string
-    notFoundDescription: string
-    allPublications: string
-    backToPublications: string
   }
   ariaLabels: {
     mainNavigation: string

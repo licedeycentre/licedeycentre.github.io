@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useUILabels } from '../hooks/useContent'
 
 const CookieBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false)
+  const labels = useUILabels()
 
   useEffect(() => {
     // Проверяем, было ли уже дано согласие
@@ -36,18 +38,15 @@ const CookieBanner: React.FC = () => {
       <div className="cookie-banner__content">
         <div className="cookie-banner__text">
           <p>
-            Мы используем cookies, Яндекс.Метрику и другие средства аналитики для улучшения работы
-            сайта. Cookies сохраняют информацию о взаимодействии с сайтом, включая IP-адрес, браузер
-            и ОС. Данные обрабатываются на территории РФ в соответствии с законодательством.
-            Продолжая пользоваться сайтом, вы соглашаетесь с использованием cookies и{' '}
+            {labels.cookies.description}{' '}
             <Link to="/privacy-policy" className="cookie-banner__link">
-              политикой конфиденциальности
+              {labels.cookies.privacyPolicy}
             </Link>
             .
           </p>
         </div>
         <button className="btn-primary" onClick={handleAccept} type="button">
-          Принять
+          {labels.cookies.accept}
         </button>
       </div>
     </div>

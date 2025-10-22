@@ -2,15 +2,7 @@
   "common": {
     "readMore": "Подробнее",
     "download": "Скачать",
-    "preview": "Предпросмотр",
-    "close": "Закрыть",
-    "open": "Открыть",
-    "showAll": "Показать всех",
-    "hideAll": "Скрыть",
-    "loading": "Загрузка...",
-    "error": "Ошибка",
-    "noResults": "Ничего не найдено",
-    "backToHome": "На главную"
+    "preview": "Предпросмотр"
   },
   "navigation": {
     "main": "Главная",
@@ -22,55 +14,17 @@
   },
   "sections": {
     "video": "Видео",
-    "documents": "Документы",
-    "gallery": "Галерея",
-    "detailedDescription": "Подробное описание",
-    "cast": "Действующие лица",
-    "schedule": "Расписание показов",
-    "ourServices": "Наши услуги",
-    "ourHistory": "Наша история"
+    "documents": "Документы"
   },
   "buttons": {
-    "buyTickets": "Купить билеты",
-    "getTickets": "Приобрести билеты",
-    "contact": "Связаться с нами",
-    "aboutUs": "О нас",
     "showArchivedActors": "Показать всех актёров",
-    "hideArchivedActors": "Скрыть архивных актёров",
-    "watchSchedule": "Смотреть Афишу",
-    "enroll": "Записаться на занятия",
-    "enrollCamp": "Записаться в лагерь",
-    "aboutStudio": "О студии",
-    "aboutCamp": "Подробнее о лагере"
+    "hideArchivedActors": "Скрыть архивных актёров"
   },
   "footer": {
     "addressTitle": "Адрес",
     "phonesTitle": "Телефоны",
     "emailTitle": "Email",
-    "socialTitle": "Социальные сети",
-    "navigation": "Навигация",
-    "quickLinks": "Быстрые ссылки",
-    "privacyPolicy": "Политика конфиденциальности"
-  },
-  "performance": {
-    "duration": "Продолжительность",
-    "ageGroup": "Возраст",
-    "creators": "Создатели",
-    "notFound": "Спектакль не найден",
-    "notFoundDescription": "Запрашиваемый спектакль не найден.",
-    "status": {
-      "upcoming": "Скоро",
-      "planned": "Планируется в сезоне",
-      "finished": "Показ завершён",
-      "development": "Созревает к показу",
-      "archived": "Архив"
-    }
-  },
-  "publication": {
-    "notFound": "Публикация не найдена",
-    "notFoundDescription": "Запрашиваемая публикация не найдена.",
-    "allPublications": "Все публикации",
-    "backToPublications": "← Все публикации"
+    "socialTitle": "Социальные сети"
   },
   "ariaLabels": {
     "mainNavigation": "Главная навигация",

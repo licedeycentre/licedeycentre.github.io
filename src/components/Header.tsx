@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { useMedia } from '../hooks/useContent'
+import { useMedia, useUILabels } from '../hooks/useContent'
 import { siTelegram, siTiktok, siVk } from 'simple-icons'
 import { scrollLock } from '../utils/scrollLock'
 import { ChevronDown } from 'lucide-react'
@@ -489,6 +489,7 @@ const MobileNavLink: React.FC<{ to: string; children: React.ReactNode; onClick: 
 const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = React.useState(false)
   const media = useMedia()
+  const labels = useUILabels()
   const location = useLocation()
 
   const toggleMobileMenu = () => {
@@ -539,21 +540,21 @@ const Header: React.FC = () => {
           </div>
 
           {/* Центральная навигация для ПК */}
-          <nav className="header-nav" aria-label="Главная навигация">
+          <nav className="header-nav" aria-label={labels.ariaLabels.mainNavigation}>
             <ul className="nav-list">
               <li className="nav-item">
-                <NavLink to="/">Главная</NavLink>
+                <NavLink to="/">{labels.navigation.main}</NavLink>
               </li>
               <AboutDropdown />
               <ServicesDropdown />
               <li className="nav-item">
-                <NavLink to="/contacts">Контакты</NavLink>
+                <NavLink to="/contacts">{labels.navigation.contacts}</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/publications">Публикации</NavLink>
+                <NavLink to="/publications">{labels.navigation.publications}</NavLink>
               </li>
               <li className="nav-item">
-                <NavLink to="/performances">Спектакли</NavLink>
+                <NavLink to="/performances">{labels.navigation.performances}</NavLink>
               </li>
             </ul>
           </nav>
@@ -665,24 +666,24 @@ const Header: React.FC = () => {
             <ul className="mobile-nav-list">
               <li className="mobile-nav-item">
                 <MobileNavLink to="/" onClick={() => setIsMobileMenuOpen(false)}>
-                  Главная
+                  {labels.navigation.main}
                 </MobileNavLink>
               </li>
               <MobileAboutDropdown onClose={() => setIsMobileMenuOpen(false)} />
               <MobileServicesDropdown onClose={() => setIsMobileMenuOpen(false)} />
               <li className="mobile-nav-item">
                 <MobileNavLink to="/contacts" onClick={() => setIsMobileMenuOpen(false)}>
-                  Контакты
+                  {labels.navigation.contacts}
                 </MobileNavLink>
               </li>
               <li className="mobile-nav-item">
                 <MobileNavLink to="/publications" onClick={() => setIsMobileMenuOpen(false)}>
-                  Публикации
+                  {labels.navigation.publications}
                 </MobileNavLink>
               </li>
               <li className="mobile-nav-item">
                 <MobileNavLink to="/performances" onClick={() => setIsMobileMenuOpen(false)}>
-                  Спектакли
+                  {labels.navigation.performances}
                 </MobileNavLink>
               </li>
             </ul>

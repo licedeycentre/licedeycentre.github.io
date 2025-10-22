@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
-import { usePerformance } from '../hooks/useContent'
+import { usePerformance, useUILabels } from '../hooks/useContent'
 import { ImageGallery } from '../components/ImageGallery'
 import { VideoPlayer } from '../components/VideoPlayer'
 import { Slider } from '../components/Slider'
@@ -14,6 +14,7 @@ import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../uti
 const PerformancePage: React.FC = () => {
   const { id } = useParams()
   const performance = usePerformance(id || '')
+  const labels = useUILabels()
   const [showAllActors, setShowAllActors] = React.useState(false)
 
   // Проверяем, есть ли архивные актёры
@@ -122,12 +123,12 @@ const PerformancePage: React.FC = () => {
                     {showAllActors ? (
                       <>
                         <ChevronUp size={16} />
-                        Скрыть архивных актёров
+                        {labels.buttons.hideArchivedActors}
                       </>
                     ) : (
                       <>
                         <ChevronDown size={16} />
-                        Показать всех актёров
+                        {labels.buttons.showArchivedActors}
                       </>
                     )}
                   </button>
@@ -164,7 +165,7 @@ const PerformancePage: React.FC = () => {
         {performance.documents && performance.documents.length > 0 && (
           <div className="content-card">
             <div className="readable-content">
-              <h2>Документы</h2>
+              <h2>{labels.sections.documents}</h2>
             </div>
             <div className="documents-grid">
               {performance.documents.map((doc, index) => (
@@ -192,8 +193,8 @@ const PerformancePage: React.FC = () => {
                       href={getDocumentPreviewUrl(doc.url)}
                       target="_blank"
                       rel="noopener noreferrer"
-                      aria-label="Предпросмотр"
-                      title="Предпросмотр"
+                      aria-label={labels.common.preview}
+                      title={labels.common.preview}
                     >
                       <Eye size={16} />
                     </a>
@@ -201,8 +202,8 @@ const PerformancePage: React.FC = () => {
                       className="icon-button"
                       href={doc.url}
                       download
-                      aria-label="Скачать"
-                      title="Скачать"
+                      aria-label={labels.common.download}
+                      title={labels.common.download}
                     >
                       <Download size={16} />
                     </a>

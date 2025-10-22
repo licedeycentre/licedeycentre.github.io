@@ -1,6 +1,6 @@
 import React from 'react'
 import { useParams, Link } from 'react-router-dom'
-import { useAbout } from '../hooks/useContent'
+import { useAbout, useUILabels } from '../hooks/useContent'
 import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
 import { processHtmlContent } from '../utils/htmlProcessor'
@@ -10,6 +10,7 @@ import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../uti
 const AboutSubsectionPage: React.FC = () => {
   const { subsection } = useParams<{ subsection?: string }>()
   const aboutData = useAbout()
+  const labels = useUILabels()
 
   if (!subsection || !aboutData?.subsections) {
     return (
@@ -108,7 +109,7 @@ const AboutSubsectionPage: React.FC = () => {
       {subsectionData.documents && subsectionData.documents.length > 0 && (
         <div className="content-card">
           <div className="readable-content">
-            <h2>Документы</h2>
+            <h2>{labels.sections.documents}</h2>
           </div>
           <div className="documents-grid">
             {subsectionData.documents.map((doc, index) => (
@@ -136,8 +137,8 @@ const AboutSubsectionPage: React.FC = () => {
                     href={getDocumentPreviewUrl(doc.url)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label="Предпросмотр"
-                    title="Предпросмотр"
+                    aria-label={labels.common.preview}
+                    title={labels.common.preview}
                   >
                     <Eye size={16} />
                   </a>
@@ -145,8 +146,8 @@ const AboutSubsectionPage: React.FC = () => {
                     className="icon-button"
                     href={doc.url}
                     download
-                    aria-label="Скачать"
-                    title="Скачать"
+                    aria-label={labels.common.download}
+                    title={labels.common.download}
                   >
                     <Download size={16} />
                   </a>
