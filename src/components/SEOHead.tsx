@@ -5,7 +5,6 @@ import {
   generatePerformanceStructuredData,
   generatePublicationStructuredData,
   generateBreadcrumbStructuredData,
-  generateFAQStructuredData,
   generateLocalBusinessStructuredData,
 } from '../utils/structuredData'
 
@@ -26,7 +25,6 @@ interface SEOHeadProps {
   performance?: Performance
   publication?: Publication
   breadcrumbs?: Array<{ name: string; url: string }>
-  faqs?: Array<{ question: string; answer: string }>
   showLocalBusiness?: boolean
 }
 
@@ -47,7 +45,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   performance,
   publication,
   breadcrumbs,
-  faqs,
   showLocalBusiness = false,
 }) => {
   const seoData = useSEO()
@@ -85,9 +82,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     additionalStructuredData.push(generateBreadcrumbStructuredData(breadcrumbs))
   }
 
-  if (faqs && faqs.length > 0) {
-    additionalStructuredData.push(generateFAQStructuredData(faqs))
-  }
 
   if (showLocalBusiness) {
     additionalStructuredData.push(generateLocalBusinessStructuredData())

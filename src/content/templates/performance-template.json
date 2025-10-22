@@ -1,0 +1,15 @@
+{
+    "_comment": "Минимальный шаблон для создания нового спектакля. Заполните обязательные поля и удалите комментарии.",
+    "title": "Название спектакля",
+    "duration": "1 час 30 минут",
+    "ageGroup": "12+",
+    "description": "Краткое описание спектакля для карточки",
+    "creators": "Режиссёр: Имя Фамилия, Сценарист: Имя Фамилия",
+    "image": "https://i.imgur.com/example-image.jpeg",
+    "status": "current",
+    "_statusComment": "Возможные значения: current (текущий), planned (запланированный), development (в разработке), archived (архивный)",
+    "showTicketsButton": true,
+    "_showTicketsButtonComment": "Показывать ли кнопку 'Приобрести билеты'",
+    "ticketsUrl": "/contacts",
+    "_ticketsUrlComment": "Ссылка для покупки билетов. Если не указана, будет ссылка на контакты"
+}

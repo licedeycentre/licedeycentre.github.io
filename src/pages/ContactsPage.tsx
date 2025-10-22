@@ -1,13 +1,11 @@
 import React from 'react'
-import { useContacts, useFAQ } from '../hooks/useContent'
+import { useContacts } from '../hooks/useContent'
 import PageLayout from '../components/PageLayout'
 import { MapPin, Phone, Mail, Users } from 'lucide-react'
 import { siTelegram, siTiktok, siVk } from 'simple-icons'
-import { FAQAccordion } from '../components/FAQAccordion'
 
 const ContactsPage: React.FC = () => {
   const contactsData = useContacts()
-  const faqData = useFAQ()
 
   return (
     <PageLayout
@@ -158,13 +156,6 @@ const ContactsPage: React.FC = () => {
         </div>
       </div>
 
-      {/* FAQ Section */}
-      <div className="content-card">
-        <div className="readable-content">
-          <h2>Часто задаваемые вопросы</h2>
-        </div>
-        <FAQAccordion items={faqData.faq} />
-      </div>
     </PageLayout>
   )
 }

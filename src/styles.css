@@ -139,6 +139,7 @@ textarea {
 
 /* Особые случаи для мобильных */
 @media (max-width: 768px) {
+
   /* Принудительный перенос для всех элементов */
   * {
     word-wrap: break-word;
@@ -316,6 +317,7 @@ body {
 
 /* Mobile touch improvements */
 @media (hover: none) and (pointer: coarse) {
+
   /* Улучшения для touch-устройств */
   .nav-link,
   .mobile-nav-link,
@@ -806,6 +808,7 @@ body.mobile-menu-open {
 
 /* Поддержка reduced motion */
 @media (prefers-reduced-motion: reduce) {
+
   .dropdown-menu,
   .dropdown-item,
   .dropdown-icon,
@@ -1083,14 +1086,6 @@ body.mobile-menu-open {
     justify-content: center;
   }
 
-  .faq-list {
-    flex-direction: column;
-    gap: 14px;
-  }
-
-  .faq-column {
-    gap: 14px;
-  }
 }
 
 /* Mobile landscape and small tablets */
@@ -1905,7 +1900,7 @@ body.mobile-menu-open {
 /* Декоративные разделители между секциями убраны */
 
 /* Дополнительные отступы между секциями */
-.section + .section {
+.section+.section {
   margin-top: 40px;
 }
 
@@ -2013,12 +2008,12 @@ body.mobile-menu-open {
 }
 
 /* Стили для заголовков вне .content-text (для обратной совместимости) */
-.content-card > h1,
-.content-card > h2,
-.content-card > h3,
-.content-card > h4,
-.content-card > h5,
-.content-card > h6 {
+.content-card>h1,
+.content-card>h2,
+.content-card>h3,
+.content-card>h4,
+.content-card>h5,
+.content-card>h6 {
   margin-bottom: 24px;
   font-size: 28px;
   font-weight: 500;
@@ -2494,92 +2489,13 @@ body.mobile-menu-open {
   outline-offset: 2px;
 }
 
-@media (hover: hover) and (pointer: fine) {
-}
+@media (hover: hover) and (pointer: fine) {}
 
 .hero-arrow:active:not(.hero-arrow--disabled) {
   transform: translateY(-50%) scale(0.95);
 }
 
 /* Навигация теперь всегда видна */
-
-/* FAQ */
-.faq-list {
-  display: flex;
-  gap: 16px;
-}
-
-.faq-column {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-.faq-item {
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  background: var(--white);
-  box-shadow: var(--shadow);
-  overflow: hidden;
-  transition: box-shadow var(--duration-2) var(--easing-standard);
-}
-
-.faq-question {
-  width: 100%;
-  padding: 16px 20px;
-  font-weight: 600;
-  font-size: 15px;
-  color: var(--text);
-  cursor: pointer;
-  background: transparent;
-  border: none;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  transition: all var(--duration-2) var(--easing-standard);
-}
-
-.faq-question:hover {
-  background: var(--surface);
-  color: var(--burgundy);
-}
-
-.faq-icon {
-  flex-shrink: 0;
-  color: var(--burgundy);
-  transition: transform var(--duration-2) var(--easing-standard);
-}
-
-.faq-item--open .faq-icon {
-  transform: rotate(180deg);
-}
-
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.faq-answer p {
-  padding: 0 20px 16px 20px;
-  margin: 0;
-  color: var(--muted);
-  line-height: 1.6;
-  font-size: 14px;
-  opacity: 0;
-  transform: translateY(-8px);
-  transition:
-    opacity 0.25s ease 0.1s,
-    transform 0.25s ease 0.1s;
-}
-
-.faq-item--open .faq-answer p {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 .map-wrap {
   margin-top: 10px;
@@ -4641,6 +4557,7 @@ body.mobile-menu-open {
 
 /* Исправление переноса длинных слов на мобильных */
 @media (max-width: 768px) {
+
   /* Принудительный перенос длинных слов */
   p,
   h1,
@@ -4669,6 +4586,7 @@ body.mobile-menu-open {
 
 /* Мобильные адаптации */
 @media (max-width: 768px) {
+
   .nav-arrow--hero,
   .nav-arrow--gallery {
     width: 48px;
@@ -4799,8 +4717,7 @@ body.mobile-menu-open {
 }
 
 /* Hover эффекты для десктопа */
-@media (hover: hover) and (pointer: fine) {
-}
+@media (hover: hover) and (pointer: fine) {}
 
 /* Мобильные адаптации */
 @media (max-width: 768px) {
@@ -4885,8 +4802,7 @@ body.mobile-menu-open {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {
-}
+@media (hover: hover) and (pointer: fine) {}
 
 /* Ссылка "Как добраться" */
 
@@ -5609,23 +5525,6 @@ body.mobile-menu-open {
     padding: 6px 12px;
   }
 
-  .faq-list {
-    gap: 12px;
-  }
-
-  .faq-column {
-    gap: 12px;
-  }
-
-  .faq-question {
-    padding: 12px 16px;
-    font-size: 14px;
-  }
-
-  .faq-answer p {
-    padding: 0 16px 12px 16px;
-    font-size: 13px;
-  }
 
   .contact-info-item {
     padding: 12px 14px;
@@ -5726,23 +5625,6 @@ body.mobile-menu-open {
     padding: 5px 10px;
   }
 
-  .faq-list {
-    gap: 10px;
-  }
-
-  .faq-column {
-    gap: 10px;
-  }
-
-  .faq-question {
-    padding: 10px 14px;
-    font-size: 13px;
-  }
-
-  .faq-answer p {
-    padding: 0 14px 10px 14px;
-    font-size: 12px;
-  }
 
   .contact-info-item {
     padding: 10px 12px;
@@ -6103,6 +5985,7 @@ body.mobile-menu-open {
 
 /* Улучшенные переходы для мобильных устройств */
 @media (max-width: 768px) {
+
   /* Карточки публикаций уже вертикальные - адаптируем размеры */
   .publication-card {
     height: auto;
@@ -6222,6 +6105,7 @@ body.mobile-menu-open {
 
 /* ===== HOVER ЭФФЕКТЫ (только для устройств с точным указателем) ===== */
 @media (hover: hover) and (pointer: fine) {
+
   /* === НАВИГАЦИЯ === */
   .nav-link:hover {
     background: rgba(255, 255, 255, 0.12);
@@ -6481,9 +6365,6 @@ body.mobile-menu-open {
     border-color: rgba(90, 10, 22, 0.2);
   }
 
-  .faq-item:hover {
-    box-shadow: 0 2px 8px rgba(90, 10, 22, 0.08);
-  }
 
   .document-link:hover .document-link-action {
     opacity: 1;
@@ -6620,6 +6501,7 @@ body.mobile-menu-open {
 
   /* Адаптивность для новых элементов */
   @media (max-width: 768px) {
+
     .tags-toggle-button,
     .tags-dropdown-button {
       padding: 6px 12px;
@@ -6731,7 +6613,7 @@ body.mobile-menu-open {
     max-height: 80vh;
   }
 
-  .video-player-wrapper > div {
+  .video-player-wrapper>div {
     position: absolute;
     top: 0;
     left: 0;

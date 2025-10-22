@@ -161,7 +161,6 @@ export interface ContactsData {
   socials: ContactSocial[]
   mapUrl?: string
   feedbackFormUrl?: string
-  faq?: FAQItem[]
 }
 
 // Типы для страницы "О нас"
@@ -293,15 +292,6 @@ export interface SEOData {
   }
 }
 
-// Типы для FAQ
-export interface FAQItem {
-  question: string
-  answer: string
-}
-
-export interface FAQData {
-  faq: FAQItem[]
-}
 
 // Типы для глобальных настроек сайта
 export interface SiteData {

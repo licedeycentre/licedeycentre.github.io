@@ -2,41 +2,36 @@
   "address": "Владивосток, ул. Бородинская 15Б",
   "addressDetails": "парк «Солнышко», вверх по лестнице — второй этаж",
   "phones": [
-    { "number": "8 914 712-69-52 (Ольга)", "href": "tel:+79147126952" },
-    { "number": "8 914 734-70-10 (Евгения)", "href": "tel:+79147347010" }
+    {
+      "number": "8 914 712-69-52 (Ольга)",
+      "href": "tel:+79147126952"
+    },
+    {
+      "number": "8 914 734-70-10 (Евгения)",
+      "href": "tel:+79147347010"
+    }
   ],
-  "email": { "text": "nko.licedey@list.ru", "href": "mailto:nko.licedey@list.ru" },
+  "email": {
+    "text": "nko.licedey@list.ru",
+    "href": "mailto:nko.licedey@list.ru"
+  },
   "socials": [
-    { "name": "Telegram", "href": "https://t.me/licedeycentre", "icon": "siTelegram" },
-    { "name": "TikTok", "href": "https://www.tiktok.com/@licedeycentre", "icon": "siTiktok" },
-    { "name": "VK", "href": "https://vk.com/licedeycentre", "icon": "siVk" }
+    {
+      "name": "Telegram",
+      "href": "https://t.me/licedeycentre",
+      "icon": "siTelegram"
+    },
+    {
+      "name": "TikTok",
+      "href": "https://www.tiktok.com/@licedeycentre",
+      "icon": "siTiktok"
+    },
+    {
+      "name": "VK",
+      "href": "https://vk.com/licedeycentre",
+      "icon": "siVk"
+    }
   ],
   "mapUrl": "https://yandex.ru/map-widget/v1/?um=constructor%3A&ll=131.919513%2C43.165880&z=16&pt=131.919513,43.165880,pm2rdm",
-  "feedbackFormUrl": "https://forms.yandex.ru/cloud/68e8929a02848f207c913644?iframe=1",
-  "faq": [
-    {
-      "question": "Кто может прийти заниматься?",
-      "answer": "Мы открыты для всех, кто хочет развиваться через театр и творчество. У нас есть группы для детей от 3 лет, подростков и взрослых."
-    },
-    {
-      "question": "Нужна ли предварительная запись?",
-      "answer": "Да, рекомендуем предварительно связаться с нами по телефону или в соцсетях. Мы подскажем актуальную информацию."
-    },
-    {
-      "question": "Какова стоимость занятий?",
-      "answer": "На момент 2025/2026: Абонемент на месяц — 6500₽. Разовое посещение — 700₽. Пробное занятие — бесплатно! Действуют скидки для многодетных семей (25%) и при записи нескольких членов семьи (10%)."
-    },
-    {
-      "question": "Что нужно для занятий?",
-      "answer": "Удобная одежда и обувь (идеально — чешки и трико). Хорошее настроение и желание творить!"
-    },
-    {
-      "question": "Участвуют ли студийцы в спектаклях?",
-      "answer": "Обязательно! Постановка спектаклей — важная часть обучения. Выступления проходят на различных площадках и фестивалях."
-    },
-    {
-      "question": "Какие направления входят в обучение?",
-      "answer": "Актерское мастерство, сценическая речь, сценическое движение, вокал, хореография, история театра. Также есть бутафорская мастерская."
-    }
-  ]
+  "feedbackFormUrl": "https://forms.yandex.ru/cloud/68e8929a02848f207c913644?iframe=1"
 }

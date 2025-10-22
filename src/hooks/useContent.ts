@@ -8,7 +8,6 @@ import type {
   ServicesData,
   LegalPageData,
   SEOData,
-  FAQData,
   SiteData,
   UILabels,
   PerformanceStatusType,
@@ -267,11 +266,6 @@ export const useSEO = (): SEOData => {
   )
 }
 
-// Хук для работы с FAQ (теперь из контактов)
-export const useFAQ = (): FAQData => {
-  const contacts = useContacts()
-  return { faq: contacts.faq || [] }
-}
 
 // Хук для работы с глобальными настройками сайта
 export const useSite = (): SiteData => {
