@@ -139,7 +139,6 @@ textarea {
 
 /* Особые случаи для мобильных */
 @media (max-width: 768px) {
-
   /* Принудительный перенос для всех элементов */
   * {
     word-wrap: break-word;
@@ -317,7 +316,6 @@ body {
 
 /* Mobile touch improvements */
 @media (hover: none) and (pointer: coarse) {
-
   /* Улучшения для touch-устройств */
   .nav-link,
   .mobile-nav-link,
@@ -808,7 +806,6 @@ body.mobile-menu-open {
 
 /* Поддержка reduced motion */
 @media (prefers-reduced-motion: reduce) {
-
   .dropdown-menu,
   .dropdown-item,
   .dropdown-icon,
@@ -1908,7 +1905,7 @@ body.mobile-menu-open {
 /* Декоративные разделители между секциями убраны */
 
 /* Дополнительные отступы между секциями */
-.section+.section {
+.section + .section {
   margin-top: 40px;
 }
 
@@ -2016,12 +2013,12 @@ body.mobile-menu-open {
 }
 
 /* Стили для заголовков вне .content-text (для обратной совместимости) */
-.content-card>h1,
-.content-card>h2,
-.content-card>h3,
-.content-card>h4,
-.content-card>h5,
-.content-card>h6 {
+.content-card > h1,
+.content-card > h2,
+.content-card > h3,
+.content-card > h4,
+.content-card > h5,
+.content-card > h6 {
   margin-bottom: 24px;
   font-size: 28px;
   font-weight: 500;
@@ -2497,7 +2494,8 @@ body.mobile-menu-open {
   outline-offset: 2px;
 }
 
-@media (hover: hover) and (pointer: fine) {}
+@media (hover: hover) and (pointer: fine) {
+}
 
 .hero-arrow:active:not(.hero-arrow--disabled) {
   transform: translateY(-50%) scale(0.95);
@@ -4643,7 +4641,6 @@ body.mobile-menu-open {
 
 /* Исправление переноса длинных слов на мобильных */
 @media (max-width: 768px) {
-
   /* Принудительный перенос длинных слов */
   p,
   h1,
@@ -4672,7 +4669,6 @@ body.mobile-menu-open {
 
 /* Мобильные адаптации */
 @media (max-width: 768px) {
-
   .nav-arrow--hero,
   .nav-arrow--gallery {
     width: 48px;
@@ -4803,7 +4799,8 @@ body.mobile-menu-open {
 }
 
 /* Hover эффекты для десктопа */
-@media (hover: hover) and (pointer: fine) {}
+@media (hover: hover) and (pointer: fine) {
+}
 
 /* Мобильные адаптации */
 @media (max-width: 768px) {
@@ -4888,7 +4885,8 @@ body.mobile-menu-open {
   }
 }
 
-@media (hover: hover) and (pointer: fine) {}
+@media (hover: hover) and (pointer: fine) {
+}
 
 /* Ссылка "Как добраться" */
 
@@ -6105,7 +6103,6 @@ body.mobile-menu-open {
 
 /* Улучшенные переходы для мобильных устройств */
 @media (max-width: 768px) {
-
   /* Карточки публикаций уже вертикальные - адаптируем размеры */
   .publication-card {
     height: auto;
@@ -6225,7 +6222,6 @@ body.mobile-menu-open {
 
 /* ===== HOVER ЭФФЕКТЫ (только для устройств с точным указателем) ===== */
 @media (hover: hover) and (pointer: fine) {
-
   /* === НАВИГАЦИЯ === */
   .nav-link:hover {
     background: rgba(255, 255, 255, 0.12);
@@ -6624,7 +6620,6 @@ body.mobile-menu-open {
 
   /* Адаптивность для новых элементов */
   @media (max-width: 768px) {
-
     .tags-toggle-button,
     .tags-dropdown-button {
       padding: 6px 12px;
@@ -6736,7 +6731,7 @@ body.mobile-menu-open {
     max-height: 80vh;
   }
 
-  .video-player-wrapper>div {
+  .video-player-wrapper > div {
     position: absolute;
     top: 0;
     left: 0;

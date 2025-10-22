@@ -39,6 +39,7 @@ export interface ShowDate {
 export interface CastMember {
   role: string // Название роли
   actors: string[] // Массив актёров
+  archivedActors?: string[] // Массив архивных актёров (опционально)
 }
 
 // Тип для видео спектакля

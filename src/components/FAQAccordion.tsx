@@ -55,7 +55,9 @@ export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
             </button>
 
             <div
-              ref={el => (contentRefs.current[globalIndex] = el)}
+              ref={el => {
+                contentRefs.current[globalIndex] = el
+              }}
               className="faq-answer"
               id={`faq-answer-${globalIndex}`}
               aria-hidden={!isOpen}

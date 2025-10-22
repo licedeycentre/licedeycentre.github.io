@@ -6,7 +6,7 @@ import DOMPurify from 'dompurify'
  * @param html - HTML строка для обработки
  * @returns JSX элемент с обработанным HTML
  */
-export const processHtmlContent = (html: string): JSX.Element => {
+export const processHtmlContent = (html: string): React.JSX.Element => {
   if (!html) {
     return <div></div>
   }

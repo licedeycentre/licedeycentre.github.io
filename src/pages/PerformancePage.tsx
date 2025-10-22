@@ -98,7 +98,7 @@ const PerformancePage: React.FC = () => {
                       ))}
                       {member.archivedActors && member.archivedActors.length > 0 && (
                         <div className={`expandable-content ${showAllActors ? 'expanded' : ''}`}>
-                          {member.archivedActors.map((actor, actorIndex) => (
+                          {member.archivedActors.map((actor: string, actorIndex: number) => (
                             <div
                               key={`archived-${actorIndex}`}
                               className={`cast-actor cast-actor-archived expandable-item-staggered ${showAllActors ? 'visible' : ''}`}

@@ -5,9 +5,10 @@
   "type": "module",
   "homepage": "https://licedeycentre.github.io",
   "scripts": {
-    "dev": "vite",
+    "dev": "vite --open",
     "build": "npm run generate-sitemap && tsc && vite build",
-    "preview": "vite preview",
+    "preview": "vite preview --open",
+    "deploy": "npm run build && gh-pages -d dist",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "type-check": "tsc --noEmit",
@@ -15,13 +16,12 @@
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,json,css,md}\"",
     "test": "vitest",
     "test:ui": "vitest --ui",
-    "test:run": "vitest run",
     "test:coverage": "vitest run --coverage",
-    "test:watch": "vitest --watch",
     "generate-sitemap": "node scripts/generate-sitemap.js",
     "docs:placeholders": "node scripts/generate-doc-placeholders.mjs",
-    "validate": "npm run type-check && npm run lint && npm run format:check && npm run test:run",
-    "fix": "npm run lint:fix && npm run format"
+    "check": "npm run type-check && npm run lint && npm run format:check && npm run test:coverage",
+    "fix": "npm run lint:fix && npm run format",
+    "clean": "rm -rf dist coverage node_modules/.vite"
   },
   "dependencies": {
     "dompurify": "^3.3.0",
