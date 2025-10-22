@@ -1,4 +1,5 @@
 import React from 'react'
+import { ChevronDown } from 'lucide-react'
 
 interface FAQItem {
   question: string
@@ -12,89 +13,65 @@ interface FAQAccordionProps {
 export const FAQAccordion: React.FC<FAQAccordionProps> = ({ items }) => {
   const [openIndex, setOpenIndex] = React.useState<number | null>(null)
   const contentRefs = React.useRef<(HTMLDivElement | null)[]>([])
-  const bodyRefs = React.useRef<(HTMLDivElement | null)[]>([])
-
-  // Инициализируем refs для всех элементов
-  React.useEffect(() => {
-    contentRefs.current = contentRefs.current.slice(0, items.length)
-    bodyRefs.current = bodyRefs.current.slice(0, items.length)
-  }, [items.length])
 
   const toggleItem = (index: number) => {
-    if (openIndex === index) {
-      // Закрываем текущий элемент
-      setOpenIndex(null)
-    } else {
-      // Открываем новый элемент
-      setOpenIndex(index)
-    }
+    setOpenIndex(openIndex === index ? null : index)
   }
 
-  const handleKeyDown = (e: React.KeyboardEvent, index: number) => {
-    if (e.key === 'Enter' || e.key === ' ') {
-      e.preventDefault()
-      toggleItem(index)
-    }
-  }
-
-  // Устанавливаем высоту контента для анимации
+  // Устанавливаем точную высоту для плавной анимации
   React.useEffect(() => {
-    // Сначала закрываем все элементы
-    contentRefs.current.forEach(ref => {
+    contentRefs.current.forEach((ref, index) => {
       if (ref) {
-        ref.style.height = '0px'
+        if (openIndex === index) {
+          ref.style.maxHeight = `${ref.scrollHeight}px`
+        } else {
+          ref.style.maxHeight = '0px'
+        }
       }
     })
-
-    // Затем открываем нужный элемент (если есть)
-    if (openIndex !== null) {
-      const contentRef = contentRefs.current[openIndex]
-      const bodyRef = bodyRefs.current[openIndex]
-
-      if (contentRef && bodyRef) {
-        // Небольшая задержка для плавного переключения
-        setTimeout(() => {
-          const contentHeight = bodyRef.scrollHeight
-          contentRef.style.height = `${contentHeight}px`
-        }, 10)
-      }
-    }
   }, [openIndex])
 
-  return (
-    <div className="faq-list-compact">
-      {items.map((item, index) => {
-        const isOpen = openIndex === index
+  // Разделяем элементы на две колонки
+  const leftColumnItems = items.filter((_, index) => index % 2 === 0)
+  const rightColumnItems = items.filter((_, index) => index % 2 === 1)
+
+  const renderColumn = (columnItems: FAQItem[], startIndex: number) => (
+    <div className="faq-column">
+      {columnItems.map((item, columnIndex) => {
+        const globalIndex = startIndex + columnIndex * 2
+        const isOpen = openIndex === globalIndex
 
         return (
-          <div
-            key={index}
-            className={`faq-accordion-item ${isOpen ? 'faq-accordion-item--open' : ''}`}
-          >
+          <div key={globalIndex} className={`faq-item ${isOpen ? 'faq-item--open' : ''}`}>
             <button
-              className="faq-accordion-button"
-              onClick={() => toggleItem(index)}
-              onKeyDown={e => handleKeyDown(e, index)}
+              className="faq-question"
+              onClick={() => toggleItem(globalIndex)}
               aria-expanded={isOpen}
-              aria-controls={`faq-content-${index}`}
+              aria-controls={`faq-answer-${globalIndex}`}
               type="button"
             >
-              <span className="faq-accordion-button-text">{item.question}</span>
+              <span>{item.question}</span>
+              <ChevronDown className="faq-icon" size={20} />
             </button>
 
             <div
-              ref={el => (contentRefs.current[index] = el)}
-              className="faq-accordion-content"
-              id={`faq-content-${index}`}
+              ref={el => (contentRefs.current[globalIndex] = el)}
+              className="faq-answer"
+              id={`faq-answer-${globalIndex}`}
               aria-hidden={!isOpen}
             >
-              <div ref={el => (bodyRefs.current[index] = el)} className="faq-accordion-body">
-                <p>{item.answer}</p>
-              </div>
+              <p>{item.answer}</p>
             </div>
           </div>
         )
       })}
+    </div>
+  )
+
+  return (
+    <div className="faq-list">
+      {renderColumn(leftColumnItems, 0)}
+      {renderColumn(rightColumnItems, 1)}
     </div>
   )
 }

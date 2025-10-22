@@ -8,12 +8,19 @@ import { PerformanceInfoCard } from '../components/PerformanceInfoCard'
 import PageLayout from '../components/PageLayout'
 import { processHtmlContent } from '../utils/htmlProcessor'
 import { VideoGroup as VideoGroupType } from '../types/content'
-import { Download, Eye } from 'lucide-react'
+import { Download, Eye, ChevronDown, ChevronUp } from 'lucide-react'
 import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../utils/documentIcons'
 
 const PerformancePage: React.FC = () => {
   const { id } = useParams()
   const performance = usePerformance(id || '')
+  const [showAllActors, setShowAllActors] = React.useState(false)
+
+  // Проверяем, есть ли архивные актёры
+  const hasArchivedActors =
+    performance?.castMembers?.some(
+      member => member.archivedActors && member.archivedActors.length > 0
+    ) || false
 
   if (!performance) {
     return (
@@ -71,6 +78,61 @@ const PerformancePage: React.FC = () => {
           <div className="content-card">
             <div className="readable-content">
               {processHtmlContent(performance.detailedDescription || '')}
+            </div>
+          </div>
+        )}
+
+        {/* Действующие лица */}
+        {performance.castMembers && performance.castMembers.length > 0 && (
+          <div className="content-card">
+            <div className="readable-content">
+              <div className="cast-list">
+                {performance.castMembers.map((member, index) => (
+                  <div key={index} className="cast-member">
+                    <div className="cast-role">{member.role}</div>
+                    <div className="cast-actors">
+                      {member.actors.map((actor, actorIndex) => (
+                        <div key={actorIndex} className="cast-actor">
+                          {actor}
+                        </div>
+                      ))}
+                      {member.archivedActors && member.archivedActors.length > 0 && (
+                        <div className={`expandable-content ${showAllActors ? 'expanded' : ''}`}>
+                          {member.archivedActors.map((actor, actorIndex) => (
+                            <div
+                              key={`archived-${actorIndex}`}
+                              className={`cast-actor cast-actor-archived expandable-item-staggered ${showAllActors ? 'visible' : ''}`}
+                              style={{ transitionDelay: `${actorIndex * 0.05}s` }}
+                            >
+                              {actor}
+                            </div>
+                          ))}
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {hasArchivedActors && (
+                <div className="cast-toggle-container">
+                  <button
+                    className="cast-toggle-button"
+                    onClick={() => setShowAllActors(!showAllActors)}
+                  >
+                    {showAllActors ? (
+                      <>
+                        <ChevronUp size={16} />
+                        Скрыть архивных актёров
+                      </>
+                    ) : (
+                      <>
+                        <ChevronDown size={16} />
+                        Показать всех актёров
+                      </>
+                    )}
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         )}

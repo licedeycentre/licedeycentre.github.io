@@ -35,6 +35,12 @@ export interface ShowDate {
   time: string // Формат: "19:00"
 }
 
+// Тип для действующих лиц
+export interface CastMember {
+  role: string // Название роли
+  actors: string[] // Массив актёров
+}
+
 // Тип для видео спектакля
 export interface PerformanceVideo {
   url: string
@@ -61,7 +67,6 @@ export interface Performance {
   ageGroup: string
   description: string
   detailedDescription?: string // Подробное описание спектакля
-  cast: string
   creators: string
   image: string
   slider?: string[] // Изображения для слайдера
@@ -72,6 +77,7 @@ export interface Performance {
   ticketsUrl?: string // Кастомная ссылка для покупки билетов
   showTicketsButton?: boolean // Показывать ли кнопку "Приобрести билеты"
   documents?: Document[] // Документы спектакля (опциональные)
+  castMembers?: CastMember[] // Список действующих лиц
 }
 
 export interface PerformancesData {

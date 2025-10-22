@@ -6,7 +6,6 @@
       "ageGroup": "12+",
       "description": "Режиссёр Таранова Ольга Алексеевна, Сценарист Таранова Ольга Алексеевна, Автор восемнадцатилетняя Таранова Ольга Алексеевна",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Оля, Ваня, Тая",
       "creators": "Режиссёр: Таранова Ольга Алексеевна, Сценарист: Таранова Ольга Алексеевна",
       "image": "https://i.imgur.com/wmacDwq.jpeg",
       "slider": [
@@ -78,6 +77,23 @@
           "description": "Эскизы и описания костюмов персонажей",
           "url": "/documents/pustotsvet-costume-design.pdf"
         }
+      ],
+      "castMembers": [
+        {
+          "role": "Оля",
+          "actors": ["Анна Смирнова", "Мария Иванова"],
+          "archivedActors": ["Елена Волкова", "Татьяна Петрова", "Ольга Сидорова"]
+        },
+        {
+          "role": "Ваня",
+          "actors": ["Дмитрий Козлов"],
+          "archivedActors": ["Алексей Морозов", "Игорь Лебедев"]
+        },
+        {
+          "role": "Тая",
+          "actors": ["Елена Петрова", "Ольга Сидорова"],
+          "archivedActors": ["Анна Соколова", "Мария Волкова", "Татьяна Козлова"]
+        }
       ]
     },
     {
@@ -86,7 +102,6 @@
       "ageGroup": "12+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Александр Новиков, Елена Козлова, Дмитрий Морозов",
       "creators": "Режиссёр: Светлана Петрова, Сценарист: Н.В. Гоголь",
       "image": "https://i.imgur.com/wmacDwq.jpeg",
       "slider": [
@@ -143,7 +158,21 @@
           "time": "18:00"
         }
       ],
-      "ticketsUrl": "/contacts"
+      "ticketsUrl": "/contacts",
+      "castMembers": [
+        {
+          "role": "Хлестаков",
+          "actors": ["Александр Новиков", "Игорь Волков"]
+        },
+        {
+          "role": "Городничий",
+          "actors": ["Елена Козлова"]
+        },
+        {
+          "role": "Марья Антоновна",
+          "actors": ["Дмитрий Морозов", "Анна Соколова"]
+        }
+      ]
     },
     {
       "title": "Щелкунчик",
@@ -151,7 +180,6 @@
       "ageGroup": "6+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Соколова, Михаил Новиков, Татьяна Козлова, Ольга Морозова",
       "creators": "Режиссёр: Мария Волкова, Сценарист: Э.Т.А. Гофман",
       "image": "https://i.imgur.com/SLVylPe.jpeg",
       "slider": [
@@ -216,7 +244,25 @@
           "time": "14:00"
         }
       ],
-      "ticketsUrl": "/contacts"
+      "ticketsUrl": "/contacts",
+      "castMembers": [
+        {
+          "role": "Клара",
+          "actors": ["Анна Соколова", "Татьяна Морозова"]
+        },
+        {
+          "role": "Щелкунчик",
+          "actors": ["Михаил Новиков"]
+        },
+        {
+          "role": "Мышиный король",
+          "actors": ["Татьяна Козлова", "Дмитрий Волков"]
+        },
+        {
+          "role": "Фея Драже",
+          "actors": ["Ольга Морозова", "Елена Соколова"]
+        }
+      ]
     },
     {
       "title": "Новые горизонты",
@@ -224,7 +270,6 @@
       "ageGroup": "14+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Молодая, Михаил Новый, Елена Современная",
       "creators": "Режиссёр: Современный Театр, Сценарист: Молодой Драматург",
       "image": "https://i.imgur.com/wmacDwq.jpeg",
       "slider": [
@@ -283,7 +328,6 @@
       "ageGroup": "6+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Лесная, Михаил Дерево, Елена Цветок",
       "creators": "Режиссёр: Лесной Театр, Сценарист: Природный Писатель",
       "image": "https://i.imgur.com/cMDJuFf.jpeg",
       "slider": [
@@ -343,7 +387,6 @@
       "ageGroup": "16+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Дмитрий Волков, Светлана Морозова, Игорь Лебедев",
       "creators": "Режиссёр: Иванов Иван Иванович, Сценарист: Петров Петр Петрович",
       "image": "https://i.imgur.com/wIykMF0.jpeg",
       "slider": [
@@ -369,7 +412,6 @@
       "ageGroup": "6+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Смирнова, Михаил Козлов, Елена Петрова",
       "creators": "Режиссёр: Светлана Новикова, Сценарист: Евгений Шварц",
       "image": "https://i.imgur.com/TM5hcWJ.jpeg",
       "slider": [
@@ -405,7 +447,6 @@
       "ageGroup": "8+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Алексей Морозов, Мария Волкова, Дмитрий Соколов",
       "creators": "Режиссёр: Ольга Тарасова, Сценарист: Антуан де Сент-Экзюпери",
       "image": "https://i.imgur.com/cMDJuFf.jpeg",
       "slider": [
@@ -429,7 +470,6 @@
       "ageGroup": "14+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Екатерина Новикова, Андрей Морозов, Татьяна Соколова",
       "creators": "Режиссёр: Игорь Лебедев, Сценарист: А.Н. Островский",
       "image": "https://i.imgur.com/SLVylPe.jpeg",
       "slider": [
@@ -464,7 +504,6 @@
       "ageGroup": "10+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Наталья Козлова, Сергей Петров, Ольга Морозова",
       "creators": "Режиссёр: Мария Волкова, Сценарист: Н.В. Гоголь",
       "image": "https://i.imgur.com/mbgTAbO.jpeg",
       "slider": [
@@ -490,7 +529,6 @@
       "ageGroup": "5+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Соколова, Михаил Новиков, Татьяна Козлова",
       "creators": "Режиссёр: Ольга Морозова, Сценарист: Г.Х. Андерсен",
       "image": "https://i.imgur.com/cMDJuFf.jpeg",
       "slider": [
@@ -533,7 +571,6 @@
       "ageGroup": "16+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Дмитрий Волков, Светлана Морозова, Игорь Лебедев, Анна Смирнова",
       "creators": "Режиссёр: Михаил Козлов, Сценарист: Уильям Шекспир",
       "image": "https://i.imgur.com/wIykMF0.jpeg",
       "slider": [
@@ -558,7 +595,6 @@
       "ageGroup": "8+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Мария Волкова, Алексей Морозов, Елена Петрова, Дмитрий Соколов",
       "creators": "Режиссёр: Татьяна Соколова, Сценарист: Льюис Кэрролл",
       "image": "https://i.imgur.com/TM5hcWJ.jpeg",
       "slider": [
@@ -593,7 +629,6 @@
       "ageGroup": "14+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Екатерина Новикова, Андрей Морозов, Татьяна Соколова, Сергей Петров",
       "creators": "Режиссёр: Ольга Тарасова, Сценарист: Антон Чехов",
       "image": "https://i.imgur.com/mbgTAbO.jpeg",
       "slider": [
@@ -617,7 +652,6 @@
       "ageGroup": "14+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Козлова, Сергей Морозов",
       "creators": "Режиссёр: Елена Петрова, Сценарист: Уильям Шекспир",
       "image": "https://i.imgur.com/wIykMF0.jpeg",
       "slider": [
@@ -641,7 +675,6 @@
       "ageGroup": "16+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Екатерина Новикова, Анна Соколова, Татьяна Морозова, Сергей Петров",
       "creators": "Режиссёр: Александр Волков, Сценарист: Антон Чехов",
       "image": "https://i.imgur.com/SLVylPe.jpeg",
       "slider": [
@@ -680,7 +713,6 @@
       "ageGroup": "12+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Зимова, Михаил Снегов, Елена Морозова",
       "creators": "Режиссёр: Зимний Театр, Сценарист: Сказочник",
       "image": "https://i.imgur.com/wmacDwq.jpeg",
       "slider": [
@@ -718,7 +750,6 @@
       "ageGroup": "8+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Весна Цветкова, Март Листов, Апрель Почечный",
       "creators": "Режиссёр: Весенний Театр, Сценарист: Мечтатель",
       "image": "https://i.imgur.com/wIykMF0.jpeg",
       "slider": [
@@ -756,7 +787,6 @@
       "ageGroup": "12+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Мечта, Михаил Город, Елена Возможность",
       "creators": "Режиссёр: Мечтательный Театр, Сценарист: Фантазер",
       "image": "https://i.imgur.com/SLVylPe.jpeg",
       "slider": [
@@ -781,7 +811,6 @@
       "ageGroup": "8+",
       "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
       "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "cast": "Анна Звезда, Михаил Космос, Елена Галактика",
       "creators": "Режиссёр: Космический Театр, Сценарист: Астроном",
       "image": "https://i.imgur.com/mbgTAbO.jpeg",
       "slider": [
