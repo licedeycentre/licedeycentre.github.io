@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { useContacts, useSite } from '../hooks/useContent'
+import { useContacts, useSite, useUILabels } from '../hooks/useContent'
 import { siTelegram, siTiktok, siVk } from 'simple-icons'
 
 const Footer: React.FC = () => {
   const contactsData = useContacts()
   const siteData = useSite()
+  const labels = useUILabels()
 
   return (
     <footer className="site-footer">
@@ -14,7 +15,7 @@ const Footer: React.FC = () => {
           <div className="footer-blocks">
             {/* Блок 1: Адрес */}
             <div className="footer-block">
-              <h4 className="footer-block-title">Адрес</h4>
+              <h4 className="footer-block-title">{labels.footer.addressTitle}</h4>
               <p className="footer-block-text">
                 {contactsData.address}
                 {contactsData.addressDetails && (
@@ -30,7 +31,7 @@ const Footer: React.FC = () => {
 
             {/* Блок 2: Телефоны */}
             <div className="footer-block">
-              <h4 className="footer-block-title">Телефоны</h4>
+              <h4 className="footer-block-title">{labels.footer.phonesTitle}</h4>
               <div className="footer-phones">
                 {contactsData.phones.map((phone, index) => (
                   <a key={index} href={phone.href} className="footer-phone">
@@ -42,7 +43,7 @@ const Footer: React.FC = () => {
 
             {/* Блок 3: Email */}
             <div className="footer-block">
-              <h4 className="footer-block-title">Email</h4>
+              <h4 className="footer-block-title">{labels.footer.emailTitle}</h4>
               <a href={contactsData.email.href} className="footer-email">
                 {contactsData.email.text}
               </a>
@@ -50,7 +51,7 @@ const Footer: React.FC = () => {
 
             {/* Блок 4: Социальные сети */}
             <div className="footer-block">
-              <h4 className="footer-block-title">Социальные сети</h4>
+              <h4 className="footer-block-title">{labels.footer.socialTitle}</h4>
               <div className="footer-socials">
                 {contactsData.socials.map((social, index) => {
                   const iconMap: { [key: string]: { path: string } } = {

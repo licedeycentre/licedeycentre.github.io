@@ -10,6 +10,7 @@ import type {
   SEOData,
   FAQData,
   SiteData,
+  UILabels,
   PerformanceStatusType,
 } from '../types/content'
 import { PerformanceStatus } from '../types/content'
@@ -26,6 +27,7 @@ import servicesData from '../content/services.json'
 import privacyPolicyData from '../content/privacy-policy.json'
 import seoData from '../content/seo.json'
 import siteData from '../content/site.json'
+import uiLabelsData from '../content/ui-labels.json'
 
 // Функция для определения статуса спектакля
 const getPerformanceStatus = (performance: Performance): PerformanceStatus => {
@@ -281,4 +283,9 @@ export const useSite = (): SiteData => {
       contacts: { mapDescription: '' },
     }
   )
+}
+
+// Хук для работы с UI labels
+export const useUILabels = (): UILabels => {
+  return uiLabelsData
 }
