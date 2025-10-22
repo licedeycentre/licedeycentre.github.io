@@ -1,39 +1,28 @@
 {
-    "_comment": "Полный шаблон публикации со всеми возможными полями. Удалите ненужные поля и комментарии.",
-    "title": "Заголовок публикации",
-    "date": "2025-01-15",
-    "_dateComment": "Дата публикации в формате YYYY-MM-DD",
-    "image": "https://i.imgur.com/example-image.jpeg",
-    "tags": [
-        "новости",
-        "театр",
-        "события"
-    ],
-    "_tagsComment": "Теги для категоризации публикации",
-    "html": "<p>Содержимое публикации в HTML формате</p><h2>Заголовок</h2><p>Текст публикации</p><h3>Подзаголовок</h3><ul><li>Элемент списка 1</li><li>Элемент списка 2</li></ul>",
-    "gallery": [
-        "https://i.imgur.com/gallery-image-1.jpeg",
-        "https://i.imgur.com/gallery-image-2.jpeg",
-        "https://i.imgur.com/gallery-image-3.jpeg"
-    ],
-    "_galleryComment": "Галерея изображений для публикации (опционально)",
-    "video": {
-        "url": "https://www.youtube.com/watch?v=example",
-        "title": "Название видео",
-        "description": "Описание видео"
-    },
-    "_videoComment": "Видео для публикации (опционально). Может быть одно видео или массив групп видео",
-    "button": {
-        "text": "Текст кнопки",
-        "url": "/performances/example-performance"
-    },
-    "_buttonComment": "Кнопка действия для публикации (опционально)",
-    "documents": [
-        {
-            "title": "Название документа",
-            "description": "Описание документа",
-            "url": "/documents/document-name.pdf"
-        }
-    ],
-    "_documentsComment": "Документы для публикации (опционально): программы, пресс-релизы, отзывы и т.д."
+  "title": "Заголовок публикации",
+  "date": "2025-01-15",
+  "image": "https://i.imgur.com/example-image.jpeg",
+  "tags": ["новости", "театр", "события"],
+  "html": "<p>Содержимое публикации в HTML формате</p><h2>Заголовок</h2><p>Текст публикации</p><h3>Подзаголовок</h3><ul><li>Элемент списка 1</li><li>Элемент списка 2</li></ul>",
+  "gallery": [
+    "https://i.imgur.com/gallery-image-1.jpeg",
+    "https://i.imgur.com/gallery-image-2.jpeg",
+    "https://i.imgur.com/gallery-image-3.jpeg"
+  ],
+  "video": {
+    "url": "https://www.youtube.com/watch?v=example",
+    "title": "Название видео",
+    "description": "Описание видео"
+  },
+  "button": {
+    "text": "Текст кнопки",
+    "url": "/performances/example-performance"
+  },
+  "documents": [
+    {
+      "title": "Название документа",
+      "description": "Описание документа",
+      "url": "/documents/document-name.pdf"
+    }
+  ]
 }
