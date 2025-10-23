@@ -90,6 +90,8 @@ export interface MediaData {
 export interface ContactPhone {
   number: string
   href: string
+  telegram?: string
+  whatsapp?: string
 }
 
 export interface ContactEmail {
