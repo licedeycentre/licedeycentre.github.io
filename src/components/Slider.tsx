@@ -1,23 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import {
-  formatShowDate,
-  filterFutureShowDates,
-  getLastPastShowDate,
-  formatLastShowDate,
+  formatDateTimeString,
+  formatDateTimeStringShort,
+  formatDateTimeStringFull,
+  filterFutureDateTimeStrings,
+  getLastPastDateTimeString,
+  parseDateTimeString,
 } from '../utils/dateFormat'
-import type { ShowDate, PerformanceStatusType } from '../types/content'
+import type { ShowDates, PerformanceStatusType } from '../types/content'
 
 interface HeroSlide {
   title: string
   description: string
   bgUrl?: string
-  bgColor?: string
-  buttons?: Array<{
-    text: string
-    href: string
-    primary: boolean
-  }>
+  primaryButton?: { text: string; link: string }
+  secondaryButton?: { text: string; link: string }
 }
 
 interface SliderProps {
@@ -27,10 +25,9 @@ interface SliderProps {
   title?: string
   description?: string
   meta?: string[]
-  ticketsUrl?: string
-  showDates?: ShowDate[]
+  tickets?: string
+  showDates?: ShowDates
   performanceStatus?: PerformanceStatusType
-  showTicketsButton?: boolean
   className?: string
 }
 
@@ -41,10 +38,9 @@ export const Slider: React.FC<SliderProps> = ({
   title,
   description,
   meta = [],
-  ticketsUrl,
+  tickets,
   showDates = [],
   performanceStatus,
-  showTicketsButton,
   className = '',
 }) => {
   const [index, setIndex] = React.useState(0)
@@ -60,10 +56,8 @@ export const Slider: React.FC<SliderProps> = ({
     title: 'Лицедей — Центр Современного Искусства',
     description: "Театр‑студия 'Балаганчик' во Владивостоке",
     bgUrl: '',
-    buttons: [
-      { text: 'Связаться с нами', href: '/contacts', primary: true },
-      { text: 'О нас', href: '/about', primary: false },
-    ],
+    primaryButton: { text: 'Связаться с нами', link: '/contacts' },
+    secondaryButton: { text: 'О нас', link: '/about' }
   }
 
   const current = mode === 'hero' ? (slides.length > 0 ? slides[index] : fallbackSlide) : null
@@ -73,9 +67,6 @@ export const Slider: React.FC<SliderProps> = ({
     if (mode === 'hero') {
       if (current?.bgUrl) {
         return `linear-gradient(135deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.2) 100%), url(${current.bgUrl})`
-      }
-      if (current?.bgColor) {
-        return `linear-gradient(135deg, ${current.bgColor} 0%, ${current.bgColor}dd 100%)`
       }
       return `var(--gradient-hero)`
     }
@@ -102,7 +93,8 @@ export const Slider: React.FC<SliderProps> = ({
       return {
         title: current?.title,
         description: current?.description,
-        buttons: current?.buttons,
+        primaryButton: current?.primaryButton,
+        secondaryButton: current?.secondaryButton,
       }
     }
 
@@ -110,10 +102,9 @@ export const Slider: React.FC<SliderProps> = ({
       title,
       description,
       meta,
-      ticketsUrl,
+      tickets,
       showDates,
       performanceStatus,
-      showTicketsButton,
     }
   }
 
@@ -129,8 +120,9 @@ export const Slider: React.FC<SliderProps> = ({
           content.title ||
           content.description ||
           content.meta?.length ||
-          content.ticketsUrl ||
-          content.buttons?.length ||
+          content.tickets ||
+          content.primaryButton ||
+          content.secondaryButton ||
           content.showDates?.length
         )
       )
@@ -141,8 +133,9 @@ export const Slider: React.FC<SliderProps> = ({
       content.title ||
       content.description ||
       content.meta?.length ||
-      content.ticketsUrl ||
-      content.buttons?.length ||
+      content.tickets ||
+      content.primaryButton ||
+      content.secondaryButton ||
       content.showDates?.length
     )
   }
@@ -229,29 +222,29 @@ export const Slider: React.FC<SliderProps> = ({
       return renderStatusBadges()
     }
 
-    const futureDates = filterFutureShowDates(showDates)
+    const futureDates = filterFutureDateTimeStrings(showDates)
 
+    // Для архивных спектаклей всегда показываем статусную плашку
+    if (performanceStatus === 'archived') {
+      return renderStatusBadges()
+    }
+
+    // Для активных спектаклей показываем даты или статус
     if (futureDates.length > 0) {
       return (
         <div className="hero-show-dates">
           <div className="hero-show-dates-list">
-            {futureDates.map((showDate, index) => (
-              <div key={index} className="hero-show-date-item">
-                {formatShowDate(showDate.date, showDate.time)}
+            {futureDates.map((dateTimeString, index) => (
+              <div
+                key={index}
+                className="hero-show-date-item"
+                title={formatDateTimeStringFull(dateTimeString)}
+              >
+                {formatDateTimeString(dateTimeString)}
               </div>
             ))}
           </div>
 
-          {/* Плашка "Планируется в сезоне" для planned спектаклей с датами */}
-          {performanceStatus === 'planned' && (
-            <div
-              className="hero-status-badge hero-status-badge--planned"
-              role="status"
-              aria-label="Спектакль планируется к показу в текущем сезоне"
-            >
-              Планируется в сезоне
-            </div>
-          )}
         </div>
       )
     } else {
@@ -266,86 +259,28 @@ export const Slider: React.FC<SliderProps> = ({
     }
 
     if (performanceStatus === 'archived') {
-      if (showDates && showDates.length > 0) {
-        const lastPastDate = getLastPastShowDate(showDates)
-        if (lastPastDate) {
-          return (
-            <div className="hero-status-section">
-              <div
-                className="hero-status-badge hero-status-badge--archived"
-                role="status"
-                aria-label={`Архивный спектакль. Последний показ: ${formatLastShowDate(lastPastDate.date)}`}
-              >
-                {formatLastShowDate(lastPastDate.date)}
-              </div>
-            </div>
-          )
-        } else {
-          // Все даты в будущем - показываем заглушку
-          return (
-            <div className="hero-status-section">
-              <div
-                className="hero-status-badge hero-status-badge--archived"
-                role="status"
-                aria-label="Архивный спектакль без прошедших дат показов"
-              >
-                Давненько было...
-              </div>
-            </div>
-          )
-        }
-      } else {
-        return (
-          <div className="hero-status-section">
-            <div
-              className="hero-status-badge hero-status-badge--archived"
-              role="status"
-              aria-label="Архивный спектакль без дат показов"
-            >
-              Давненько было...
-            </div>
-          </div>
-        )
-      }
-    }
-
-    if (performanceStatus === 'current') {
       return (
         <div className="hero-status-section">
           <div
-            className="hero-status-badge hero-status-badge--completed"
+            className="hero-status-badge hero-status-badge--archived"
             role="status"
-            aria-label="Текущий спектакль, показ завершен"
+            aria-label="Архивный спектакль"
           >
-            Показ завершен
+            Однажды на сцене
           </div>
         </div>
       )
     }
 
-    if (performanceStatus === 'development') {
+    if (performanceStatus === 'active') {
       return (
         <div className="hero-status-section">
           <div
-            className="hero-status-badge hero-status-badge--ripening"
+            className="hero-status-badge hero-status-badge--upcoming"
             role="status"
-            aria-label="Спектакль в разработке, созревает к показу"
+            aria-label="Активный спектакль"
           >
-            Созревает к показу
-          </div>
-        </div>
-      )
-    }
-
-    if (performanceStatus === 'planned') {
-      return (
-        <div className="hero-status-section">
-          <div
-            className="hero-status-badge hero-status-badge--planned"
-            role="status"
-            aria-label="Спектакль планируется к показу в текущем сезоне"
-          >
-            Планируется в сезоне
+            Грядущий показ
           </div>
         </div>
       )
@@ -378,32 +313,46 @@ export const Slider: React.FC<SliderProps> = ({
           {/* Кнопки */}
           <div className="hero-buttons">
             {/* Кнопки из hero режима */}
-            {mode === 'hero' &&
-              content.buttons?.map((button, i) => (
-                <Link
-                  key={i}
-                  to={button.href}
-                  className={button.primary ? 'btn-primary' : 'btn-secondary'}
-                >
-                  {button.text}
-                </Link>
-              ))}
+            {mode === 'hero' && (
+              <>
+                {content.primaryButton && (
+                  <Link
+                    to={content.primaryButton.link}
+                    className="btn-primary"
+                  >
+                    {content.primaryButton.text}
+                  </Link>
+                )}
+                {content.secondaryButton && (
+                  <Link
+                    to={content.secondaryButton.link}
+                    className="btn-secondary"
+                  >
+                    {content.secondaryButton.text}
+                  </Link>
+                )}
+              </>
+            )}
 
             {/* Кнопка билетов для gallery режима */}
             {mode === 'gallery' &&
-              content.ticketsUrl &&
+              tickets &&
+              tickets !== 'hide' &&
               (() => {
-                const futureDates = showDates ? filterFutureShowDates(showDates) : []
+                const futureDates = showDates ? filterFutureDateTimeStrings(showDates) : []
                 const hasFutureDates = futureDates.length > 0
-                const isCurrentWithoutDates = performanceStatus === 'current' && !hasFutureDates
 
-                // Проверяем, нужно ли показывать кнопку (только если явно указано true)
-                const shouldShowTickets = content.showTicketsButton === true
+                const isFinished = performanceStatus === 'active' &&
+                  showDates &&
+                  showDates.length > 0 &&
+                  !hasFutureDates
 
-                if (shouldShowTickets && !isCurrentWithoutDates) {
+                const ticketsUrl = tickets === 'show' ? '/contacts' : tickets
+
+                if (performanceStatus !== 'archived' && !isFinished) {
                   return (
                     <a
-                      href={content.ticketsUrl}
+                      href={ticketsUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-primary"

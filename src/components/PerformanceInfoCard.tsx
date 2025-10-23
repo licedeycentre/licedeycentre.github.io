@@ -1,7 +1,7 @@
 import React from 'react'
 import type { Performance } from '../types/content'
 import { Info, Clock, Calendar } from 'lucide-react'
-import { getLastPastShowDate, formatLastShowDate } from '../utils/dateFormat'
+import { getLastPastDateTimeString, parseDateTimeString, formatDateTimeStringShort } from '../utils/dateFormat'
 
 interface PerformanceInfoCardProps {
   performance: Performance
@@ -10,7 +10,7 @@ interface PerformanceInfoCardProps {
 export const PerformanceInfoCard: React.FC<PerformanceInfoCardProps> = ({ performance }) => {
   // Получаем последний показ спектакля (только прошедшие даты)
   const getLastShow = () => {
-    return getLastPastShowDate(performance.showDates || [])
+    return getLastPastDateTimeString(performance.showDates || [])
   }
 
   const lastShow = getLastShow()
@@ -55,7 +55,7 @@ export const PerformanceInfoCard: React.FC<PerformanceInfoCardProps> = ({ perfor
           </div>
           <div className="performance-meta-content">
             <div className="performance-meta-label">Последний показ</div>
-            <div className="performance-meta-value">{formatLastShowDate(lastShow.date)}</div>
+            <div className="performance-meta-value">{formatDateTimeStringShort(lastShow)}</div>
           </div>
         </div>
       )

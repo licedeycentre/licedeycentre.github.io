@@ -19,7 +19,7 @@ const ServicesPage: React.FC = () => {
     >
       <div className="content-card">
         <div className="readable-content">
-          <h2>{servicesData.sectionTitles?.services || 'Наши услуги'}</h2>
+          <h2>Наши услуги</h2>
           {servicesData.introText && <p>{servicesData.introText}</p>}
         </div>
 
@@ -43,11 +43,7 @@ const ServicesPage: React.FC = () => {
       {/* Видео */}
       {servicesData.video && (
         <div className="content-card">
-          <VideoPlayer
-            url={servicesData.video.url}
-            title={servicesData.video.title}
-            description={servicesData.video.description}
-          />
+          <VideoPlayer url={servicesData.video} />
         </div>
       )}
 

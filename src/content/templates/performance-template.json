@@ -1,11 +1,42 @@
 {
-  "title": "Название спектакля",
-  "duration": "1 час 30 минут",
-  "ageGroup": "12+",
-  "description": "Краткое описание спектакля для карточки",
-  "creators": "Режиссёр: Имя Фамилия, Сценарист: Имя Фамилия",
-  "image": "https://i.imgur.com/example-image.jpeg",
-  "status": "current",
-  "showTicketsButton": true,
-  "ticketsUrl": "/contacts"
+    "title": "Название спектакля",
+    "duration": "1 час 30 минут",
+    "ageGroup": "12+",
+    "description": "Краткое описание спектакля для карточки",
+    "creators": "Режиссёр: Имя Фамилия, Сценарист: Имя Фамилия",
+    "status": "Одно значение - active/archived (active - для всех активных спектаклей)",
+    "tickets": "show (показать кнопку билетов) | hide (скрыть кнопку) | URL (внешняя ссылка на билеты)",
+    "details": "Содержание в HTML формате: https://html-online.com/ - скопировать и вставить одной строкой",
+    "showDates": "Даты показов. Формат: [\"2025-12-15 19:00\"] или [\"2025-12-15\"] (время по умолчанию 19:00). Пустой массив [] для плашки \"Грядущий показ\"",
+    "slider": [
+        "https://i.imgur.com/slider-image-1.jpeg",
+        "https://i.imgur.com/slider-image-2.jpeg",
+        "https://i.imgur.com/slider-image-3.jpeg"
+    ],
+    "gallery": [
+        "https://i.imgur.com/gallery-image-1.jpeg",
+        "https://i.imgur.com/gallery-image-2.jpeg",
+        "https://i.imgur.com/gallery-image-3.jpeg"
+    ],
+    "video": [
+        "https://www.youtube.com/watch?v=example1",
+        "https://rutube.ru/video/example2",
+        "https://example.com/video.mp4"
+    ],
+    "showDates": [
+        "2025-12-15 19:00",
+        "2025-12-22",
+        "2025-12-29 18:00"
+    ],
+    "cast": {
+        "Название роли": [
+            "Имя Фамилия",
+            "Имя Фамилия",
+            "*Архивный актер"
+        ]
+    },
+    "documents": {
+        "Название документа": "/documents/document-name.pdf",
+        "Название документа 2": "/documents/document-name-2.pdf"
+    }
 }

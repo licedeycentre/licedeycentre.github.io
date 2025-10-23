@@ -2,6 +2,27 @@
   "title": "Заголовок публикации",
   "date": "2025-01-15",
   "image": "https://i.imgur.com/example-image.jpeg",
-  "tags": ["новости", "театр"],
-  "html": "<p>Содержимое публикации в HTML формате</p><h2>Заголовок</h2><p>Текст публикации</p>"
+  "details": "Содержание в HTML формате: https://html-online.com/ - скопировать и вставить одной строкой",
+  "buttons": [
+    "Подробнее:/performances/example-performance"
+  ],
+  "tags": [
+    "новости",
+    "театр",
+    "события"
+  ],
+  "gallery": [
+    "https://i.imgur.com/gallery-image-1.jpeg",
+    "https://i.imgur.com/gallery-image-2.jpeg",
+    "https://i.imgur.com/gallery-image-3.jpeg"
+  ],
+  "video": [
+    "https://www.youtube.com/watch?v=example1",
+    "https://rutube.ru/video/example2",
+    "https://example.com/video.mp4"
+  ],
+  "documents": {
+    "Название документа": "/documents/document-name.pdf",
+    "Название документа 2": "/documents/document-name-2.pdf"
+  }
 }

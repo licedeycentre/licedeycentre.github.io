@@ -12,8 +12,8 @@ import type {
   UILabels,
   PerformanceStatusType,
 } from '../types/content'
-import { PerformanceStatus } from '../types/content'
 import { generatePublicationId, generatePerformanceId } from '../utils/slugify'
+import { parseDateTimeString } from '../utils/dateFormat'
 
 // Импорты данных
 import performancesData from '../content/performances.json'
@@ -28,46 +28,32 @@ import seoData from '../content/seo.json'
 import siteData from '../content/site.json'
 import uiLabelsData from '../content/ui-labels.json'
 
-// Функция для определения статуса спектакля
-const getPerformanceStatus = (performance: Performance): PerformanceStatus => {
+// Вспомогательные функции для проверки дат и билетов
+const hasFutureDates = (performance: Performance): boolean => {
+  if (!performance.showDates || performance.showDates.length === 0) {
+    return false
+  }
+
   const now = new Date()
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
-  // Если есть status, используем его для обратной совместимости
-  if (performance.status) {
-    if (performance.status === 'current') {
-      // Проверяем даты показов
-      if (performance.showDates && performance.showDates.length > 0) {
-        const hasFutureDates = performance.showDates.some(showDate => {
-          const showDateObj = new Date(showDate.date)
-          return showDateObj >= today
-        })
-        return hasFutureDates ? PerformanceStatus.UPCOMING : PerformanceStatus.FINISHED
-      }
-      return PerformanceStatus.FINISHED
-    }
-
-    if (performance.status === 'planned') {
-      return PerformanceStatus.PLANNED
-    }
-
-    if (performance.status === 'development') {
-      return PerformanceStatus.DEVELOPMENT
-    }
-
-    if (performance.status === 'archived') {
-      return performance.showDates && performance.showDates.length > 0
-        ? PerformanceStatus.ARCHIVED_DATED
-        : PerformanceStatus.ARCHIVED
-    }
-  }
-
-  // Fallback для случаев без status
-  return PerformanceStatus.ARCHIVED
+  return performance.showDates.some(dateTimeString => {
+    const { date } = parseDateTimeString(dateTimeString)
+    const showDate = new Date(date)
+    return showDate >= today
+  })
 }
 
-// Функция для получения релевантной даты спектакля для сортировки
-const getRelevantShowDate = (performance: Performance): Date | null => {
+const hasAnyDates = (performance: Performance): boolean => {
+  return !!(performance.showDates && performance.showDates.length > 0)
+}
+
+const shouldShowTickets = (performance: Performance): boolean => {
+  return !!(performance.tickets && performance.tickets !== 'hide')
+}
+
+// Функция для получения ближайшей будущей даты
+const getNextShowDate = (performance: Performance): Date | null => {
   if (!performance.showDates || performance.showDates.length === 0) {
     return null
   }
@@ -75,75 +61,69 @@ const getRelevantShowDate = (performance: Performance): Date | null => {
   const now = new Date()
   const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
 
-  // Для текущих спектаклей ищем ближайшую будущую дату
-  if (performance.status === 'current') {
-    const futureDates = performance.showDates
-      .map(showDate => new Date(showDate.date))
-      .filter(date => date >= today)
-      .sort((a, b) => a.getTime() - b.getTime())
+  const futureDates = performance.showDates
+    .map(dateTimeString => {
+      const { date } = parseDateTimeString(dateTimeString)
+      return new Date(date)
+    })
+    .filter(date => date >= today)
+    .sort((a, b) => a.getTime() - b.getTime())
 
-    return futureDates.length > 0 ? futureDates[0] : null
-  }
-
-  // Для архивных спектаклей берем последнюю дату показа
-  if (performance.status === 'archived') {
-    const allDates = performance.showDates
-      .map(showDate => new Date(showDate.date))
-      .sort((a, b) => b.getTime() - a.getTime()) // Сортируем по убыванию
-
-    return allDates.length > 0 ? allDates[0] : null
-  }
-
-  // Для планируемых спектаклей берем первую дату (если есть)
-  if (performance.status === 'planned') {
-    const allDates = performance.showDates
-      .map(showDate => new Date(showDate.date))
-      .sort((a, b) => a.getTime() - b.getTime())
-
-    return allDates.length > 0 ? allDates[0] : null
-  }
-
-  return null
+  return futureDates.length > 0 ? futureDates[0] : null
 }
 
-// Функция для сортировки спектаклей по приоритету статусов и датам
-const sortPerformances = (performances: Performance[]): Performance[] => {
-  const statusPriority = {
-    [PerformanceStatus.UPCOMING]: 1,
-    [PerformanceStatus.PLANNED]: 2,
-    [PerformanceStatus.DEVELOPMENT]: 3,
-    [PerformanceStatus.FINISHED]: 4,
-    [PerformanceStatus.ARCHIVED_DATED]: 5,
-    [PerformanceStatus.ARCHIVED]: 6,
+// Упрощенная функция для определения приоритета сортировки
+const getSortPriority = (performance: Performance): number => {
+  const isActive = performance.status === 'active'
+  const hasTickets = shouldShowTickets(performance)
+  const hasFuture = hasFutureDates(performance)
+  const hasDates = hasAnyDates(performance)
+
+  // Архивные всегда в конце
+  if (performance.status === 'archived') {
+    return 6
   }
 
-  return [...performances].sort((a, b) => {
-    const statusA = getPerformanceStatus(a)
-    const statusB = getPerformanceStatus(b)
+  // Активные с прошедшими датами
+  if (isActive && hasDates && !hasFuture) {
+    return 5
+  }
 
-    // Сначала сортируем по статусу
-    const priorityDiff = statusPriority[statusA] - statusPriority[statusB]
+  // Активные с билетами имеют приоритет
+  if (isActive && hasTickets) {
+    return hasFuture ? 1 : 2 // С датами или без
+  }
+
+  // Активные без билетов
+  if (isActive) {
+    return hasFuture ? 3 : 4 // С датами или без
+  }
+
+  return 6 // fallback
+}
+
+// Упрощенная функция сортировки спектаклей
+const sortPerformances = (performances: Performance[]): Performance[] => {
+  return [...performances].sort((a, b) => {
+    // 1. Сортировка по приоритету
+    const priorityDiff = getSortPriority(a) - getSortPriority(b)
     if (priorityDiff !== 0) {
       return priorityDiff
     }
 
-    // Если статусы одинаковые, сортируем по релевантной дате
-    const dateA = getRelevantShowDate(a)
-    const dateB = getRelevantShowDate(b)
+    // 2. Сортировка по датам (если есть)
+    const dateA = getNextShowDate(a)
+    const dateB = getNextShowDate(b)
 
     if (dateA && dateB) {
       return dateA.getTime() - dateB.getTime()
     }
 
-    if (dateA && !dateB) {
-      return -1
-    }
-    if (!dateA && dateB) {
-      return 1
-    }
+    if (dateA && !dateB) return -1
+    if (!dateA && dateB) return 1
 
-    // Если дат нет, сортируем по названию
-    return a.title.localeCompare(b.title)
+    // 3. Сортировка по алфавиту
+    return a.title.localeCompare(b.title, 'ru')
   })
 }
 
@@ -172,21 +152,26 @@ const sortPublications = (publications: Publication[]): Publication[] => {
 
 // Хук для работы с публикациями (отсортированными)
 export const usePublications = (): Publication[] => {
-  const publications = Array.isArray(publicationsData?.publications)
-    ? publicationsData.publications
-    : []
-  return sortPublications(publications)
+  const publications = Array.isArray(publicationsData) ? publicationsData : []
+  // Приводим типы для совместимости с JSON
+  const typedPublications = publications.map(pub => ({
+    ...pub,
+    details: pub.details || pub.html || '',
+    buttons: pub.buttons as string[] | undefined,
+    documents: pub.documents as Record<string, string> | undefined,
+  }))
+  return sortPublications(typedPublications)
 }
 
 // Хук для работы со спектаклями (отсортированными)
 export const usePerformances = (): Performance[] => {
-  const performances = Array.isArray(performancesData?.performances)
-    ? performancesData.performances
-    : []
+  const performances = Array.isArray(performancesData) ? performancesData : []
   // Приводим типы для совместимости с JSON
   const typedPerformances = performances.map(perf => ({
     ...perf,
     status: perf.status as PerformanceStatusType | undefined,
+    showDates: perf.showDates as string[] | undefined,
+    cast: perf.cast as Record<string, string[]> | undefined,
   }))
   return sortPerformances(typedPerformances)
 }
@@ -205,7 +190,7 @@ export const useSortedPublications = (limit?: number): Publication[] => {
 
 // Хук для работы с героем
 export const useHeroSlides = (): HeroSlide[] => {
-  return Array.isArray(heroData?.slides) ? heroData.slides : []
+  return Array.isArray(heroData) ? heroData : []
 }
 
 // Хук для работы с медиа
@@ -271,10 +256,7 @@ export const useSEO = (): SEOData => {
 export const useSite = (): SiteData => {
   return (
     siteData || {
-      organization: { name: '', fullName: '', shortName: '' },
-      season: { current: '', label: '' },
       footer: { copyright: '', photoConsent: '' },
-      contacts: { mapDescription: '' },
     }
   )
 }

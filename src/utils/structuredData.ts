@@ -1,4 +1,5 @@
 import { Performance, Publication } from '../types/content'
+import { parseDateTimeString } from './dateFormat'
 
 export const generatePerformanceStructuredData = (performance: Performance, _index: number) => {
   return {
@@ -10,21 +11,25 @@ export const generatePerformanceStructuredData = (performance: Performance, _ind
       .toLowerCase()
       .replace(/\s+/g, '-')
       .replace(/[^\w\-а-яё]/gi, '')}`,
-    image: performance.image,
+    image: performance.slider?.[0] || '',
     startDate: performance.showDates?.[0]
-      ? `${performance.showDates[0].date}T${performance.showDates[0].time}:00`
+      ? (() => {
+        const { date, time } = parseDateTimeString(performance.showDates[0])
+        return `${date}T${time}:00`
+      })()
       : undefined,
     endDate: performance.showDates?.[0]
-      ? `${performance.showDates[0].date}T${performance.showDates[0].time}:00`
+      ? (() => {
+        const { date, time } = parseDateTimeString(performance.showDates[0])
+        return `${date}T${time}:00`
+      })()
       : undefined,
     eventStatus:
-      performance.status === 'current'
+      performance.status === 'active'
         ? 'https://schema.org/EventScheduled'
-        : performance.status === 'planned'
-          ? 'https://schema.org/EventScheduled'
-          : performance.status === 'archived'
-            ? 'https://schema.org/EventPostponed'
-            : 'https://schema.org/EventScheduled',
+        : performance.status === 'archived'
+          ? 'https://schema.org/EventPostponed'
+          : 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
       '@type': 'Place',
@@ -67,7 +72,7 @@ export const generatePublicationStructuredData = (publication: Publication, _ind
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: publication.title,
-    description: publication.html?.replace(/<[^>]*>/g, '').substring(0, 160) || publication.title,
+    description: publication.details?.replace(/<[^>]*>/g, '').substring(0, 160) || publication.title,
     url: `https://licedeycentre.github.io/publications/${publication.title
       .toLowerCase()
       .replace(/\s+/g, '-')

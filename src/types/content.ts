@@ -6,11 +6,8 @@ export interface VideoGroup {
   }>
 }
 
-// Тип для кнопки публикации
-export interface PublicationButton {
-  text: string
-  url: string
-}
+// Тип для кнопки публикации - теперь просто URL
+export type PublicationButton = string
 
 // Типы для публикаций
 export interface Publication {
@@ -18,97 +15,50 @@ export interface Publication {
   date?: string
   image: string
   tags: string[]
-  html: string
+  details: string
   gallery?: string[]
-  video?: PerformanceVideo | VideoGroup[] // Видео публикации (одно видео или группы видео)
-  button?: PublicationButton // Кнопка действия (опциональная)
-  documents?: Document[] // Документы публикации (опциональные)
-}
-
-export interface PublicationsData {
-  publications: Publication[]
+  video?: string | string[] // Видео публикации (одно видео или массив видео)
+  buttons?: string[] // Формат: ["текст:ссылка", "текст:ссылка"]
+  documents?: Documents // Документы публикации (опциональные)
 }
 
 // Типы для спектаклей
-export interface ShowDate {
-  date: string // ISO формат: "2024-10-11"
-  time: string // Формат: "19:00"
-}
+export type ShowDates = string[] // Массив строк в формате "2025-12-15 19:00"
 
-// Тип для действующих лиц
-export interface CastMember {
-  role: string // Название роли
-  actors: string[] // Массив актёров
-  archivedActors?: string[] // Массив архивных актёров (опционально)
-}
+// Тип для действующих лиц - объект с ключами-ролями
+// Архивные актеры помечаются префиксом "*"
+export type Cast = Record<string, string[]> // {"Роль": ["Актер1", "*Архивный актер"]}
 
-// Тип для видео спектакля
-export interface PerformanceVideo {
-  url: string
-  title: string
-  description: string
-}
-
-// Enum для статусов спектаклей
-export enum PerformanceStatus {
-  UPCOMING = 'upcoming', // Предстоящие (current с будущими датами)
-  PLANNED = 'planned', // Планируется в сезоне
-  FINISHED = 'finished', // Показ завершён (current с прошедшими датами)
-  DEVELOPMENT = 'development', // Созревает к показу
-  ARCHIVED_DATED = 'archived_dated', // Архивное с датой (archived с showDates)
-  ARCHIVED = 'archived', // Архивное без даты (archived без showDates)
-}
 
 // Тип для статуса спектакля в JSON данных
-export type PerformanceStatusType = 'current' | 'planned' | 'development' | 'archived'
+export type PerformanceStatusType = 'active' | 'archived'
 
 export interface Performance {
   title: string
   duration: string
   ageGroup: string
   description: string
-  detailedDescription?: string // Подробное описание спектакля
+  details?: string // Подробное описание спектакля
   creators: string
-  image: string
   slider?: string[] // Изображения для слайдера
   gallery?: string[] // Изображения для галереи внизу страницы
-  video?: PerformanceVideo | VideoGroup[] // Видео спектакля (одно видео или группы видео)
+  video?: string | string[] // Видео спектакля (одно видео или массив видео)
   status?: PerformanceStatusType
-  showDates?: ShowDate[]
-  ticketsUrl?: string // Кастомная ссылка для покупки билетов
-  showTicketsButton?: boolean // Показывать ли кнопку "Приобрести билеты"
-  documents?: Document[] // Документы спектакля (опциональные)
-  castMembers?: CastMember[] // Список действующих лиц
+  showDates?: ShowDates
+  tickets?: string // "show" | "hide" | URL для покупки билетов
+  documents?: Documents // Документы спектакля (опциональные)
+  cast?: Cast // Список действующих лиц
 }
 
-export interface PerformancesData {
-  performances: Performance[]
-}
-
-// Типы для документов
-export interface Document {
-  title: string
-  description: string
-  url: string
-}
+// Типы для документов - объект с ключами-названиями
+export type Documents = Record<string, string>
 
 // Типы для героя
-export interface HeroButton {
-  text: string
-  href: string
-  primary: boolean
-}
-
 export interface HeroSlide {
   title: string
   description: string
   bgUrl?: string
-  bgColor?: string
-  buttons: HeroButton[]
-}
-
-export interface HeroData {
-  slides: HeroSlide[]
+  buttons?: string[] // Формат: ["текст:ссылка", "текст:ссылка"]
 }
 
 // Типы для медиа
@@ -178,8 +128,8 @@ export interface AboutSubsection {
   seoDescription?: string
   seoKeywords?: string
   content: string
-  documents?: Document[]
-  video?: PerformanceVideo
+  documents?: Documents
+  video?: string
   contactButton?: {
     text: string
     href: string
@@ -191,14 +141,9 @@ export interface AboutData {
   leadText: string
   history: string
   mission: string
-  sectionTitles?: {
-    history?: string
-    mission?: string
-    directions?: string
-  }
-  documents?: Document[]
+  documents?: Documents
   gallery?: string[]
-  video?: PerformanceVideo
+  video?: string
   directions: AboutDirection[]
   subsections?: {
     studio?: AboutSubsection
@@ -226,7 +171,7 @@ export interface ServicesSubsection {
   seoDescription?: string
   seoKeywords?: string
   content: string
-  video?: PerformanceVideo
+  video?: string
   contactButton?: {
     text: string
     href: string
@@ -235,12 +180,9 @@ export interface ServicesSubsection {
 
 export interface ServicesData {
   introText?: string
-  sectionTitles?: {
-    services?: string
-  }
   services?: Service[]
   gallery?: string[]
-  video?: PerformanceVideo
+  video?: string
   subsections?: {
     performances?: ServicesSubsection
     hall?: ServicesSubsection
@@ -295,21 +237,9 @@ export interface SEOData {
 
 // Типы для глобальных настроек сайта
 export interface SiteData {
-  organization: {
-    name: string
-    fullName: string
-    shortName: string
-  }
-  season: {
-    current: string
-    label: string
-  }
   footer: {
     copyright: string
     photoConsent: string
-  }
-  contacts: {
-    mapDescription: string
   }
 }
 

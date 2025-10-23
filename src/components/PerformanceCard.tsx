@@ -2,10 +2,11 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { MediaThumb } from './MediaThumb'
 import {
-  formatShowDateShort,
-  filterFutureShowDates,
-  getLastPastShowDate,
-  formatLastShowDate,
+  formatDateTimeStringShort,
+  formatDateTimeStringFull,
+  filterFutureDateTimeStrings,
+  getLastPastDateTimeString,
+  parseDateTimeString,
 } from '../utils/dateFormat'
 import { generatePerformanceId } from '../utils/slugify'
 import type { Performance } from '../types/content'
@@ -24,7 +25,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
   // Мемоизируем вычисления для оптимизации
   const futureDates = React.useMemo(() => {
     const hasDates = performance.showDates && performance.showDates.length > 0
-    return hasDates ? filterFutureShowDates(performance.showDates!) : []
+    return hasDates ? filterFutureDateTimeStrings(performance.showDates!) : []
   }, [performance.showDates])
 
   const displayDates = React.useMemo(() => {
@@ -63,7 +64,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
         className="performance-card-bg"
       >
         <MediaThumb
-          src={performance.image}
+          src={performance.slider?.[0] || ''}
           alt={performance.title}
           containerClass="performance-image"
           placeholderClass="performance-placeholder"
@@ -106,131 +107,106 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
 
       {/* Контент (даты и кнопка) - не кликабельный */}
       <div className="card-content-area">
-        {/* Даты показов */}
-        {showDates && futureDates.length > 0 && (
+        {/* Даты показов - только для активных спектаклей */}
+        {showDates && futureDates.length > 0 && performance.status !== 'archived' && (
           <div className="performance-dates">
-            {displayDates.map((showDate, index) => (
-              <div key={index} className="performance-date">
-                {formatShowDateShort(showDate.date, showDate.time)}
+            {displayDates.map((dateTimeString, index) => (
+              <div
+                key={index}
+                className="performance-date"
+                title={formatDateTimeStringFull(dateTimeString)}
+              >
+                {formatDateTimeStringShort(dateTimeString)}
               </div>
             ))}
             {remainingDates > 0 && (
               <div className="performance-date-more">+{remainingDates} ещё</div>
             )}
-
-            {/* Плашка "Планируется в сезоне" для planned спектаклей с датами */}
-            {performance.status === 'planned' && (
-              <div
-                className="performance-status-badge performance-status-badge--planned"
-                role="status"
-                aria-label="Спектакль планируется к показу в текущем сезоне"
-              >
-                Планируется в сезоне
-              </div>
-            )}
           </div>
         )}
 
-        {/* Плашки статуса для спектаклей без будущих дат */}
-        {showDates && futureDates.length === 0 && (
+        {/* Плашки статуса */}
+        {showDates && (
           <>
-            {/* Архивный спектакль - показываем последнюю прошедшую дату */}
-            {performance.status === 'archived' &&
-              performance.showDates &&
-              performance.showDates.length > 0 &&
-              (() => {
-                const lastPastDate = getLastPastShowDate(performance.showDates)
-                if (lastPastDate) {
-                  return (
-                    <div
-                      className="performance-status-badge performance-status-badge--archived"
-                      role="status"
-                      aria-label={`Архивный спектакль. Последний показ: ${formatLastShowDate(lastPastDate.date)}`}
-                    >
-                      Последний показ: {formatLastShowDate(lastPastDate.date)}
-                    </div>
-                  )
-                } else {
-                  // Все даты в будущем - показываем заглушку
-                  return (
-                    <div
-                      className="performance-status-badge performance-status-badge--archived"
-                      role="status"
-                      aria-label="Архивный спектакль без прошедших дат показов"
-                    >
-                      Давненько было...
-                    </div>
-                  )
-                }
-              })()}
-
-            {/* Архивный спектакль без дат */}
-            {performance.status === 'archived' &&
-              (!performance.showDates || performance.showDates.length === 0) && (
-                <div
-                  className="performance-status-badge performance-status-badge--archived"
-                  role="status"
-                  aria-label="Архивный спектакль без дат показов"
-                >
-                  Давненько было...
-                </div>
-              )}
-
-            {/* Текущий спектакль, но даты прошли */}
-            {performance.status === 'current' && (
+            {/* Архивный спектакль - всегда показываем плашку независимо от дат */}
+            {performance.status === 'archived' && (
               <div
-                className="performance-status-badge performance-status-badge--completed"
+                className="performance-status-badge performance-status-badge--archived"
                 role="status"
-                aria-label="Текущий спектакль, показ завершен"
+                aria-label="Архивный спектакль"
               >
-                Показ завершен
+                Однажды на сцене
               </div>
             )}
 
-            {/* Планируемый спектакль без дат */}
-            {performance.status === 'development' && (
-              <div
-                className="performance-status-badge performance-status-badge--ripening"
-                role="status"
-                aria-label="Спектакль в разработке, созревает к показу"
-              >
-                Созревает к показу
-              </div>
-            )}
+            {/* Активные спектакли без будущих дат */}
+            {performance.status === 'active' && futureDates.length === 0 && (
+              <>
+                {/* Активный спектакль без дат */}
+                {(!performance.showDates || performance.showDates.length === 0) && (
+                  <div
+                    className="performance-status-badge performance-status-badge--upcoming"
+                    role="status"
+                    aria-label="Активный спектакль без дат показов"
+                  >
+                    Грядущий показ
+                  </div>
+                )}
 
-            {/* Планируется в сезоне */}
-            {performance.status === 'planned' && (
-              <div
-                className="performance-status-badge performance-status-badge--planned"
-                role="status"
-                aria-label="Спектакль планируется к показу в текущем сезоне"
-              >
-                Планируется в сезоне
-              </div>
+                {/* Активный спектакль с прошедшими датами */}
+                {performance.showDates && performance.showDates.length > 0 && (
+                  <div
+                    className="performance-status-badge performance-status-badge--completed"
+                    role="status"
+                    aria-label="Активный спектакль, показ завершен"
+                  >
+                    Показ завершен
+                  </div>
+                )}
+              </>
             )}
           </>
         )}
 
         {/* Кнопка билеты - отдельная ссылка */}
-        {performance.showTicketsButton === true &&
-          !(performance.status === 'current' && futureDates.length === 0) && (
-            <div className="card-tickets-button">
-              {performance.ticketsUrl ? (
-                <a
-                  href={performance.ticketsUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn btn-primary"
-                >
-                  Приобрести билеты
-                </a>
-              ) : (
-                <Link to="/contacts" className="btn btn-primary">
-                  Приобрести билеты
-                </Link>
-              )}
-            </div>
-          )}
+        {(() => {
+          // Определяем, показывать ли кнопку
+          const shouldShowTickets = performance.tickets && performance.tickets !== 'hide'
+
+          // Определяем URL
+          const getTicketsUrl = () => {
+            if (!performance.tickets || performance.tickets === 'hide') return null
+            if (performance.tickets === 'show') return '/contacts'
+            return performance.tickets // URL
+          }
+
+          const ticketsUrl = getTicketsUrl()
+
+          return shouldShowTickets &&
+            performance.status !== 'archived' &&
+            !(performance.status === 'active' &&
+              performance.showDates &&
+              performance.showDates.length > 0 &&
+              futureDates.length === 0) &&
+            ticketsUrl && (
+              <div className="card-tickets-button">
+                {ticketsUrl.startsWith('http') ? (
+                  <a
+                    href={ticketsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn btn-primary"
+                  >
+                    Приобрести билеты
+                  </a>
+                ) : (
+                  <Link to={ticketsUrl} className="btn btn-primary">
+                    Приобрести билеты
+                  </Link>
+                )}
+              </div>
+            )
+        })()}
       </div>
     </div>
   )

@@ -88,11 +88,7 @@ const AboutSubsectionPage: React.FC = () => {
       {/* Видео */}
       {subsectionData.video && (
         <div className="content-card">
-          <VideoPlayer
-            url={subsectionData.video.url}
-            title={subsectionData.video.title}
-            description={subsectionData.video.description}
-          />
+          <VideoPlayer url={subsectionData.video} />
         </div>
       )}
 
@@ -106,35 +102,30 @@ const AboutSubsectionPage: React.FC = () => {
       )}
 
       {/* Документы для скачивания */}
-      {subsectionData.documents && subsectionData.documents.length > 0 && (
+      {subsectionData.documents && Object.keys(subsectionData.documents).length > 0 && (
         <div className="content-card">
           <div className="readable-content">
             <h2>{labels.sections.documents}</h2>
           </div>
           <div className="documents-grid">
-            {subsectionData.documents.map((doc, index) => (
+            {Object.entries(subsectionData.documents).map(([title, url], index) => (
               <div
-                key={
-                  (doc.title && doc.title.replace(/\s+/g, '-')) ||
-                  (doc.url.split('/').pop() || '').replace(/\.[^.]+$/, '') ||
-                  String(index)
-                }
+                key={title.replace(/\s+/g, '-') || String(index)}
                 className="document-card"
               >
                 <div
                   className="document-card-icon"
-                  style={{ backgroundColor: getDocumentColor(doc.url) }}
+                  style={{ backgroundColor: getDocumentColor(url) }}
                 >
-                  {React.createElement(getDocumentIcon(doc.url), { size: 24 })}
+                  {React.createElement(getDocumentIcon(url), { size: 24 })}
                 </div>
                 <div className="document-card-content">
-                  <h3 className="document-card-title">{doc.title}</h3>
-                  <p className="document-card-desc">{doc.description}</p>
+                  <h3 className="document-card-title">{title}</h3>
                 </div>
                 <div className="document-card-action">
                   <a
                     className="icon-button"
-                    href={getDocumentPreviewUrl(doc.url)}
+                    href={getDocumentPreviewUrl(url)}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={labels.common.preview}
@@ -144,7 +135,7 @@ const AboutSubsectionPage: React.FC = () => {
                   </a>
                   <a
                     className="icon-button"
-                    href={doc.url}
+                    href={url}
                     download
                     aria-label={labels.common.download}
                     title={labels.common.download}

@@ -1,833 +1,309 @@
-{
-  "performances": [
-    {
-      "title": "Пустоцвет",
-      "duration": "45 минут",
-      "ageGroup": "12+",
-      "description": "Режиссёр Таранова Ольга Алексеевна, Сценарист Таранова Ольга Алексеевна, Автор восемнадцатилетняя Таранова Ольга Алексеевна",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Таранова Ольга Алексеевна, Сценарист: Таранова Ольга Алексеевна",
-      "image": "https://i.imgur.com/wmacDwq.jpeg",
-      "slider": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg"
+[
+  {
+    "title": "Пустоцвет",
+    "duration": "45 минут",
+    "ageGroup": "12+",
+    "description": "Режиссёр Таранова Ольга Алексеевна, Сценарист Таранова Ольга Алексеевна, Автор восемнадцатилетняя Таранова Ольга Алексеевна",
+    "creators": "Режиссёр: Таранова Ольга Алексеевна, Сценарист: Таранова Ольга Алексеевна",
+    "status": "active",
+    "tickets": "show",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg",
+      "https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg",
+      "https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ],
+    "video": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "showDates": [
+      "2025-12-15 19:00",
+      "2025-12-22 19:00",
+      "2025-12-29 18:00",
+      "2026-01-15 19:00",
+      "2026-01-22 19:00",
+      "2026-02-05 18:00"
+    ],
+    "cast": {
+      "Оля": [
+        "Анна Смирнова",
+        "Мария Иванова",
+        "*Елена Волкова",
+        "*Татьяна Петрова",
+        "*Ольга Сидорова"
       ],
-      "gallery": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg",
-        "https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg",
-        "https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+      "Ваня": [
+        "Дмитрий Козлов",
+        "*Алексей Морозов",
+        "*Игорь Лебедев"
       ],
-      "video": {
-        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-        "title": "Трейлер спектакля 'Пустоцвет'",
-        "description": "Официальный трейлер спектакля театра-студии 'Балаганчик'. Погрузитесь в атмосферу театрального искусства."
-      },
-      "status": "current",
-      "showTicketsButton": true,
-      "showDates": [
-        {
-          "date": "2025-12-15",
-          "time": "19:00"
-        },
-        {
-          "date": "2025-12-22",
-          "time": "19:00"
-        },
-        {
-          "date": "2025-12-29",
-          "time": "18:00"
-        },
-        {
-          "date": "2026-01-15",
-          "time": "19:00"
-        },
-        {
-          "date": "2026-01-22",
-          "time": "19:00"
-        },
-        {
-          "date": "2026-02-05",
-          "time": "18:00"
-        }
-      ],
-      "ticketsUrl": "/contacts",
-      "documents": [
-        {
-          "title": "Сценарий спектакля 'Пустоцвет'",
-          "description": "Полный текст сценария спектакля",
-          "url": "/documents/pustotsvet-script.pdf"
-        },
-        {
-          "title": "Режиссерские заметки",
-          "description": "Заметки режиссера по постановке спектакля",
-          "url": "/documents/pustotsvet-director-notes.pdf"
-        },
-        {
-          "title": "Эскизы костюмов",
-          "description": "Эскизы и описания костюмов персонажей",
-          "url": "/documents/pustotsvet-costume-design.pdf"
-        }
-      ],
-      "castMembers": [
-        {
-          "role": "Оля",
-          "actors": ["Анна Смирнова", "Мария Иванова"],
-          "archivedActors": ["Елена Волкова", "Татьяна Петрова", "Ольга Сидорова"]
-        },
-        {
-          "role": "Ваня",
-          "actors": ["Дмитрий Козлов"],
-          "archivedActors": ["Алексей Морозов", "Игорь Лебедев"]
-        },
-        {
-          "role": "Тая",
-          "actors": ["Елена Петрова", "Ольга Сидорова"],
-          "archivedActors": ["Анна Соколова", "Мария Волкова", "Татьяна Козлова"]
-        }
+      "Тая": [
+        "Елена Петрова",
+        "Ольга Сидорова",
+        "*Анна Соколова",
+        "*Мария Волкова",
+        "*Татьяна Козлова"
       ]
     },
-    {
-      "title": "Ревизор",
-      "duration": "2 часа 30 минут",
-      "ageGroup": "12+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Светлана Петрова, Сценарист: Н.В. Гоголь",
-      "image": "https://i.imgur.com/wmacDwq.jpeg",
-      "slider": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/TM5hcWJ.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/TM5hcWJ.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "video": {
-        "url": "https://i.imgur.com/FSaHcSv.mp4",
-        "title": "Видео спектакля 'Ревизор'",
-        "description": "Прямое видео спектакля в формате MP4. Демонстрация возможностей видеоплеера с локальными файлами."
-      },
-      "status": "planned",
-      "showTicketsButton": true,
-      "showDates": [
-        {
-          "date": "2024-12-28",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-12-30",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-12-31",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-01-03",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-01-10",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-01-20",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-01-27",
-          "time": "18:00"
-        },
-        {
-          "date": "2024-02-10",
-          "time": "18:00"
-        }
-      ],
-      "ticketsUrl": "/contacts",
-      "castMembers": [
-        {
-          "role": "Хлестаков",
-          "actors": ["Александр Новиков", "Игорь Волков"]
-        },
-        {
-          "role": "Городничий",
-          "actors": ["Елена Козлова"]
-        },
-        {
-          "role": "Марья Антоновна",
-          "actors": ["Дмитрий Морозов", "Анна Соколова"]
-        }
-      ]
-    },
-    {
-      "title": "Щелкунчик",
-      "duration": "1 час 45 минут",
-      "ageGroup": "6+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Мария Волкова, Сценарист: Э.Т.А. Гофман",
-      "image": "https://i.imgur.com/SLVylPe.jpeg",
-      "slider": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "video": [
-        {
-          "title": "Материалы спектакля 'Щелкунчик'",
-          "videos": [
-            {
-              "url": "https://rutube.ru/video/b7094bb353ef614bebc8b081b7b312ee/"
-            },
-            {
-              "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-            }
-          ]
-        }
-      ],
-      "status": "planned",
-      "showTicketsButton": true,
-      "showDates": [
-        {
-          "date": "2024-12-31",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-12-25",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-12-26",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-01-01",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-01-02",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-01-18",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-01-25",
-          "time": "14:00"
-        },
-        {
-          "date": "2024-02-08",
-          "time": "14:00"
-        }
-      ],
-      "ticketsUrl": "/contacts",
-      "castMembers": [
-        {
-          "role": "Клара",
-          "actors": ["Анна Соколова", "Татьяна Морозова"]
-        },
-        {
-          "role": "Щелкунчик",
-          "actors": ["Михаил Новиков"]
-        },
-        {
-          "role": "Мышиный король",
-          "actors": ["Татьяна Козлова", "Дмитрий Волков"]
-        },
-        {
-          "role": "Фея Драже",
-          "actors": ["Ольга Морозова", "Елена Соколова"]
-        }
-      ]
-    },
-    {
-      "title": "Новые горизонты",
-      "duration": "2 часа 15 минут",
-      "ageGroup": "14+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Современный Театр, Сценарист: Молодой Драматург",
-      "image": "https://i.imgur.com/wmacDwq.jpeg",
-      "slider": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showDates": [
-        {
-          "date": "2024-02-15",
-          "time": "19:00"
-        },
-        {
-          "date": "2024-02-22",
-          "time": "19:00"
-        },
-        {
-          "date": "2024-03-01",
-          "time": "18:30"
-        },
-        {
-          "date": "2024-03-08",
-          "time": "19:00"
-        },
-        {
-          "date": "2025-02-15",
-          "time": "19:00"
-        },
-        {
-          "date": "2025-02-22",
-          "time": "19:00"
-        },
-        {
-          "date": "2025-03-01",
-          "time": "18:30"
-        },
-        {
-          "date": "2025-03-08",
-          "time": "19:00"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Волшебный лес",
-      "duration": "1 час 30 минут",
-      "ageGroup": "6+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Лесной Театр, Сценарист: Природный Писатель",
-      "image": "https://i.imgur.com/cMDJuFf.jpeg",
-      "slider": [
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showTicketsButton": true,
-      "showDates": [
-        {
-          "date": "2024-04-10",
-          "time": "15:00"
-        },
-        {
-          "date": "2024-04-17",
-          "time": "15:00"
-        },
-        {
-          "date": "2024-04-24",
-          "time": "14:30"
-        },
-        {
-          "date": "2024-05-01",
-          "time": "15:00"
-        },
-        {
-          "date": "2025-04-10",
-          "time": "15:00"
-        },
-        {
-          "date": "2025-04-17",
-          "time": "15:00"
-        },
-        {
-          "date": "2025-04-24",
-          "time": "14:30"
-        },
-        {
-          "date": "2025-05-01",
-          "time": "15:00"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Старые друзья",
-      "duration": "3.5 часа с антрактом",
-      "ageGroup": "16+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Иванов Иван Иванович, Сценарист: Петров Петр Петрович",
-      "image": "https://i.imgur.com/wIykMF0.jpeg",
-      "slider": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showTicketsButton": true,
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Сказка о потерянном времени",
-      "duration": "1 час 20 минут",
-      "ageGroup": "6+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Светлана Новикова, Сценарист: Евгений Шварц",
-      "image": "https://i.imgur.com/TM5hcWJ.jpeg",
-      "slider": [
-        "https://i.imgur.com/TM5hcWJ.jpeg",
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/TM5hcWJ.jpeg",
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showTicketsButton": true,
-      "showDates": [
-        {
-          "date": "2024-12-20",
-          "time": "15:00"
-        },
-        {
-          "date": "2024-12-27",
-          "time": "15:00"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Маленький принц",
-      "duration": "1 час 30 минут",
-      "ageGroup": "8+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Ольга Тарасова, Сценарист: Антуан де Сент-Экзюпери",
-      "image": "https://i.imgur.com/cMDJuFf.jpeg",
-      "slider": [
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "archived"
-    },
-    {
-      "title": "Гроза",
-      "duration": "2 часа 15 минут",
-      "ageGroup": "14+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Игорь Лебедев, Сценарист: А.Н. Островский",
-      "image": "https://i.imgur.com/SLVylPe.jpeg",
-      "slider": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showDates": [
-        {
-          "date": "2024-12-18",
-          "time": "19:30"
-        },
-        {
-          "date": "2024-12-25",
-          "time": "19:30"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Вечера на хуторе близ Диканьки",
-      "duration": "1 час 45 минут",
-      "ageGroup": "10+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Мария Волкова, Сценарист: Н.В. Гоголь",
-      "image": "https://i.imgur.com/mbgTAbO.jpeg",
-      "slider": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showTicketsButton": true,
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Снежная королева",
-      "duration": "1 час 15 минут",
-      "ageGroup": "5+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Ольга Морозова, Сценарист: Г.Х. Андерсен",
-      "image": "https://i.imgur.com/cMDJuFf.jpeg",
-      "slider": [
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showDates": [
-        {
-          "date": "2024-12-21",
-          "time": "12:00"
-        },
-        {
-          "date": "2024-12-24",
-          "time": "12:00"
-        },
-        {
-          "date": "2024-12-26",
-          "time": "12:00"
-        },
-        {
-          "date": "2024-12-29",
-          "time": "12:00"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Гамлет",
-      "duration": "3 часа с антрактом",
-      "ageGroup": "16+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Михаил Козлов, Сценарист: Уильям Шекспир",
-      "image": "https://i.imgur.com/wIykMF0.jpeg",
-      "slider": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "development",
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Алиса в Стране чудес",
-      "duration": "1 час 30 минут",
-      "ageGroup": "8+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Татьяна Соколова, Сценарист: Льюис Кэрролл",
-      "image": "https://i.imgur.com/TM5hcWJ.jpeg",
-      "slider": [
-        "https://i.imgur.com/TM5hcWJ.jpeg",
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/TM5hcWJ.jpeg",
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showDates": [
-        {
-          "date": "2024-12-23",
-          "time": "15:00"
-        },
-        {
-          "date": "2024-12-30",
-          "time": "15:00"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Вишнёвый сад",
-      "duration": "2 часа 45 минут",
-      "ageGroup": "14+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Ольга Тарасова, Сценарист: Антон Чехов",
-      "image": "https://i.imgur.com/mbgTAbO.jpeg",
-      "slider": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "archived"
-    },
-    {
-      "title": "Ромео и Джульетта",
-      "duration": "2 часа 30 минут",
-      "ageGroup": "14+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Елена Петрова, Сценарист: Уильям Шекспир",
-      "image": "https://i.imgur.com/wIykMF0.jpeg",
-      "slider": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "development"
-    },
-    {
-      "title": "Три сестры",
-      "duration": "3 часа с антрактом",
-      "ageGroup": "16+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Александр Волков, Сценарист: Антон Чехов",
-      "image": "https://i.imgur.com/SLVylPe.jpeg",
-      "slider": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "showDates": [
-        {
-          "date": "2024-11-01",
-          "time": "19:00"
-        },
-        {
-          "date": "2024-11-08",
-          "time": "19:00"
-        },
-        {
-          "date": "2024-11-15",
-          "time": "18:30"
-        }
-      ],
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Зимняя сказка",
-      "duration": "2 часа с антрактом",
-      "ageGroup": "12+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Зимний Театр, Сценарист: Сказочник",
-      "image": "https://i.imgur.com/wmacDwq.jpeg",
-      "slider": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wmacDwq.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "archived",
-      "showDates": [
-        {
-          "date": "2024-12-10",
-          "time": "19:00"
-        },
-        {
-          "date": "2024-12-17",
-          "time": "19:00"
-        },
-        {
-          "date": "2024-12-24",
-          "time": "18:00"
-        }
-      ]
-    },
-    {
-      "title": "Весенние мечты",
-      "duration": "1 час 45 минут",
-      "ageGroup": "8+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Весенний Театр, Сценарист: Мечтатель",
-      "image": "https://i.imgur.com/wIykMF0.jpeg",
-      "slider": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "archived",
-      "showDates": [
-        {
-          "date": "2024-03-15",
-          "time": "15:00"
-        },
-        {
-          "date": "2024-03-22",
-          "time": "15:00"
-        },
-        {
-          "date": "2024-03-29",
-          "time": "14:30"
-        }
-      ]
-    },
-    {
-      "title": "Город мечты",
-      "duration": "2 часа 30 минут",
-      "ageGroup": "12+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Мечтательный Театр, Сценарист: Фантазер",
-      "image": "https://i.imgur.com/SLVylPe.jpeg",
-      "slider": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "current",
-      "ticketsUrl": "/contacts"
-    },
-    {
-      "title": "Звездное небо",
-      "duration": "1 час 45 минут",
-      "ageGroup": "8+",
-      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "detailedDescription": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
-      "creators": "Режиссёр: Космический Театр, Сценарист: Астроном",
-      "image": "https://i.imgur.com/mbgTAbO.jpeg",
-      "slider": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg"
-      ],
-      "gallery": [
-        "https://i.imgur.com/mbgTAbO.jpeg",
-        "https://i.imgur.com/wIykMF0.jpeg",
-        "https://i.imgur.com/cMDJuFf.jpeg",
-        "https://i.imgur.com/SLVylPe.jpeg",
-        "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
-        "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
-      ],
-      "status": "development",
-      "ticketsUrl": "/contacts"
+    "documents": {
+      "Сценарий спектакля 'Пустоцвет'": "/documents/pustotsvet-script.pdf",
+      "Режиссерские заметки": "/documents/pustotsvet-director-notes.pdf",
+      "Эскизы костюмов": "/documents/pustotsvet-costume-design.pdf"
     }
-  ]
-}
+  },
+  {
+    "title": "Ревизор",
+    "duration": "2 часа 30 минут",
+    "ageGroup": "12+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Светлана Петрова, Сценарист: Н.В. Гоголь",
+    "status": "active",
+    "tickets": "hide",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/TM5hcWJ.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/TM5hcWJ.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ],
+    "video": "https://i.imgur.com/FSaHcSv.mp4",
+    "showDates": [
+      "2024-12-28 18:00",
+      "2024-12-30 18:00",
+      "2024-12-31 18:00",
+      "2024-01-03 18:00",
+      "2024-01-10 18:00",
+      "2024-01-20 18:00",
+      "2024-01-27 18:00",
+      "2024-02-10 18:00"
+    ],
+    "cast": {
+      "Хлестаков": [
+        "Александр Новиков",
+        "Игорь Волков"
+      ],
+      "Городничий": [
+        "Елена Козлова"
+      ],
+      "Марья Антоновна": [
+        "Дмитрий Морозов",
+        "Анна Соколова"
+      ]
+    }
+  },
+  {
+    "title": "Щелкунчик",
+    "duration": "1 час 45 минут",
+    "ageGroup": "6+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Мария Волкова, Сценарист: Э.Т.А. Гофман",
+    "status": "active",
+    "tickets": "show",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ],
+    "video": [
+      "https://rutube.ru/video/b7094bb353ef614bebc8b081b7b312ee/",
+      "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+    ],
+    "showDates": [
+      "2025-12-25 14:00",
+      "2025-12-26 14:00",
+      "2025-12-31 14:00",
+      "2026-01-01 14:00",
+      "2026-01-02 14:00",
+      "2026-01-18 14:00",
+      "2026-01-25 14:00",
+      "2026-02-08 14:00"
+    ],
+    "cast": {
+      "Клара": [
+        "Анна Соколова",
+        "Татьяна Морозова"
+      ],
+      "Щелкунчик": [
+        "Михаил Новиков"
+      ],
+      "Мышиный король": [
+        "Татьяна Козлова",
+        "Дмитрий Волков"
+      ],
+      "Фея Драже": [
+        "Ольга Морозова",
+        "Елена Соколова"
+      ]
+    }
+  },
+  {
+    "title": "Маленький принц",
+    "duration": "1 час 30 минут",
+    "ageGroup": "8+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Ольга Тарасова, Сценарист: Антуан де Сент-Экзюпери",
+    "status": "archived",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ]
+  },
+  {
+    "title": "Вишнёвый сад",
+    "duration": "2 часа 45 минут",
+    "ageGroup": "14+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Ольга Тарасова, Сценарист: Антон Чехов",
+    "status": "archived",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ]
+  },
+  {
+    "title": "Ромео и Джульетта",
+    "duration": "2 часа 30 минут",
+    "ageGroup": "14+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Елена Петрова, Сценарист: Уильям Шекспир",
+    "status": "active",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ]
+  },
+  {
+    "title": "Зимняя сказка",
+    "duration": "2 часа с антрактом",
+    "ageGroup": "12+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Зимний Театр, Сценарист: Сказочник",
+    "status": "archived",
+    "tickets": "show",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ],
+    "showDates": [
+      "2025-12-10 19:00",
+      "2025-12-17 19:00",
+      "2025-12-24 18:00"
+    ]
+  },
+  {
+    "title": "Грядущая премьера",
+    "duration": "2 часа",
+    "ageGroup": "12+",
+    "description": "Скоро в театре! Подготовка к новой постановке в самом разгаре.",
+    "creators": "Режиссёр: Новый Режиссёр, Сценарист: Современный Драматург",
+    "status": "active",
+    "tickets": "show",
+    "details": "<p>Мы работаем над новой постановкой, которая обещает стать настоящим событием театрального сезона. Детали будут объявлены позже.</p><h3>О спектакле</h3><p>Информация о спектакле будет добавлена по мере готовности постановки.</p><h3>Расписание</h3><p>Даты показов будут объявлены дополнительно. Следите за обновлениями!</p>",
+    "slider": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/wmacDwq.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg"
+    ]
+  },
+  {
+    "title": "Весенние мечты",
+    "duration": "1 час 45 минут",
+    "ageGroup": "8+",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "creators": "Режиссёр: Весенний Театр, Сценарист: Мечтатель",
+    "status": "archived",
+    "details": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><h3>Duis aute irure</h3><p>Dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p><h3>Sed ut perspiciatis</h3><p>Unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p><h3>Nemo enim ipsam</h3><ul><li>Voluptatem quia voluptas sit aspernatur</li><li>Aut odit aut fugit, sed quia consequuntur</li><li>Magni dolores eos qui ratione voluptatem</li></ul><h3>At vero eos</h3><p>Et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident.</p><blockquote>\"Similique sunt in culpa qui officia deserunt mollitia animi\" - temporibus autem</blockquote>",
+    "slider": [
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg"
+    ],
+    "gallery": [
+      "https://i.imgur.com/wIykMF0.jpeg",
+      "https://i.imgur.com/SLVylPe.jpeg",
+      "https://i.imgur.com/mbgTAbO.jpeg",
+      "https://i.imgur.com/cMDJuFf.jpeg",
+      "https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg",
+      "https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg"
+    ],
+    "showDates": [
+      "2024-03-15 15:00",
+      "2024-03-22 15:00",
+      "2024-03-29 14:30"
+    ]
+  }
+]

@@ -86,11 +86,7 @@ const ServicesSubsectionPage: React.FC = () => {
       {/* Видео */}
       {subsectionData.video && (
         <div className="content-card">
-          <VideoPlayer
-            url={subsectionData.video.url}
-            title={subsectionData.video.title}
-            description={subsectionData.video.description}
-          />
+          <VideoPlayer url={subsectionData.video} />
         </div>
       )}
 

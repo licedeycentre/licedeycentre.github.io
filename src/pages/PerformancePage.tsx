@@ -7,21 +7,13 @@ import { Slider } from '../components/Slider'
 import { PerformanceInfoCard } from '../components/PerformanceInfoCard'
 import PageLayout from '../components/PageLayout'
 import { processHtmlContent } from '../utils/htmlProcessor'
-import { VideoGroup as VideoGroupType } from '../types/content'
-import { Download, Eye, ChevronDown, ChevronUp } from 'lucide-react'
+import { Download, Eye } from 'lucide-react'
 import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../utils/documentIcons'
 
 const PerformancePage: React.FC = () => {
   const { id } = useParams()
   const performance = usePerformance(id || '')
   const labels = useUILabels()
-  const [showAllActors, setShowAllActors] = React.useState(false)
-
-  // Проверяем, есть ли архивные актёры
-  const hasArchivedActors =
-    performance?.castMembers?.some(
-      member => member.archivedActors && member.archivedActors.length > 0
-    ) || false
 
   if (!performance) {
     return (
@@ -54,8 +46,7 @@ const PerformancePage: React.FC = () => {
         description={performance.description}
         showDates={performance.showDates}
         performanceStatus={performance.status}
-        ticketsUrl={performance.ticketsUrl}
-        showTicketsButton={performance.showTicketsButton}
+        tickets={performance.tickets}
       />
 
       <PageLayout
@@ -75,65 +66,39 @@ const PerformancePage: React.FC = () => {
         <PerformanceInfoCard performance={performance} />
 
         {/* Подробное описание спектакля */}
-        {performance.detailedDescription && (
+        {performance.details && (
           <div className="content-card">
             <div className="readable-content">
-              {processHtmlContent(performance.detailedDescription || '')}
+              {processHtmlContent(performance.details || '')}
             </div>
           </div>
         )}
 
         {/* Действующие лица */}
-        {performance.castMembers && performance.castMembers.length > 0 && (
+        {performance.cast && Object.keys(performance.cast).length > 0 && (
           <div className="content-card">
             <div className="readable-content">
               <div className="cast-list">
-                {performance.castMembers.map((member, index) => (
+                {Object.entries(performance.cast).map(([role, actors], index) => (
                   <div key={index} className="cast-member">
-                    <div className="cast-role">{member.role}</div>
+                    <div className="cast-role">{role}</div>
                     <div className="cast-actors">
-                      {member.actors.map((actor, actorIndex) => (
-                        <div key={actorIndex} className="cast-actor">
-                          {actor}
-                        </div>
-                      ))}
-                      {member.archivedActors && member.archivedActors.length > 0 && (
-                        <div className={`expandable-content ${showAllActors ? 'expanded' : ''}`}>
-                          {member.archivedActors.map((actor: string, actorIndex: number) => (
-                            <div
-                              key={`archived-${actorIndex}`}
-                              className={`cast-actor cast-actor-archived expandable-item-staggered ${showAllActors ? 'visible' : ''}`}
-                              style={{ transitionDelay: `${actorIndex * 0.05}s` }}
-                            >
-                              {actor}
-                            </div>
-                          ))}
-                        </div>
-                      )}
+                      {actors.map((actor, actorIndex) => {
+                        const isArchived = actor.startsWith('*')
+                        const actorName = isArchived ? actor.slice(1) : actor
+                        return (
+                          <div
+                            key={actorIndex}
+                            className={`cast-actor ${isArchived ? 'cast-actor-archived' : ''}`}
+                          >
+                            {actorName}
+                          </div>
+                        )
+                      })}
                     </div>
                   </div>
                 ))}
               </div>
-              {hasArchivedActors && (
-                <div className="cast-toggle-container">
-                  <button
-                    className="cast-toggle-button"
-                    onClick={() => setShowAllActors(!showAllActors)}
-                  >
-                    {showAllActors ? (
-                      <>
-                        <ChevronUp size={16} />
-                        {labels.buttons.hideArchivedActors}
-                      </>
-                    ) : (
-                      <>
-                        <ChevronDown size={16} />
-                        {labels.buttons.showArchivedActors}
-                      </>
-                    )}
-                  </button>
-                </div>
-              )}
             </div>
           </div>
         )}
@@ -141,15 +106,15 @@ const PerformancePage: React.FC = () => {
         {/* Видео спектакля */}
         {performance.video && (
           <div className="content-card">
-            {/* Проверяем, является ли video одиночным видео или массивом групп */}
+            {/* Проверяем, является ли video строкой или массивом строк */}
             {Array.isArray(performance.video) ? (
-              // Если это массив групп видео
-              performance.video.map((group: VideoGroupType, index: number) => (
-                <VideoPlayer key={index} title={group.title} videos={group.videos} />
+              // Если это массив видео
+              performance.video.map((url: string, index: number) => (
+                <VideoPlayer key={index} url={url} className="video-player-item" />
               ))
             ) : (
-              // Если это одиночное видео
-              <VideoPlayer url={performance.video.url} title={performance.video.title} />
+              // Если это одно видео
+              <VideoPlayer url={performance.video} />
             )}
           </div>
         )}
@@ -162,35 +127,30 @@ const PerformancePage: React.FC = () => {
         )}
 
         {/* Документы спектакля */}
-        {performance.documents && performance.documents.length > 0 && (
+        {performance.documents && Object.keys(performance.documents).length > 0 && (
           <div className="content-card">
             <div className="readable-content">
               <h2>{labels.sections.documents}</h2>
             </div>
             <div className="documents-grid">
-              {performance.documents.map((doc, index) => (
+              {Object.entries(performance.documents).map(([title, url], index) => (
                 <div
-                  key={
-                    (doc.title && doc.title.replace(/\s+/g, '-')) ||
-                    (doc.url.split('/').pop() || '').replace(/\.[^.]+$/, '') ||
-                    String(index)
-                  }
+                  key={title.replace(/\s+/g, '-') || String(index)}
                   className="document-card"
                 >
                   <div
                     className="document-card-icon"
-                    style={{ backgroundColor: getDocumentColor(doc.url) }}
+                    style={{ backgroundColor: getDocumentColor(url) }}
                   >
-                    {React.createElement(getDocumentIcon(doc.url), { size: 24 })}
+                    {React.createElement(getDocumentIcon(url), { size: 24 })}
                   </div>
                   <div className="document-card-content">
-                    <h3 className="document-card-title">{doc.title}</h3>
-                    <p className="document-card-desc">{doc.description}</p>
+                    <h3 className="document-card-title">{title}</h3>
                   </div>
                   <div className="document-card-action">
                     <a
                       className="icon-button"
-                      href={getDocumentPreviewUrl(doc.url)}
+                      href={getDocumentPreviewUrl(url)}
                       target="_blank"
                       rel="noopener noreferrer"
                       aria-label={labels.common.preview}
@@ -200,7 +160,7 @@ const PerformancePage: React.FC = () => {
                     </a>
                     <a
                       className="icon-button"
-                      href={doc.url}
+                      href={url}
                       download
                       aria-label={labels.common.download}
                       title={labels.common.download}

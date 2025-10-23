@@ -1,31 +1,39 @@
-{
-  "slides": [
-    {
-      "title": "Посетите театр «Балаган»",
-      "description": "Да-да, именно Вы",
-      "bgUrl": "https://i.imgur.com/FOz2IzJ.jpeg",
-      "buttons": [
-        { "text": "Смотреть Афишу", "href": "/performances", "primary": true },
-        { "text": "О нас", "href": "/about", "primary": false }
-      ]
+[
+  {
+    "title": "Посетите театр «Балаган»",
+    "description": "Да-да, именно Вы",
+    "bgUrl": "https://i.imgur.com/FOz2IzJ.jpeg",
+    "primaryButton": {
+      "text": "Смотреть Афишу",
+      "link": "/performances"
     },
-    {
-      "title": "Театральная студия",
-      "description": "Открыт набор по всем возрастным группам",
-      "bgColor": "#2c5530",
-      "buttons": [
-        { "text": "Записаться на занятия", "href": "/contacts", "primary": true },
-        { "text": "О студии", "href": "/about/studio", "primary": false }
-      ]
-    },
-    {
-      "title": "Летний театральный лагерь 2026",
-      "description": "Набор на летние смены открыт! Театральные тренинги, постановка спектаклей, творческие занятия для детей 6-14 лет",
-      "bgColor": "#8B4513",
-      "buttons": [
-        { "text": "Записаться в лагерь", "href": "/contacts", "primary": true },
-        { "text": "Подробнее о лагере", "href": "/about/summer-camp", "primary": false }
-      ]
+    "secondaryButton": {
+      "text": "О нас",
+      "link": "/about"
     }
-  ]
-}
+  },
+  {
+    "title": "Театральная студия",
+    "description": "Открыт набор по всем возрастным группам",
+    "primaryButton": {
+      "text": "Записаться на занятия",
+      "link": "/contacts"
+    },
+    "secondaryButton": {
+      "text": "О студии",
+      "link": "/about/studio"
+    }
+  },
+  {
+    "title": "Летний театральный лагерь 2026",
+    "description": "Набор на летние смены открыт! Театральные тренинги, постановка спектаклей, творческие занятия для детей 6-14 лет",
+    "primaryButton": {
+      "text": "Записаться в лагерь",
+      "link": "/contacts"
+    },
+    "secondaryButton": {
+      "text": "Подробнее о лагере",
+      "link": "/about/summer-camp"
+    }
+  }
+]

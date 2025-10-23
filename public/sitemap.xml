@@ -9,43 +9,43 @@
   <!-- Основные страницы -->
   <url>
     <loc>https://licedeycentre.github.io/</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/about</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/performances</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/publications</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/services</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/contacts</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/privacy-policy</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
@@ -53,25 +53,25 @@
   <!-- Подразделы "О нас" -->
   <url>
     <loc>https://licedeycentre.github.io/about/studio</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/about/inclusive</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/about/theater</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/about/summer-camp</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -79,718 +79,21 @@
   <!-- Подразделы "Услуги" -->
   <url>
     <loc>https://licedeycentre.github.io/services/performances</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/services/hall</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://licedeycentre.github.io/services/equipment</loc>
-    <lastmod>2025-10-22</lastmod>
+    <lastmod>2025-10-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-
-  <!-- Спектакли -->
-  <url>
-    <loc>https://licedeycentre.github.io/performances/pustotsvet</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-    <video:video>
-      <video:content_loc>https://www.youtube.com/watch?v=dQw4w9WgXcQ</video:content_loc>
-      <video:title>Трейлер спектакля 'Пустоцвет'</video:title>
-      <video:description>Официальный трейлер спектакля театра-студии 'Балаганчик'. Погрузитесь в атмосферу театрального искусства.</video:description>
-    </video:video>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/revizor</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wmacDwq.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/TM5hcWJ.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-    <video:video>
-      <video:content_loc>https://i.imgur.com/FSaHcSv.mp4</video:content_loc>
-      <video:title>Видео спектакля 'Ревизор'</video:title>
-      <video:description>Прямое видео спектакля в формате MP4. Демонстрация возможностей видеоплеера с локальными файлами.</video:description>
-    </video:video>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/shchelkunchik</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-    <video:video>
-      <video:content_loc>undefined</video:content_loc>
-      <video:title>undefined</video:title>
-      <video:description>undefined</video:description>
-    </video:video>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/novye-gorizonty</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wmacDwq.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/volshebnyy-les</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/starye-druzya</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/skazka-o-poteryannom-vremeni</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/TM5hcWJ.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wmacDwq.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/malenkiy-prints</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/groza</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/vechera-na-khutore-bliz-dikanki</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/snezhnaya-koroleva</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/gamlet</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/alisa-v-strane-chudes</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/TM5hcWJ.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wmacDwq.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/vishnyovyy-sad</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/romeo-i-dzhuletta</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/tri-sestry</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wmacDwq.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/zimnyaya-skazka</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wmacDwq.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/vesennie-mechty</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/gorod-mechty</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/performances/zvezdnoe-nebo</loc>
-    <lastmod>2025-10-22</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-  </url>
-
-  <!-- Публикации -->
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2025-02-10-anons-pokaza-spektaklya-pustotsvet</loc>
-    <lastmod>2025-02-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-    <image:image>
-      <image:loc>https://i.imgur.com/mbgTAbO.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/wIykMF0.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/cMDJuFf.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://i.imgur.com/SLVylPe.jpeg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2017/08/01/11/48/blue-2564660_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2018/04/05/14/07/space-3291516_1280.jpg</image:loc>
-    </image:image>
-    <image:image>
-      <image:loc>https://cdn.pixabay.com/photo/2016/11/29/09/38/adult-1868750_1280.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2025-01-15-novyy-teatralnyy-sezon-20252026</loc>
-    <lastmod>2025-01-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2025-01-25-detskiy-teatralnyy-lager</loc>
-    <lastmod>2025-01-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-06-15-proekt-voobraziliya-razvitie-tvorcheskogo-voobrazheniya</loc>
-    <lastmod>2024-06-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-03-20-proekt-dyornem-za-veryovochku-vmeste-obedinenie-pokoleniy</loc>
-    <lastmod>2024-03-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-09-10-proekt-gorod-masterov-izuchenie-narodnykh-remyosel</loc>
-    <lastmod>2023-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-05-15-proekt-s-kukloy-k-lyudyam-sotsialnaya-rabota-s-detmi</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-12-15-novosti-teatralnoy-studii-dekabr-2024</loc>
-    <lastmod>2024-12-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-11-20-anons-festivalya-detskogo-tvorchestva</loc>
-    <lastmod>2024-11-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-10-10-master-klass-po-akterskomu-masterstvu</loc>
-    <lastmod>2024-10-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-08-15-letniy-teatralnyy-lager-2024</loc>
-    <lastmod>2024-08-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-07-05-premera-spektaklya-zolushka</loc>
-    <lastmod>2024-07-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-06-01-nabor-v-teatralnuyu-studiyu</loc>
-    <lastmod>2024-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-05-20-teatralnyy-festival-vesna</loc>
-    <lastmod>2024-05-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-04-12-master-klass-po-narodnym-remeslam</loc>
-    <lastmod>2024-04-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-03-08-semeynyy-teatralnyy-vecher</loc>
-    <lastmod>2024-03-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-02-14-inklyuzivnyy-spektakl-druzhba</loc>
-    <lastmod>2024-02-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2024-01-05-zimnie-kanikuly-v-teatre</loc>
-    <lastmod>2024-01-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-12-25-novogodniy-spektakl-snezhnaya-koroleva</loc>
-    <lastmod>2023-12-25</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-11-18-master-klass-po-stsenicheskoy-rechi</loc>
-    <lastmod>2023-11-18</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-10-15-osenniy-festival-teatra</loc>
-    <lastmod>2023-10-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-09-10-den-otkrytykh-dverey-v-studii</loc>
-    <lastmod>2023-09-10</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-08-20-letniy-intensiv-po-akterskomu-masterstvu</loc>
-    <lastmod>2023-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-07-12-premera-spektaklya-malenkiy-prints</loc>
-    <lastmod>2023-07-12</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-06-01-teatralnyy-kruzhok-dlya-vzroslykh</loc>
-    <lastmod>2023-06-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://licedeycentre.github.io/publications/2023-05-15-vesenniy-kontsert-studii</loc>
-    <lastmod>2023-05-15</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
   </url>
 
 </urlset>

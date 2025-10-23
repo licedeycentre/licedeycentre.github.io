@@ -6,7 +6,6 @@ import { VideoPlayer } from '../components/VideoPlayer'
 import PageLayout from '../components/PageLayout'
 import { formatDate } from '../utils/dateFormat'
 import { processHtmlContent } from '../utils/htmlProcessor'
-import { VideoGroup as VideoGroupType } from '../types/content'
 import { Download, Eye } from 'lucide-react'
 import { getDocumentIcon, getDocumentColor, getDocumentPreviewUrl } from '../utils/documentIcons'
 
@@ -50,7 +49,7 @@ const PublicationPage: React.FC = () => {
     <PageLayout
       title={`${post.title} — Лицедей`}
       description={
-        getTextFromHtml(post.html) ||
+        getTextFromHtml(post.details) ||
         `Публикация '${post.title}' театра-студии 'Балаганчик' во Владивостоке.`
       }
       keywords={`публикация, ${post.title}, театр, Владивосток, Балаганчик, ${(post.tags || []).join(', ')}`}
@@ -79,24 +78,30 @@ const PublicationPage: React.FC = () => {
           </div>
         )}
         <article className="detail-content readable-content">
-          {processHtmlContent(post.html || '')}
+          {processHtmlContent(post.details || '')}
         </article>
 
-        {/* Кнопка действия */}
-        {post.button && (
+        {/* Кнопки действия */}
+        {post.buttons && post.buttons.length > 0 && (
           <div className="cta-section" style={{ textAlign: 'center', marginTop: '20px' }}>
-            <span
-              className="internal-link btn-primary"
-              data-href={post.button.url}
-              onClick={e => {
-                e.preventDefault()
-                window.history.pushState(null, '', post.button!.url)
-                window.dispatchEvent(new PopStateEvent('popstate'))
-              }}
-              style={{ cursor: 'pointer' }}
-            >
-              {post.button.text}
-            </span>
+            {post.buttons.slice(0, 2).map((buttonStr, i) => {
+              const [text, href] = buttonStr.split(':')
+              return (
+                <span
+                  key={i}
+                  className={`internal-link ${i === 0 ? 'btn-primary' : 'btn-secondary'}`}
+                  data-href={href || '#'}
+                  onClick={e => {
+                    e.preventDefault()
+                    window.history.pushState(null, '', href || '#')
+                    window.dispatchEvent(new PopStateEvent('popstate'))
+                  }}
+                  style={{ cursor: 'pointer', marginRight: i === 0 ? '10px' : '0' }}
+                >
+                  {text}
+                </span>
+              )
+            })}
           </div>
         )}
       </div>
@@ -105,19 +110,15 @@ const PublicationPage: React.FC = () => {
       {post.video && (
         <div className="content-card">
           <div className="modal-gallery">
-            {/* Проверяем, является ли video одиночным видео или массивом групп */}
+            {/* Проверяем, является ли video строкой или массивом строк */}
             {Array.isArray(post.video) ? (
-              // Если это массив групп видео
-              post.video.map((group: VideoGroupType, index: number) => (
-                <VideoPlayer key={index} title={group.title} videos={group.videos} />
+              // Если это массив видео
+              post.video.map((url: string, index: number) => (
+                <VideoPlayer key={index} url={url} className="video-player-item" />
               ))
             ) : (
-              // Если это одиночное видео
-              <VideoPlayer
-                url={post.video.url}
-                title={post.video.title}
-                description={post.video.description}
-              />
+              // Если это одно видео
+              <VideoPlayer url={post.video} />
             )}
           </div>
         </div>
@@ -133,35 +134,30 @@ const PublicationPage: React.FC = () => {
       )}
 
       {/* Документы публикации */}
-      {post.documents && post.documents.length > 0 && (
+      {post.documents && Object.keys(post.documents).length > 0 && (
         <div className="content-card">
           <div className="readable-content">
             <h2>{labels.sections.documents}</h2>
           </div>
           <div className="documents-grid">
-            {post.documents.map((doc, index) => (
+            {Object.entries(post.documents).map(([title, url], index) => (
               <div
-                key={
-                  (doc.title && doc.title.replace(/\s+/g, '-')) ||
-                  (doc.url.split('/').pop() || '').replace(/\.[^.]+$/, '') ||
-                  String(index)
-                }
+                key={title.replace(/\s+/g, '-') || String(index)}
                 className="document-card"
               >
                 <div
                   className="document-card-icon"
-                  style={{ backgroundColor: getDocumentColor(doc.url) }}
+                  style={{ backgroundColor: getDocumentColor(url) }}
                 >
-                  {React.createElement(getDocumentIcon(doc.url), { size: 24 })}
+                  {React.createElement(getDocumentIcon(url), { size: 24 })}
                 </div>
                 <div className="document-card-content">
-                  <h4 className="document-card-title">{doc.title}</h4>
-                  <p className="document-card-desc">{doc.description}</p>
+                  <h4 className="document-card-title">{title}</h4>
                 </div>
                 <div className="document-card-action">
                   <a
                     className="icon-button"
-                    href={getDocumentPreviewUrl(doc.url)}
+                    href={getDocumentPreviewUrl(url)}
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={labels.common.preview}
@@ -171,7 +167,7 @@ const PublicationPage: React.FC = () => {
                   </a>
                   <a
                     className="icon-button"
-                    href={doc.url}
+                    href={url}
                     download
                     aria-label={labels.common.download}
                     title={labels.common.download}

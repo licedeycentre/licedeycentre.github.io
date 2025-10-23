@@ -34,9 +34,19 @@ const Footer: React.FC = () => {
               <h4 className="footer-block-title">{labels.footer.phonesTitle}</h4>
               <div className="footer-phones">
                 {contactsData.phones.map((phone, index) => (
-                  <a key={index} href={phone.href} className="footer-phone">
-                    {phone.number}
-                  </a>
+                  <div key={index} className="footer-phone-item">
+                    <a href={phone.href} className="footer-phone">
+                      {phone.number}
+                    </a>
+                    <div className="footer-messengers">
+                      <a href={phone.telegram} target="_blank" rel="noopener noreferrer" className="footer-messenger-link">
+                        Telegram
+                      </a>
+                      <a href={phone.whatsapp} target="_blank" rel="noopener noreferrer" className="footer-messenger-link">
+                        WhatsApp
+                      </a>
+                    </div>
+                  </div>
                 ))}
               </div>
             </div>
