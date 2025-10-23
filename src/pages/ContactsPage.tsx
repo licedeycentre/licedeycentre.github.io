@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useContacts } from '../hooks/useContent'
 import PageLayout from '../components/PageLayout'
 import { MapPin, Phone, Mail, Users } from 'lucide-react'
-import { siTelegram, siTiktok, siVk } from 'simple-icons'
+import { siTelegram, siTiktok, siVk, siWhatsapp } from 'simple-icons'
 
 const ContactsPage: React.FC = () => {
   const contactsData = useContacts()
@@ -38,10 +38,16 @@ const ContactsPage: React.FC = () => {
                           {phone.number}
                         </a>
                         <div className="phone-messengers">
-                          <a href={phone.telegram} target="_blank" rel="noopener noreferrer" className="messenger-link">
+                          <a href={phone.telegram} target="_blank" rel="noopener noreferrer" className="messenger-btn telegram-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                              <path d={siTelegram.path} />
+                            </svg>
                             Telegram
                           </a>
-                          <a href={phone.whatsapp} target="_blank" rel="noopener noreferrer" className="messenger-link">
+                          <a href={phone.whatsapp} target="_blank" rel="noopener noreferrer" className="messenger-btn whatsapp-btn">
+                            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+                              <path d={siWhatsapp.path} />
+                            </svg>
                             WhatsApp
                           </a>
                         </div>

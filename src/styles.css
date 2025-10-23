@@ -5210,6 +5210,41 @@ body.mobile-menu-open {
   text-decoration: underline;
 }
 
+.messenger-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  min-height: 36px;
+}
+
+.telegram-btn {
+  background-color: #0088cc;
+  color: white;
+}
+
+.telegram-btn:hover {
+  background-color: #006699;
+  color: white;
+  text-decoration: none;
+}
+
+.whatsapp-btn {
+  background-color: #25d366;
+  color: white;
+}
+
+.whatsapp-btn:hover {
+  background-color: #1ea952;
+  color: white;
+  text-decoration: none;
+}
+
 .phone-info .whatsapp-btn {
   align-self: flex-start;
   padding: 8px 12px;
@@ -5562,6 +5597,13 @@ body.mobile-menu-open {
     font-size: 12px;
   }
 
+  .messenger-btn {
+    padding: 6px 10px;
+    font-size: 12px;
+    gap: 5px;
+    min-height: 32px;
+  }
+
   .phone-info .whatsapp-btn {
     padding: 8px 12px;
     font-size: 12px;
@@ -5666,6 +5708,13 @@ body.mobile-menu-open {
 
   .messenger-link {
     font-size: 11px;
+  }
+
+  .messenger-btn {
+    padding: 5px 8px;
+    font-size: 11px;
+    gap: 4px;
+    min-height: 28px;
   }
 
   .phone-info .whatsapp-btn {
