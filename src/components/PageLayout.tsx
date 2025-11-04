@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import SEOHead from './SEOHead'
+import { Performance, Publication } from '../types/content'
 
 export interface BreadcrumbItem {
   label: string
@@ -14,10 +15,24 @@ export interface PageAction {
 }
 
 export interface PageLayoutProps {
-  // SEO
+  // Базовое SEO (обязательно)
   title: string
   description: string
   keywords?: string
+
+  // Расширенное SEO (опционально)
+  seo?: {
+    image?: string
+    imageAlt?: string
+    type?: 'website' | 'article' | 'profile'
+    publishedTime?: string
+    modifiedTime?: string
+    author?: string
+    tags?: string[]
+    performance?: Performance
+    publication?: Publication
+    showLocalBusiness?: boolean
+  }
 
   // Breadcrumbs
   breadcrumbs?: BreadcrumbItem[]
@@ -31,27 +46,53 @@ export interface PageLayoutProps {
   // Layout options
   fullWidth?: boolean
   centered?: boolean
+  compactBreadcrumbs?: boolean
 }
 
 const PageLayout: React.FC<PageLayoutProps> = ({
   title,
   description,
   keywords,
+  seo,
   breadcrumbs = [],
   children,
   actions = [],
   fullWidth = false,
   centered = true,
+  compactBreadcrumbs = false,
 }) => {
   const containerClass = fullWidth ? 'container-fluid' : 'container'
 
+  // Конвертируем breadcrumbs для Schema.org если они есть
+  const seoBreadcrumbs = breadcrumbs
+    .filter(item => item.href)
+    .map(item => ({
+      name: item.label,
+      url: item.href || '',
+    }))
+
   return (
     <>
-      <SEOHead title={title} description={description} keywords={keywords} />
+      <SEOHead
+        title={title}
+        description={description}
+        keywords={keywords}
+        image={seo?.image}
+        imageAlt={seo?.imageAlt}
+        type={seo?.type}
+        publishedTime={seo?.publishedTime}
+        modifiedTime={seo?.modifiedTime}
+        author={seo?.author}
+        tags={seo?.tags}
+        performance={seo?.performance}
+        publication={seo?.publication}
+        breadcrumbs={seoBreadcrumbs.length > 0 ? seoBreadcrumbs : undefined}
+        showLocalBusiness={seo?.showLocalBusiness}
+      />
 
       <div className={containerClass}>
-        {/* Breadcrumbs */}
-        {breadcrumbs.length > 0 && (
+        {/* Breadcrumbs - скрываем на страницах со слайдером */}
+        {breadcrumbs.length > 0 && !compactBreadcrumbs && (
           <nav className="breadcrumbs" aria-label="Хлебные крошки">
             <ol className="breadcrumb-list">
               {breadcrumbs.map((item, index) => (
@@ -64,7 +105,23 @@ const PageLayout: React.FC<PageLayoutProps> = ({
                     <span className="breadcrumb-current">{item.label}</span>
                   )}
                   {index < breadcrumbs.length - 1 && (
-                    <span className="breadcrumb-separator">/</span>
+                    <span className="breadcrumb-separator" aria-hidden="true">
+                      <svg
+                        width="16"
+                        height="16"
+                        viewBox="0 0 16 16"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M6 4L10 8L6 12"
+                          stroke="currentColor"
+                          strokeWidth="2"
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                        />
+                      </svg>
+                    </span>
                   )}
                 </li>
               ))}

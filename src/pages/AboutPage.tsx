@@ -97,10 +97,7 @@ const AboutPage: React.FC = () => {
           </div>
           <div className="documents-grid">
             {Object.entries(aboutData.documents).map(([title, url], index) => (
-              <div
-                key={title.replace(/\s+/g, '-') || String(index)}
-                className="document-card"
-              >
+              <div key={title.replace(/\s+/g, '-') || String(index)} className="document-card">
                 <div
                   className="document-card-icon"
                   style={{ backgroundColor: getDocumentColor(url) }}

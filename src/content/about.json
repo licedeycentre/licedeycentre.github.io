@@ -59,6 +59,10 @@
       "link": "/publications?tag=проекты"
     }
   ],
+  "contactButton": {
+    "text": "Связаться с нами",
+    "href": "/contacts"
+  },
   "subsections": {
     "studio": {
       "title": "Театральная студия «Балаганчик»",
@@ -89,10 +93,6 @@
         "Расписание инклюзивной студии": "/documents/schedule.pdf",
         "Договор для инклюзивной студии": "/documents/contract.pdf",
         "Заявление для инклюзивной студии": "/documents/application-form.pdf"
-      },
-      "contactButton": {
-        "text": "Связаться с нами",
-        "href": "/contacts"
       }
     },
     "theater": {
@@ -105,10 +105,6 @@
       "documents": {
         "Афиша спектаклей": "/documents/schedule.pdf",
         "Правила посещения театра": "/documents/regulations.pdf"
-      },
-      "contactButton": {
-        "text": "Связаться с нами",
-        "href": "/contacts"
       }
     },
     "summer-camp": {
@@ -120,16 +116,7 @@
         "Договор на оказание образовательных услуг": "/documents/contract.pdf",
         "Заявление на зачисление": "/documents/application-form.pdf",
         "Справка о состоянии здоровья": "/documents/medical-certificate.pdf"
-      },
-      "contactButton": {
-        "text": "Связаться с нами",
-        "href": "/contacts"
       }
     }
-  },
-  "contactButton": {
-    "text": "Связаться с нами",
-    "href": "/contacts"
-  },
-  "_note": "Порядок отображения: основной контент → видео → галерея → кнопка связаться → документы"
+  }
 }

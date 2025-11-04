@@ -70,12 +70,12 @@ export const formatShowDate = (date: string, time: string): string => {
   }
 
   // Используем Intl API для корректного форматирования
-  const vladivostokDateStr = dateObj.toLocaleString("en-US", {
-    timeZone: "Asia/Vladivostok",
+  const vladivostokDateStr = dateObj.toLocaleString('en-US', {
+    timeZone: 'Asia/Vladivostok',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-    weekday: 'short'
+    weekday: 'short',
   })
 
   const vladivostokDate = new Date(vladivostokDateStr)
@@ -101,12 +101,12 @@ export const formatShowDateShort = (date: string, time: string): string => {
   }
 
   // Используем Intl API для корректного форматирования
-  const vladivostokDateStr = dateObj.toLocaleString("en-US", {
-    timeZone: "Asia/Vladivostok",
+  const vladivostokDateStr = dateObj.toLocaleString('en-US', {
+    timeZone: 'Asia/Vladivostok',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-    weekday: 'short'
+    weekday: 'short',
   })
 
   const vladivostokDate = new Date(vladivostokDateStr)
@@ -123,8 +123,8 @@ export const formatShowDateShort = (date: string, time: string): string => {
  */
 export const getVladivostokTime = (): Date => {
   // Используем Intl API для корректной работы с часовым поясом
-  const nowStr = new Date().toLocaleString("en-US", {
-    timeZone: "Asia/Vladivostok"
+  const nowStr = new Date().toLocaleString('en-US', {
+    timeZone: 'Asia/Vladivostok',
   })
   return new Date(nowStr)
 }
@@ -139,8 +139,8 @@ export const isFutureDate = (date: string, time?: string): boolean => {
   const dateTimeString = time ? `${date}T${time}` : `${date}T00:00`
 
   // Парсим дату как владивостокское время
-  const dateStr = new Date(dateTimeString).toLocaleString("en-US", {
-    timeZone: "Asia/Vladivostok"
+  const dateStr = new Date(dateTimeString).toLocaleString('en-US', {
+    timeZone: 'Asia/Vladivostok',
   })
   const vladivostokDateObj = new Date(dateStr)
 
@@ -162,7 +162,7 @@ export const parseDateTimeString = (dateTimeString: string): { date: string; tim
   if (!dateTimeString.includes(' ')) {
     return {
       date: dateTimeString.trim(),
-      time: '00:00' // начало дня вместо 19:00
+      time: '00:00', // начало дня вместо 19:00
     }
   }
 
@@ -170,7 +170,7 @@ export const parseDateTimeString = (dateTimeString: string): { date: string; tim
   const [date, time] = dateTimeString.split(' ')
   return {
     date: date.trim(),
-    time: time.trim()
+    time: time.trim(),
   }
 }
 
@@ -234,7 +234,9 @@ export const sortDateTimeStrings = (dateTimeStrings: string[]): string[] => {
  * @returns массив только будущих дат, отсортированный по возрастанию
  */
 export const filterFutureDateTimeStrings = (dateTimeStrings: string[]): string[] => {
-  return sortDateTimeStrings(dateTimeStrings.filter(dateTimeString => isFutureDateTimeString(dateTimeString)))
+  return sortDateTimeStrings(
+    dateTimeStrings.filter(dateTimeString => isFutureDateTimeString(dateTimeString))
+  )
 }
 
 /**
@@ -248,7 +250,9 @@ export const getLastPastDateTimeString = (dateTimeStrings: string[]): string | n
   }
 
   // Фильтруем только прошедшие даты (не будущие)
-  const pastDates = dateTimeStrings.filter(dateTimeString => !isFutureDateTimeString(dateTimeString))
+  const pastDates = dateTimeStrings.filter(
+    dateTimeString => !isFutureDateTimeString(dateTimeString)
+  )
 
   if (pastDates.length === 0) {
     return null
@@ -328,8 +332,8 @@ export const formatDateTimeStringFull = (dateTimeString: string): string => {
     return 'Неверная дата'
   }
 
-  const vladivostokDateStr = dateObj.toLocaleString("en-US", {
-    timeZone: "Asia/Vladivostok"
+  const vladivostokDateStr = dateObj.toLocaleString('en-US', {
+    timeZone: 'Asia/Vladivostok',
   })
   const vladivostokDate = new Date(vladivostokDateStr)
 

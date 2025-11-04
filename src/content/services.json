@@ -23,10 +23,7 @@
       "link": "/services/equipment"
     }
   ],
-  "gallery": [
-    "https://i.imgur.com/SLVylPe.jpeg",
-    "https://i.imgur.com/mbgTAbO.jpeg"
-  ],
+  "gallery": ["https://i.imgur.com/SLVylPe.jpeg", "https://i.imgur.com/mbgTAbO.jpeg"],
   "video": "https://rutube.ru/video/b7094bb353ef614bebc8b081b7b312ee/",
   "subsections": {
     "performances": {
@@ -65,10 +62,5 @@
         "href": "/contacts"
       }
     }
-  },
-  "contactButton": {
-    "text": "Связаться с нами",
-    "href": "/contacts"
-  },
-  "_note": "Порядок отображения: основной контент → видео → галерея → кнопка связаться → документы"
+  }
 }

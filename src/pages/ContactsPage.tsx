@@ -38,13 +38,23 @@ const ContactsPage: React.FC = () => {
                           {phone.number}
                         </a>
                         <div className="phone-messengers">
-                          <a href={phone.telegram} target="_blank" rel="noopener noreferrer" className="messenger-btn telegram-btn">
+                          <a
+                            href={phone.telegram}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="messenger-btn telegram-btn"
+                          >
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                               <path d={siTelegram.path} />
                             </svg>
                             Telegram
                           </a>
-                          <a href={phone.whatsapp} target="_blank" rel="noopener noreferrer" className="messenger-btn whatsapp-btn">
+                          <a
+                            href={phone.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="messenger-btn whatsapp-btn"
+                          >
                             <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
                               <path d={siWhatsapp.path} />
                             </svg>
@@ -151,14 +161,26 @@ const ContactsPage: React.FC = () => {
             <div className="form-fallback">
               <p>Форма обратной связи временно недоступна. Вы можете связаться с нами:</p>
               <div className="contact-methods">
-                <p><strong>Телефон:</strong> {contactsData.phones.map(phone => phone.number).join(', ')}</p>
-                <p><strong>Email:</strong> <a href={contactsData.email.href}>{contactsData.email.text}</a></p>
-                <p><strong>Telegram:</strong> <a href={contactsData.socials.find(s => s.name === 'Telegram')?.href} target="_blank" rel="noopener noreferrer">@licedeycentre</a></p>
+                <p>
+                  <strong>Телефон:</strong>{' '}
+                  {contactsData.phones.map(phone => phone.number).join(', ')}
+                </p>
+                <p>
+                  <strong>Email:</strong>{' '}
+                  <a href={contactsData.email.href}>{contactsData.email.text}</a>
+                </p>
+                <p>
+                  <strong>Telegram:</strong>{' '}
+                  <a
+                    href={contactsData.socials.find(s => s.name === 'Telegram')?.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    @licedeycentre
+                  </a>
+                </p>
               </div>
-              <button
-                onClick={() => setFormError(false)}
-                className="retry-button"
-              >
+              <button onClick={() => setFormError(false)} className="retry-button">
                 Попробовать снова
               </button>
             </div>
@@ -172,18 +194,17 @@ const ContactsPage: React.FC = () => {
               title="Форма обратной связи"
               className="yandex-form-iframe"
               onError={() => {
-                console.warn('Ошибка загрузки формы обратной связи');
-                setFormError(true);
+                console.warn('Ошибка загрузки формы обратной связи')
+                setFormError(true)
               }}
               onLoad={() => {
-                console.log('Форма обратной связи загружена');
-                setFormError(false);
+                console.log('Форма обратной связи загружена')
+                setFormError(false)
               }}
             />
           )}
         </div>
       </div>
-
     </PageLayout>
   )
 }

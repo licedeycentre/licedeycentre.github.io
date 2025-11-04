@@ -39,10 +39,20 @@ const Footer: React.FC = () => {
                       {phone.number}
                     </a>
                     <div className="footer-messengers">
-                      <a href={phone.telegram} target="_blank" rel="noopener noreferrer" className="footer-messenger-link">
+                      <a
+                        href={phone.telegram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-messenger-link"
+                      >
                         Telegram
                       </a>
-                      <a href={phone.whatsapp} target="_blank" rel="noopener noreferrer" className="footer-messenger-link">
+                      <a
+                        href={phone.whatsapp}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footer-messenger-link"
+                      >
                         WhatsApp
                       </a>
                     </div>

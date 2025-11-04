@@ -7,6 +7,20 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          // Vendor код
+          'react-vendor': ['react', 'react-dom', 'react-router-dom'],
+          'ui-vendor': ['lucide-react', 'yet-another-react-lightbox'],
+
+          // Тяжелый контент в отдельные чанки
+          'content-performances': ['./src/content/performances.json'],
+          'content-publications': ['./src/content/publications.json'],
+        },
+      },
+    },
+    chunkSizeWarningLimit: 600,
   },
   publicDir: 'public',
   server: {

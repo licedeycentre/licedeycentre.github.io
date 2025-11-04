@@ -1,21 +1,13 @@
 import React from 'react'
 import type { Performance } from '../types/content'
-import { Info, Clock, Calendar } from 'lucide-react'
-import { getLastPastDateTimeString, parseDateTimeString, formatDateTimeStringShort } from '../utils/dateFormat'
+import { Info, Clock, Drama } from 'lucide-react'
 
 interface PerformanceInfoCardProps {
   performance: Performance
 }
 
 export const PerformanceInfoCard: React.FC<PerformanceInfoCardProps> = ({ performance }) => {
-  // Получаем последний показ спектакля (только прошедшие даты)
-  const getLastShow = () => {
-    return getLastPastDateTimeString(performance.showDates || [])
-  }
-
-  const lastShow = getLastShow()
-
-  // Рендер мета-информации (возраст, продолжительность, последний показ)
+  // Рендер мета-информации (возраст, продолжительность, жанр)
   const renderMetaInfo = () => {
     const metaItems = []
 
@@ -47,15 +39,15 @@ export const PerformanceInfoCard: React.FC<PerformanceInfoCardProps> = ({ perfor
       )
     }
 
-    if (lastShow) {
+    if (performance.genre) {
       metaItems.push(
-        <div key="lastShow" className="performance-meta-item">
+        <div key="genre" className="performance-meta-item">
           <div className="performance-meta-icon">
-            <Calendar size={18} />
+            <Drama size={18} />
           </div>
           <div className="performance-meta-content">
-            <div className="performance-meta-label">Последний показ</div>
-            <div className="performance-meta-value">{formatDateTimeStringShort(lastShow)}</div>
+            <div className="performance-meta-label">Жанр</div>
+            <div className="performance-meta-value">{performance.genre}</div>
           </div>
         </div>
       )

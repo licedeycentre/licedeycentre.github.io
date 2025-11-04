@@ -5,8 +5,6 @@ import {
   formatDateTimeStringShort,
   formatDateTimeStringFull,
   filterFutureDateTimeStrings,
-  getLastPastDateTimeString,
-  parseDateTimeString,
 } from '../utils/dateFormat'
 import { generatePerformanceId } from '../utils/slugify'
 import type { Performance } from '../types/content'
@@ -175,19 +173,26 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
 
           // Определяем URL
           const getTicketsUrl = () => {
-            if (!performance.tickets || performance.tickets === 'hide') return null
-            if (performance.tickets === 'show') return '/contacts'
+            if (!performance.tickets || performance.tickets === 'hide') {
+              return null
+            }
+            if (performance.tickets === 'show') {
+              return '/contacts'
+            }
             return performance.tickets // URL
           }
 
           const ticketsUrl = getTicketsUrl()
 
-          return shouldShowTickets &&
+          return (
+            shouldShowTickets &&
             performance.status !== 'archived' &&
-            !(performance.status === 'active' &&
+            !(
+              performance.status === 'active' &&
               performance.showDates &&
               performance.showDates.length > 0 &&
-              futureDates.length === 0) &&
+              futureDates.length === 0
+            ) &&
             ticketsUrl && (
               <div className="card-tickets-button">
                 {ticketsUrl.startsWith('http') ? (
@@ -206,6 +211,7 @@ export const PerformanceCard: React.FC<PerformanceCardProps> = ({
                 )}
               </div>
             )
+          )
         })()}
       </div>
     </div>

@@ -11,13 +11,30 @@ const PublicationsPage: React.FC = () => {
   const [searchParams, setSearchParams] = useSearchParams()
   const tagFromUrl = searchParams.get('tag') || 'all'
   const [activeFilter, setActiveFilter] = useState<string>(tagFromUrl)
-  const [showAllTags, setShowAllTags] = useState<boolean>(false)
   const [showDropdown, setShowDropdown] = useState<boolean>(false)
+
+  // Увеличиваем количество видимых тегов с 8 до 12
+  const VISIBLE_TAGS_COUNT = 12
 
   // Синхронизируем с URL при загрузке
   useEffect(() => {
     setActiveFilter(tagFromUrl)
   }, [tagFromUrl])
+
+  // Закрытие дропдауна при клике вне
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement
+      if (!target.closest('.tags-dropdown-container')) {
+        setShowDropdown(false)
+      }
+    }
+
+    if (showDropdown) {
+      document.addEventListener('click', handleClickOutside)
+      return () => document.removeEventListener('click', handleClickOutside)
+    }
+  }, [showDropdown])
 
   // Собираем все уникальные теги и их частоту
   const tagCounts = useMemo(() => {
@@ -37,15 +54,17 @@ const PublicationsPage: React.FC = () => {
       .map(([tag]) => tag)
   }, [tagCounts])
 
-  // Определяем видимые теги
+  // Изначально показываем первые 12 тегов
   const visibleTags = useMemo(() => {
-    if (!showAllTags) {
-      return allTagsSorted.slice(0, 8)
-    } else if (allTagsSorted.length > 20) {
-      return allTagsSorted.slice(0, 20)
-    }
-    return allTagsSorted
-  }, [allTagsSorted, showAllTags])
+    return allTagsSorted.slice(0, VISIBLE_TAGS_COUNT)
+  }, [allTagsSorted])
+
+  // Остальные теги в дропдауне
+  const hiddenTags = useMemo(() => {
+    return allTagsSorted.slice(VISIBLE_TAGS_COUNT)
+  }, [allTagsSorted])
+
+  const hasHiddenTags = hiddenTags.length > 0
 
   // Фильтруем публикации
   const filteredPublications = useMemo(() => {
@@ -66,15 +85,7 @@ const PublicationsPage: React.FC = () => {
     }
   }
 
-  // Обработчик раскрытия тегов
-  const handleToggleTags = () => {
-    setShowAllTags(!showAllTags)
-  }
-
   const totalTags = allTagsSorted.length
-  const hiddenTagsCount = totalTags - 8
-  const hasMoreTags = totalTags > 8
-  const needsDropdown = totalTags > 20 && showAllTags
 
   return (
     <PageLayout
@@ -91,7 +102,7 @@ const PublicationsPage: React.FC = () => {
             className={`filter-button ${activeFilter === 'all' ? 'filter-button--active' : ''}`}
             onClick={() => handleFilterChange('all')}
           >
-            Все ({publications.length})
+            Все
           </button>
 
           {visibleTags.map(tag => (
@@ -104,26 +115,21 @@ const PublicationsPage: React.FC = () => {
             </button>
           ))}
 
-          {/* Кнопка раскрытия */}
-          {hasMoreTags && (
-            <button className="tags-toggle-button" onClick={handleToggleTags}>
-              {showAllTags ? 'Свернуть' : `Показать ещё ${hiddenTagsCount}`}
-            </button>
-          )}
-
-          {/* Dropdown для большого количества тегов */}
-          {needsDropdown && (
+          {/* Дропдаун для остальных тегов */}
+          {hasHiddenTags && (
             <div className="tags-dropdown-container">
               <button
                 className="tags-dropdown-button"
                 onClick={() => setShowDropdown(!showDropdown)}
+                aria-expanded={showDropdown}
+                aria-label="Показать все теги"
               >
-                Все теги ({totalTags}) ▼
+                Все теги ▼
               </button>
 
               {showDropdown && (
                 <div className="tags-dropdown-menu">
-                  {allTagsSorted.map(tag => (
+                  {hiddenTags.map(tag => (
                     <button
                       key={tag}
                       className={`filter-button ${activeFilter === tag ? 'filter-button--active' : ''}`}

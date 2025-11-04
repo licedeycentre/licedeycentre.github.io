@@ -10,9 +10,8 @@ import ErrorBoundary from './components/ErrorBoundary'
 // Импорты страниц
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
-import AboutSubsectionPage from './pages/AboutSubsectionPage'
 import ServicesPage from './pages/ServicesPage'
-import ServicesSubsectionPage from './pages/ServicesSubsectionPage'
+import SubsectionPage from './pages/SubsectionPage'
 import PerformancesPage from './pages/PerformancesPage'
 import PerformancePage from './pages/PerformancePage'
 import PublicationsPage from './pages/PublicationsPage'
@@ -31,9 +30,9 @@ const App: React.FC = () => {
             <Routes>
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
-              <Route path="/about/:subsection" element={<AboutSubsectionPage />} />
+              <Route path="/about/:subsection" element={<SubsectionPage type="about" />} />
               <Route path="/services" element={<ServicesPage />} />
-              <Route path="/services/:subsection" element={<ServicesSubsectionPage />} />
+              <Route path="/services/:subsection" element={<SubsectionPage type="services" />} />
               <Route path="/performances" element={<PerformancesPage />} />
               <Route path="/performances/:id" element={<PerformancePage />} />
               <Route path="/contacts" element={<ContactsPage />} />

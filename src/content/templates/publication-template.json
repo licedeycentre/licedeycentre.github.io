@@ -3,14 +3,8 @@
   "date": "2025-01-15",
   "image": "https://i.imgur.com/example-image.jpeg",
   "details": "Содержание в HTML формате: https://html-online.com/ - скопировать и вставить одной строкой",
-  "buttons": [
-    "Подробнее:/performances/example-performance"
-  ],
-  "tags": [
-    "новости",
-    "театр",
-    "события"
-  ],
+  "buttons": ["Подробнее:/performances/example-performance"],
+  "tags": ["новости", "театр", "события"],
   "gallery": [
     "https://i.imgur.com/gallery-image-1.jpeg",
     "https://i.imgur.com/gallery-image-2.jpeg",

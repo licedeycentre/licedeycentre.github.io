@@ -24,12 +24,14 @@
 
 ```json
 {
-  "common": {           // Общие метки (3)
+  "common": {
+    // Общие метки (3)
     "readMore": "Подробнее",
     "download": "Скачать",
     "preview": "Предпросмотр"
   },
-  "navigation": {       // Навигация (6)
+  "navigation": {
+    // Навигация (6)
     "main": "Главная",
     "about": "О нас",
     "services": "Услуги",
@@ -37,21 +39,25 @@
     "publications": "Публикации",
     "performances": "Спектакли"
   },
-  "sections": {         // Заголовки секций (2)
+  "sections": {
+    // Заголовки секций (2)
     "video": "Видео",
     "documents": "Документы"
   },
-  "buttons": {          // Кнопки (2)
+  "buttons": {
+    // Кнопки (2)
     "showArchivedActors": "Показать всех актёров",
     "hideArchivedActors": "Скрыть архивных актёров"
   },
-  "footer": {           // Footer (4)
+  "footer": {
+    // Footer (4)
     "addressTitle": "Адрес",
     "phonesTitle": "Телефоны",
     "emailTitle": "Email",
     "socialTitle": "Социальные сети"
   },
-  "ariaLabels": {       // Accessibility (7)
+  "ariaLabels": {
+    // Accessibility (7)
     "mainNavigation": "Главная навигация",
     "socialNetworks": "Социальные сети",
     "openMenu": "Открыть меню",
@@ -60,7 +66,8 @@
     "aboutSubmenu": "Подразделы О нас",
     "servicesSubmenu": "Подразделы Услуги"
   },
-  "cookies": {          // Cookie баннер (4)
+  "cookies": {
+    // Cookie баннер (4)
     "title": "Мы используем cookies",
     "description": "Этот сайт использует cookies для улучшения пользовательского опыта...",
     "privacyPolicy": "политикой конфиденциальности",

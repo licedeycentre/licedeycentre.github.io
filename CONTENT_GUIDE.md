@@ -246,6 +246,7 @@ public/images/
 2. **Добавьте информацию о документе** в соответствующий JSON файл страницы:
 
 **Для спектакля** (в `performances.json`):
+
 ```json
 {
   "title": "Название спектакля",
@@ -260,12 +261,13 @@ public/images/
 ```
 
 **Для страницы "О нас"** (в `about.json`):
+
 ```json
 {
   "documents": [
     {
       "title": "Название документа",
-      "description": "Описание документа", 
+      "description": "Описание документа",
       "url": "/documents/filename.pdf"
     }
   ]
@@ -273,6 +275,7 @@ public/images/
 ```
 
 **Для услуг** (в `services.json`):
+
 ```json
 {
   "services": [

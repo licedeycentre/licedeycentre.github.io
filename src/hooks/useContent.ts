@@ -119,8 +119,12 @@ const sortPerformances = (performances: Performance[]): Performance[] => {
       return dateA.getTime() - dateB.getTime()
     }
 
-    if (dateA && !dateB) return -1
-    if (!dateA && dateB) return 1
+    if (dateA && !dateB) {
+      return -1
+    }
+    if (!dateA && dateB) {
+      return 1
+    }
 
     // 3. Сортировка по алфавиту
     return a.title.localeCompare(b.title, 'ru')
@@ -156,7 +160,8 @@ export const usePublications = (): Publication[] => {
   // Приводим типы для совместимости с JSON
   const typedPublications = publications.map(pub => ({
     ...pub,
-    details: pub.details || pub.html || '',
+    content: '', // BaseContentPage требует content, но для публикаций используется details
+    details: pub.details || '',
     buttons: pub.buttons as string[] | undefined,
     documents: pub.documents as Record<string, string> | undefined,
   }))
@@ -250,7 +255,6 @@ export const useSEO = (): SEOData => {
     }
   )
 }
-
 
 // Хук для работы с глобальными настройками сайта
 export const useSite = (): SiteData => {

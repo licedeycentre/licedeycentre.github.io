@@ -2,11 +2,8 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import {
   formatDateTimeString,
-  formatDateTimeStringShort,
   formatDateTimeStringFull,
   filterFutureDateTimeStrings,
-  getLastPastDateTimeString,
-  parseDateTimeString,
 } from '../utils/dateFormat'
 import type { ShowDates, PerformanceStatusType } from '../types/content'
 
@@ -16,6 +13,11 @@ interface HeroSlide {
   bgUrl?: string
   primaryButton?: { text: string; link: string }
   secondaryButton?: { text: string; link: string }
+}
+
+export interface BreadcrumbItem {
+  label: string
+  href?: string
 }
 
 interface SliderProps {
@@ -29,6 +31,7 @@ interface SliderProps {
   showDates?: ShowDates
   performanceStatus?: PerformanceStatusType
   className?: string
+  breadcrumbs?: BreadcrumbItem[]
 }
 
 export const Slider: React.FC<SliderProps> = ({
@@ -42,6 +45,7 @@ export const Slider: React.FC<SliderProps> = ({
   showDates = [],
   performanceStatus,
   className = '',
+  breadcrumbs = [],
 }) => {
   const [index, setIndex] = React.useState(0)
   const [isTransitioning, setIsTransitioning] = React.useState(false)
@@ -57,7 +61,7 @@ export const Slider: React.FC<SliderProps> = ({
     description: "Театр‑студия 'Балаганчик' во Владивостоке",
     bgUrl: '',
     primaryButton: { text: 'Связаться с нами', link: '/contacts' },
-    secondaryButton: { text: 'О нас', link: '/about' }
+    secondaryButton: { text: 'О нас', link: '/about' },
   }
 
   const current = mode === 'hero' ? (slides.length > 0 ? slides[index] : fallbackSlide) : null
@@ -244,7 +248,6 @@ export const Slider: React.FC<SliderProps> = ({
               </div>
             ))}
           </div>
-
         </div>
       )
     } else {
@@ -316,18 +319,12 @@ export const Slider: React.FC<SliderProps> = ({
             {mode === 'hero' && (
               <>
                 {content.primaryButton && (
-                  <Link
-                    to={content.primaryButton.link}
-                    className="btn-primary"
-                  >
+                  <Link to={content.primaryButton.link} className="btn-primary">
                     {content.primaryButton.text}
                   </Link>
                 )}
                 {content.secondaryButton && (
-                  <Link
-                    to={content.secondaryButton.link}
-                    className="btn-secondary"
-                  >
+                  <Link to={content.secondaryButton.link} className="btn-secondary">
                     {content.secondaryButton.text}
                   </Link>
                 )}
@@ -342,7 +339,8 @@ export const Slider: React.FC<SliderProps> = ({
                 const futureDates = showDates ? filterFutureDateTimeStrings(showDates) : []
                 const hasFutureDates = futureDates.length > 0
 
-                const isFinished = performanceStatus === 'active' &&
+                const isFinished =
+                  performanceStatus === 'active' &&
                   showDates &&
                   showDates.length > 0 &&
                   !hasFutureDates
@@ -369,6 +367,50 @@ export const Slider: React.FC<SliderProps> = ({
           {mode === 'gallery' && renderShowDatesOrStatus()}
         </div>
       </div>
+    )
+  }
+
+  // Рендер breadcrumbs внутри слайдера
+  const renderBreadcrumbs = () => {
+    if (breadcrumbs.length === 0 || mode !== 'gallery') {
+      return null
+    }
+
+    return (
+      <nav className="hero-breadcrumbs" aria-label="Хлебные крошки">
+        <ol className="hero-breadcrumb-list">
+          {breadcrumbs.map((item, index) => (
+            <li key={index} className="hero-breadcrumb-item">
+              {item.href ? (
+                <Link to={item.href} className="hero-breadcrumb-link">
+                  {item.label}
+                </Link>
+              ) : (
+                <span className="hero-breadcrumb-current">{item.label}</span>
+              )}
+              {index < breadcrumbs.length - 1 && (
+                <span className="hero-breadcrumb-separator" aria-hidden="true">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M6 4L10 8L6 12"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </span>
+              )}
+            </li>
+          ))}
+        </ol>
+      </nav>
     )
   }
 
@@ -448,6 +490,7 @@ export const Slider: React.FC<SliderProps> = ({
           onTouchMove={onTouchMove}
           onTouchEnd={onTouchEnd}
         >
+          {renderBreadcrumbs()}
           {hasContent() && renderSliderContent()}
         </div>
         {renderNavigation()}

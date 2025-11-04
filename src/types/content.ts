@@ -10,16 +10,12 @@ export interface VideoGroup {
 export type PublicationButton = string
 
 // Типы для публикаций
-export interface Publication {
-  title: string
+export interface Publication extends BaseContentPage {
   date?: string
   image: string
   tags: string[]
-  details: string
-  gallery?: string[]
-  video?: string | string[] // Видео публикации (одно видео или массив видео)
+  details: string // Переопределяем content из BaseContentPage
   buttons?: string[] // Формат: ["текст:ссылка", "текст:ссылка"]
-  documents?: Documents // Документы публикации (опциональные)
 }
 
 // Типы для спектаклей
@@ -29,24 +25,20 @@ export type ShowDates = string[] // Массив строк в формате "2
 // Архивные актеры помечаются префиксом "*"
 export type Cast = Record<string, string[]> // {"Роль": ["Актер1", "*Архивный актер"]}
 
-
 // Тип для статуса спектакля в JSON данных
 export type PerformanceStatusType = 'active' | 'archived'
 
-export interface Performance {
-  title: string
+export interface Performance extends BaseContentPage {
   duration: string
   ageGroup: string
+  genre?: string // Жанр спектакля (опциональное поле)
   description: string
   details?: string // Подробное описание спектакля
   creators: string
   slider?: string[] // Изображения для слайдера
-  gallery?: string[] // Изображения для галереи внизу страницы
-  video?: string | string[] // Видео спектакля (одно видео или массив видео)
   status?: PerformanceStatusType
   showDates?: ShowDates
   tickets?: string // "show" | "hide" | URL для покупки билетов
-  documents?: Documents // Документы спектакля (опциональные)
   cast?: Cast // Список действующих лиц
 }
 
@@ -115,6 +107,22 @@ export interface ContactsData {
   feedbackFormUrl?: string
 }
 
+// Базовый тип для всех контентных страниц
+export interface BaseContentPage {
+  title: string
+  seoTitle?: string
+  seoDescription?: string
+  seoKeywords?: string
+  content: string
+  video?: string | string[]
+  gallery?: string[]
+  documents?: Documents
+  contactButton?: {
+    text: string
+    href: string
+  }
+}
+
 // Типы для страницы "О нас"
 export interface AboutDirection {
   icon: string
@@ -124,18 +132,8 @@ export interface AboutDirection {
   link: string
 }
 
-export interface AboutSubsection {
-  title: string
-  seoTitle?: string
-  seoDescription?: string
-  seoKeywords?: string
-  content: string
-  documents?: Documents
-  video?: string
-  contactButton?: {
-    text: string
-    href: string
-  }
+export interface ContentSubsection extends BaseContentPage {
+  // Дополнительные поля для подразделов можно добавить здесь при необходимости
 }
 
 export interface AboutData {
@@ -148,9 +146,10 @@ export interface AboutData {
   video?: string
   directions: AboutDirection[]
   subsections?: {
-    studio?: AboutSubsection
-    inclusive?: AboutSubsection
-    theater?: AboutSubsection
+    studio?: ContentSubsection
+    inclusive?: ContentSubsection
+    theater?: ContentSubsection
+    'summer-camp'?: ContentSubsection
   }
   contactButton?: {
     text: string
@@ -167,17 +166,8 @@ export interface Service {
   link: string
 }
 
-export interface ServicesSubsection {
-  title: string
-  seoTitle?: string
-  seoDescription?: string
-  seoKeywords?: string
-  content: string
-  video?: string
-  contactButton?: {
-    text: string
-    href: string
-  }
+export interface ServicesSubsection extends ContentSubsection {
+  // Дополнительные поля для услуг можно добавить здесь при необходимости
 }
 
 export interface ServicesData {
@@ -197,11 +187,6 @@ export interface ServicesData {
 }
 
 // Типы для юридических страниц
-export interface LegalSection {
-  title: string
-  content: (string | { type: 'list'; items: string[] })[]
-}
-
 export interface LegalPageData {
   title: string
   seo: {
@@ -209,7 +194,7 @@ export interface LegalPageData {
     description: string
     keywords: string
   }
-  sections: LegalSection[]
+  content: string
 }
 
 // Типы для SEO данных
@@ -235,7 +220,6 @@ export interface SEOData {
     organization: Record<string, unknown>
   }
 }
-
 
 // Типы для глобальных настроек сайта
 export interface SiteData {

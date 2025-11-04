@@ -14,15 +14,15 @@ export const generatePerformanceStructuredData = (performance: Performance, _ind
     image: performance.slider?.[0] || '',
     startDate: performance.showDates?.[0]
       ? (() => {
-        const { date, time } = parseDateTimeString(performance.showDates[0])
-        return `${date}T${time}:00`
-      })()
+          const { date, time } = parseDateTimeString(performance.showDates[0])
+          return `${date}T${time}:00`
+        })()
       : undefined,
     endDate: performance.showDates?.[0]
       ? (() => {
-        const { date, time } = parseDateTimeString(performance.showDates[0])
-        return `${date}T${time}:00`
-      })()
+          const { date, time } = parseDateTimeString(performance.showDates[0])
+          return `${date}T${time}:00`
+        })()
       : undefined,
     eventStatus:
       performance.status === 'active'
@@ -72,7 +72,8 @@ export const generatePublicationStructuredData = (publication: Publication, _ind
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline: publication.title,
-    description: publication.details?.replace(/<[^>]*>/g, '').substring(0, 160) || publication.title,
+    description:
+      publication.details?.replace(/<[^>]*>/g, '').substring(0, 160) || publication.title,
     url: `https://licedeycentre.github.io/publications/${publication.title
       .toLowerCase()
       .replace(/\s+/g, '-')
@@ -116,7 +117,6 @@ export const generateBreadcrumbStructuredData = (items: Array<{ name: string; ur
     })),
   }
 }
-
 
 export const generateLocalBusinessStructuredData = () => {
   return {

@@ -82,7 +82,6 @@ const SEOHead: React.FC<SEOHeadProps> = ({
     additionalStructuredData.push(generateBreadcrumbStructuredData(breadcrumbs))
   }
 
-
   if (showLocalBusiness) {
     additionalStructuredData.push(generateLocalBusinessStructuredData())
   }

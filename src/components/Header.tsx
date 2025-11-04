@@ -97,7 +97,7 @@ const AboutDropdown: React.FC = () => {
         // Фокус на первый элемент меню
         setTimeout(() => {
           const firstLink = dropdownRef.current?.querySelector('.dropdown-link')
-          ;(firstLink as HTMLElement)?.focus()
+            ; (firstLink as HTMLElement)?.focus()
         }, 10)
         break
       case 'Escape':
@@ -119,13 +119,13 @@ const AboutDropdown: React.FC = () => {
       case 'ArrowDown': {
         event.preventDefault()
         const nextIndex = Math.min(index + 1, items.length - 1)
-        ;(items[nextIndex] as HTMLElement).focus()
+          ; (items[nextIndex] as HTMLElement).focus()
         break
       }
       case 'ArrowUp': {
         event.preventDefault()
         const prevIndex = Math.max(index - 1, 0)
-        ;(items[prevIndex] as HTMLElement).focus()
+          ; (items[prevIndex] as HTMLElement).focus()
         break
       }
       case 'Escape': {
@@ -275,7 +275,7 @@ const ServicesDropdown: React.FC = () => {
         // Фокус на первый элемент меню
         setTimeout(() => {
           const firstLink = dropdownRef.current?.querySelector('.dropdown-link')
-          ;(firstLink as HTMLElement)?.focus()
+            ; (firstLink as HTMLElement)?.focus()
         }, 10)
         break
       case 'Escape':
@@ -297,13 +297,13 @@ const ServicesDropdown: React.FC = () => {
       case 'ArrowDown': {
         event.preventDefault()
         const nextIndex = Math.min(index + 1, items.length - 1)
-        ;(items[nextIndex] as HTMLElement).focus()
+          ; (items[nextIndex] as HTMLElement).focus()
         break
       }
       case 'ArrowUp': {
         event.preventDefault()
         const prevIndex = Math.max(index - 1, 0)
-        ;(items[prevIndex] as HTMLElement).focus()
+          ; (items[prevIndex] as HTMLElement).focus()
         break
       }
       case 'Escape': {
@@ -526,14 +526,14 @@ const Header: React.FC = () => {
       <div className="header-main">
         <div className="header-container">
           <div className="header-brand">
-            <Link to="/" className="brand-link" aria-label="Лицедей — на главную">
+            <Link to="/" className="brand-link" aria-label="Балаганчик — Театр-студия | ЦСИ «Лицедей» — на главную">
               <div className="brand-logo">
-                <img src={logoSrc} alt="Лицедей" className="logo-img" />
+                <img src={logoSrc} alt="Балаганчик — Театр-студия | ЦСИ «Лицедей»" className="logo-img" />
               </div>
               <div className="brand-text">
                 <h1 className="brand-title">
-                  <span className="title-main">ЛИЦЕДЕЙ</span>
-                  <span className="title-sub">ЦЕНТР СОВРЕМЕННОГО ИСКУССТВА</span>
+                  <span className="title-main">БАЛАГАНЧИК</span>
+                  <span className="title-sub">ТЕАТР-СТУДИЯ | ЦСИ «ЛИЦЕДЕЙ»</span>
                 </h1>
               </div>
             </Link>
